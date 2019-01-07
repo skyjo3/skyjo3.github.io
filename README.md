@@ -1,12 +1,9 @@
 # Summary
-This is Amy Y. Chen's personal website. 
+This is Amy Y. Chen's personal website (2017 version).
 
-# Item Revealer
-An experiment where grid items get revealed and unrevealed with animated, morphing SVG paths using anime.js.
+If you are interested in what I am working on right now, please take a look at my ResearchGate and LinkedIn profile. 
 
-[Article on Codrops](http://tympanus.net/codrops/?p=27324)
-
-[Demo](http://tympanus.net/Development/ItemRevealer/)
+Feel free to contact me for questions and feedback. Thanks :)
 
 ## License
 
