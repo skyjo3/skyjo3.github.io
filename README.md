@@ -1,3 +1,6 @@
+# Summary
+This is Amy Y. Chen's personal website. 
+
 # Item Revealer
 An experiment where grid items get revealed and unrevealed with animated, morphing SVG paths using anime.js.
 
