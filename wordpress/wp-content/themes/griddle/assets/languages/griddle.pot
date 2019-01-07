@@ -1,0 +1,122 @@
+# Copyright (C) 2018 Griddle
+# This file is distributed under the same license as the Griddle package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Griddle\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: justnorris <im@justnorris.com>\n"
+"Last-Translator: justnorris <im@justnorris.com>\n"
+"Report-Msgid-Bugs-To: im@justnorris.com\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: comments.php:34
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:40
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:7
+msgid "Griddle theme by %1$s."
+msgstr ""
+
+#: header.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-tags.php:17
+msgid "Tags: %1$s"
+msgstr ""
+
+#: inc/template-tags.php:94
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/template-tags.php:115
+msgctxt "post date"
+msgid "Published %s"
+msgstr ""
+
+#: inc/template-tags.php:124, partials/content-page.php:36
+msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:138
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:139
+msgid "Next"
+msgstr ""
+
+#: partials/content-in-loop.php:27, partials/content-list.php:22
+msgid "Read More"
+msgstr ""
+
+#: partials/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: partials/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: partials/content-none.php:37
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#: partials/content-none.php:38
+msgid "Back Home"
+msgstr ""
+
+#: partials/content-page.php:23, partials/content.php:39
+msgid "Pages:"
+msgstr ""
+
+#: partials/content.php:12
+msgid "in"
+msgstr ""
+
+#: partials/content.php:30
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/theme/functions-google-fonts.php:16
+msgctxt "Google fonts: \"on\" or \"off\""
+msgid "on"
+msgstr ""
+
+#: inc/theme/init-setup.php:36
+msgid "Primary"
+msgstr ""
+
+#: inc/theme/init-setup.php:52
+msgid "Sidebar"
+msgstr ""
+
+#: inc/theme/init-setup.php:54
+msgid "Add widgets here."
+msgstr ""
+
+#: partials/header/menu.php:1
+msgid "Menu"
+msgstr ""
+
+#: partials/header/menu.php:7
+msgid "Close Menu"
+msgstr ""
