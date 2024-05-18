@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo-container">
-          <img src="/website-icon-32x32.png" alt="Logo" className="logo-image" />
+          <img src={`${process.env.PUBLIC_URL}/website-icon-32x32.png`} alt="Logo" className="logo-image" />
           <h1 className="logo-text">Amy Yo Sue Chen</h1>
         </div>
 
