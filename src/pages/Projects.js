@@ -5,6 +5,7 @@ import './Projects.css';
 import { useLocation } from 'react-router-dom';
 import ScrollIndicator from '../components/ScrollIndicator';
 
+import backgroundImage from '../assets/img/project_background.png';
 import image1 from '../assets/img/about.jpg';
 import image2 from '../assets/img/about.jpg';
 
@@ -57,7 +58,8 @@ const Projects = () => {
   const isProjectsPage = location.pathname === '/projects'; // Change '/projects' to your actual Projects page route
 
   return (
-    <div className="container">
+    <div className="container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundAttachment: 'fixed' }}>
+      <ScrollIndicator />
       <div className="projects-container">
         <div className="project intro">
           <h5>↳  8 FEATURED PROJECTS</h5>
@@ -86,7 +88,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <ScrollIndicator />
     </div>
   );
 };

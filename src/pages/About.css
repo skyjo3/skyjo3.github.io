@@ -1,12 +1,13 @@
 /* About.css */
 
 .about-container {
+  max-width: var(--container-width);
   display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness */
-/*  padding: var(--spacing-lg);*/
+  flex-wrap: wrap;
   gap: var(--spacing-lg);
   margin-top: 60px;
-/*  height: 90vh;*/
+  margin-left: auto; /* Auto left margin */
+  margin-right: auto; /* Auto right margin */
 }
 
 .about-content {
