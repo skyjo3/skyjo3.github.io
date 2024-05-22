@@ -2,12 +2,13 @@
 
 .about-container {
   max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-lg);
   margin-top: 60px;
-  margin-left: auto; /* Auto left margin */
-  margin-right: auto; /* Auto right margin */
 }
 
 .about-content {

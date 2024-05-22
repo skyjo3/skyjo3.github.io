@@ -6,51 +6,9 @@ import { useLocation } from 'react-router-dom';
 import ScrollIndicator from '../components/ScrollIndicator';
 
 import backgroundImage from '../assets/img/project_background.png';
-import image1 from '../assets/img/about.jpg';
-import image2 from '../assets/img/about.jpg';
 
-const projects = [
-  {
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: image1,
-  },
-  {
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    imageUrl: image2,
-  },
-  {
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: image1,
-  },
-  {
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    imageUrl: image2,
-  },
-  {
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: image1,
-  },
-  {
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    imageUrl: image2,
-  },
-  {
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: image1,
-  },
-  {
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    imageUrl: image2,
-  }
-];
+import { Link } from 'react-router-dom';
+import projects from './projectData';
 
 const Projects = () => {
   // Get the current location using react-router-dom's useLocation hook
@@ -67,24 +25,28 @@ const Projects = () => {
         </div>
         {/* Display the first project separately */}
         <div className="project project-1">
-          <div className="project-card">
-            <img src={projects[0].imageUrl} alt={projects[0].title} className="project-image" />
-            <div className="project-content">
-              <h2 className="project-title">{projects[0].title}</h2>
-              <p className="project-description">{projects[0].description}</p>
+          <Link to={projects[0].linkPath} className="project-link">
+            <div className="project-card">
+              <img src={projects[0].imageUrl} alt={projects[0].title} className="project-image" />
+              <div className="project-content">
+                <h2 className="project-title">{projects[0].title}</h2>
+                <div className="project-description">{projects[0].description}</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* Map through the rest of the projects */}
         {projects.slice(1).map((project, index) => (
           <div key={index} className={`project ${index % 2 === 0 ? 'projectL' : 'projectR'}`}>
-            <div key={index} className="project-card">
-              <img src={project.imageUrl} alt={project.title} className="project-image" />
-              <div className="project-content">
-                <h2 className="project-title">{project.title}</h2>
-                <p className="project-description">{project.description}</p>
+            <Link to={project.linkPath} className="project-link">
+              <div key={index} className="project-card">
+                <img src={project.imageUrl} alt={project.title} className="project-image" />
+                <div className="project-content">
+                  <h2 className="project-title">{project.title}</h2>
+                  <div className="project-description">{project.description}</div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
