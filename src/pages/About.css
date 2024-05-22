@@ -1,0 +1,66 @@
+/* About.css */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+/*  padding: var(--spacing-lg);*/
+  gap: var(--spacing-lg);
+  margin-top: 60px;
+/*  height: 90vh;*/
+}
+
+.about-content {
+  flex: 1; /* Takes up equal space as the image column */
+  min-width: 300px; /* Ensures a minimum width */
+  padding-right: 40px;
+}
+
+.about-image {
+  flex: 1; /* Takes up equal space as the text column */
+  min-width: 300px; /* Ensures a minimum width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure content overflows are hidden */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 10px; /* Optional styling */
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.custom-button {
+  display: inline-block;
+  margin-top: 20px;
+  min-width: 200px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: var(--color-primary-dark);
+}

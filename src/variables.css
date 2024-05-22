@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* Detail: https://fonts.google.com/specimen/Nunito+Sans?preview.layout=grid&query=nunito */
+
+/* Your existing CSS */
+
+/* Colors */
+:root {
+  --color-primary: #4F0294; /* Ay purple */
+  --color-primary-dark: #8E61A6; /* dark Ay purple */
+  --color-secondary: #07C9FF; /* Ay blue */
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffffff;
+  --color-gray: #eeeeee;
+  --color-text: #333333;
+}
+
+/* Font Sizes */
+:root {
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+}
+
+/* Font Families */
+:root {
+  --font-family-base: "Nunito Sans", sans-serif;
+  --font-family-heading: "Nunito Sans", sans-serif;
+}
+
+/* Spacing (Margins/Paddings) */
+:root {
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+}
