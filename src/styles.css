@@ -1,6 +1,9 @@
 /* styles.css */
 
-/* General Styles */
+* {
+  cursor: none; /* hide the default cursor */
+}
+
 body {
   font-family: var(--font-family-base); 
   font-weight: 400; /* 200-400 */
