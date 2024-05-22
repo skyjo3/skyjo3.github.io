@@ -7,7 +7,7 @@ import More from './pages/More';
 import Header from './Header';
 
 const AppRouter = () => (
-  <Router>
+  <Router basename="/website-new">
     <Header />
     <Routes>
       <Route path="/" element={<About />} />
