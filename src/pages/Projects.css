@@ -21,7 +21,7 @@ h5 {
   border-bottom: 0.5px solid black;
 }
 
-p {
+.projects-container p {
   width: 70%;
   margin-bottom: var(--spacing-md);
   padding-left: 6px;
@@ -92,6 +92,11 @@ p {
 }
 
 /* each project card */
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
 
 .project-card {
   background-color: #fff;

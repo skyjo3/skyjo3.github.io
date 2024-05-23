@@ -21,7 +21,8 @@ const Projects = () => {
       <div className="projects-container">
         <div className="project intro">
           <h5>↳  8 FEATURED PROJECTS</h5>
-          <p>We specialize in a wide range of design development, including UI/UX, Graphic Design, 2D/3D Illustration & Animation, Logo & Brand Identity Design, Motion Graphics and more.</p>
+          <p>My works surrounds <b>human-photo interaction</b>, <b>UX design</b>, and <b>domestic artifacts</b>.</p>
+          <p>Recently, I have started to incorporate <b>generative AI</b> to foster more <b>enriched and meaningful interactions</b> with personal data.</p>
         </div>
         {/* Display the first project separately */}
         <div className="project project-1">
