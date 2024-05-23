@@ -26,5 +26,5 @@
 .custom-cursor-hover {
   width: 40px;
   height: 40px;
-  background-color: rgba(200, 0, 0, 0.2);
+  background-color: rgba(var(--color-primary-rgb), 0.2);
 }

@@ -1,0 +1,7 @@
+/* PhotoClockDetail.css */
+
+.project-container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}

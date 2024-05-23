@@ -6,6 +6,7 @@
 /* Colors */
 :root {
   --color-primary: #4F0294; /* Ay purple */
+  --color-primary-rgb: 79, 2, 148; /* Ay purple in RGB */
   --color-primary-dark: #8E61A6; /* dark Ay purple */
   --color-secondary: #07C9FF; /* Ay blue */
   --color-success: #28a745;
