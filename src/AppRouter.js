@@ -7,7 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import More from './pages/More';
 
-import PhotoClockDetail from './pages/projects/PhotoClockDetail'
+import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
 
 // <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
       // <Route path="/projects/crescendo" element={<CrescendoDetail />} />

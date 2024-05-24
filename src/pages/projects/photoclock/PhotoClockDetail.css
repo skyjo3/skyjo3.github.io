@@ -29,7 +29,7 @@
 }
 
 .sidebar ul li a:hover {
-  background-color: var(--color-gray);
+  background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 
 .content {
@@ -40,6 +40,28 @@
 
 .content section {
   margin-bottom: 50px;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.overview-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.content h6 {
+  margin-bottom: 6px;
 }
 
 .content h2 {
