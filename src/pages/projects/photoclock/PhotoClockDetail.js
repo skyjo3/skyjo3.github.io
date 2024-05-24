@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import './PhotoClockDetail.css';
 
 import imageProject from './img/project.jpg'
+import imageContext from './img/context.jpg'
+import imagePlan from './img/plan.png'
+import imageFocusGroup from './img/M123-template_M1.png'
+import imageMiro from './img/M123-template_M2.png'
 
 const PhotoClockDetail = () => {
 
@@ -67,28 +71,83 @@ const PhotoClockDetail = () => {
                 </div>
                 <div>
                   <h2>Team</h2>
-                  <h6>Lead, Research, Design</h6>Amy Yo Sue Chen
-                  <h6>Supervisor, Design</h6>William Odom
-                  <h6>Co-supervisor</h6>Carman Neustaedter
-                  <h6>Data Analysis Supprot</h6>Sol Kang
+                  <h6>Project Lead & Design Researcher</h6>Amy Yo Sue Chen
+                  <h6>Design & Writing Supervisor</h6>William Odom
+                  <h6>Writing Supervisor</h6>Carman Neustaedter
+                  <h6>Data Analysis Assistant</h6>Sol Kang
                 </div>
               </div>
               <div>
-                <h5>IMPACT / CONTRIBUTION</h5>
+                <h2>Contribution / Impact</h2>
                 <ul>
-                  <li>This research changed the design strategy to use 'clock time' as a design material to reorganize photos.</li>
-                  <li>This research created an innovative photo viewing experience that is more naturally triggered.</li>
+                  <li>This project discovered a strategy to use 'clock time' as a design material to reorganize photos.</li>
+                  <li>We created an innovative way to view photos and to trigger people's memories more naturally.</li>
                   <li>3 research publications in top-tier HCI conferences (ACM CHI + DIS)</li>
                 </ul>
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-                <h2>Research</h2>
-                <p>It's hard to put together a meaningful UI prototype without making real requests to an API. By making real requests, you'll uncover problems with application flow, timing, and API design early, improving the quality of both the user experience and API. With Mockaroo, you can design your own mock APIs, You control the URLs, responses, and error conditions. Paralellize UI and API development and start delivering better applications faster today!</p>
+                <img src={imageContext} alt='PhotoClock' className="context-image" />
+                <h2>Research Context</h2>
+                <div className="research-container">
+                  <div>
+                    <h3>Problem Statement</h3>
+                    <p>The adoption of smartphones and low-cost cloud storage over the past decade has catalyzed a hyper-accelerated growth of personal photo archives. <b>As digital photos grow</b>, it becomes more <b>difficult for people to notice and engage</b> with their archive as an everyday resource.</p>
+                  </div>
+                  <div>
+                    <h3>Research Goal</h3>
+                    <p>We aim to explore the <b>factors and methods</b> that <b>evoke feelings of nostalgia, fulfillment, and significance</b> in individuals when they engage with photos. By gaining insights into the user needs, our objective is to introduce <b>innovative photo viewing approaches</b>.</p>
+                  </div>
+                </div>
+                <div>
+                  <h3>Question + Plan</h3>
+                  <p><i>How to make digital photo more present, dynamic, and interactive to support more situated and reflective photo viewing experiences?</i></p>
+                  <p>To answer this question, we built a qualitative research plan to understand user needs and explore potential design materials. Based on the research results, we kick started the PhotoClock design process.</p>
+                </div>
+                <div className="skills-container">
+                  <div>
+                    <h4>research methods</h4>
+                    <ul>
+                      <li>Focus group</li>
+                      <li>Field study</li>
+                      <li>Interview</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>design tools</h4>
+                    <ul>
+                      <li>Miro brainstorming</li>
+                      <li>Figma prototyping</li>
+                      <li>Adobe Suite</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>documentation</h4>
+                    <ul>
+                      <li>Google Suite</li>
+                      <li>Otter.ai</li>
+                      <li>Microsoft Word / LaTeX</li>
+                    </ul>
+                  </div>
+                </div>
+                <img src={imagePlan} alt='PhotoClock' className="plan-image" />
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
+                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" />
                 <h2>Empathize</h2>
-                <p>If you're developing an application, you'll want to make sure you're testing it under conditions that closely simulate a production environment. In production, you'll have an army of users banging away at your app and filling your database with data, which puts stress on your code. If you're hand-entering data into a test environment one record at a time using the UI, you're never going to build up the volume and variety of data that your app will accumulate in a few days in production. Worse, the data you enter will be biased towards your own usage patterns and won't match real-world usage, leaving important bugs undiscovered.</p>
+                <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
+                <p>The results show that: </p>
+                <ul>
+                  <li>The conventional chronological photo viewing with <b>gallery view</b> does not present <b>memories associated with the present self</b>, so this form of viewing does not trigger memories deeply.</li>
+                  <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
+                </ul>
+                <div className="miro-container">
+                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" /></div>
+                  <div>
+                    <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
+                    <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
+                  </div>
+                </div>
             </section>
             <section id="design" ref={sectionRefs.current.design}>
                 <h2>Design</h2>
@@ -101,6 +160,10 @@ const PhotoClockDetail = () => {
             <section id="takeaways" ref={sectionRefs.current.takeaways}>
                 <h2>Takeaways</h2>
                 <p>Concluding remarks and outcomes of the PhotoClock project...</p>
+                <div>
+                  <h3>How Research Changed the Design Direction</h3>
+                  <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
+                </div>
             </section>
         </div>
       </div>

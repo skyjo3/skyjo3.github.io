@@ -39,7 +39,7 @@
 }
 
 .content section {
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 
 .active {
@@ -58,6 +58,55 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
+}
+
+.context-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.research-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.plan-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.focus-group-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.miro-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.miro-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
 }
 
 .content h6 {
