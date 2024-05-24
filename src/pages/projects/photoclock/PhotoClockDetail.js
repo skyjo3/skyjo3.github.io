@@ -88,7 +88,7 @@ const PhotoClockDetail = () => {
             </section>
             <section id="research" ref={sectionRefs.current.research}>
                 <img src={imageContext} alt='PhotoClock' className="context-image" />
-                <h2>Research Context</h2>
+                <h2>1 - Research Context</h2>
                 <div className="research-container">
                   <div>
                     <h3>Problem Statement</h3>
@@ -134,7 +134,7 @@ const PhotoClockDetail = () => {
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
                 <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" />
-                <h2>Empathize</h2>
+                <h2>2 - Empathize</h2>
                 <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
                 <p>The results show that: </p>
                 <ul>
@@ -150,15 +150,15 @@ const PhotoClockDetail = () => {
                 </div>
             </section>
             <section id="design" ref={sectionRefs.current.design}>
-                <h2>Design</h2>
+                <h2>3 - Design</h2>
                 <p>When your test database is filled with realistic looking data, you'll be more engaged as a tester. When you demonstrate new features to others, they'll understand them faster. Real data is varied and will contain characters that may not play nice with your code, such as apostrophes, or unicode characters from other languages. Testing with realistic data will make your app more robust because you'll catch errors that are likely to occur in production before release day.</p>
             </section>
             <section id="test" ref={sectionRefs.current.test}>
-                <h2>Test</h2>
+                <h2>4 - Test</h2>
                 <p>There are plenty of great data mocking libraries available for almost every language and platform. But not everyone is a programmer or has time to learn a new framework. Mockaroo allows you to quickly and easily to download large amounts of randomly generated test data based on your own specs which you can then load directly into your test environment using SQL or CSV formats. No programming is required.</p>
             </section>
             <section id="takeaways" ref={sectionRefs.current.takeaways}>
-                <h2>Takeaways</h2>
+                <h2>5 - Takeaways</h2>
                 <p>Concluding remarks and outcomes of the PhotoClock project...</p>
                 <div>
                   <h3>How Research Changed the Design Direction</h3>
