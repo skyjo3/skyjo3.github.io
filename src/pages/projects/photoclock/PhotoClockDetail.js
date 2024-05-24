@@ -2,6 +2,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './PhotoClockDetail.css';
 
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
 import imagePlan from './img/plan.png'
@@ -10,6 +13,7 @@ import imageMiro from './img/M123-template_M2.png'
 
 const PhotoClockDetail = () => {
 
+  /* Sidebar Navigation */
   const [activeSection, setActiveSection] = useState('');
   const sectionRefs = useRef({
     overview: useRef(null),
@@ -21,32 +25,52 @@ const PhotoClockDetail = () => {
   });
 
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    },
-    { rootMargin: '-20% 0px', threshold: 0.1 }  // Trigger when 10% of the element is visible and expand the top margin
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-20% 0px', threshold: 0.1 }  // Trigger when 10% of the element is visible and expand the top margin
+    );
 
-  // Observe each section
-  Object.values(sectionRefs.current).forEach(ref => {
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-  });
-
-  return () => {
     Object.values(sectionRefs.current).forEach(ref => {
       if (ref.current) {
-        observer.unobserve(ref.current);
+        observer.observe(ref.current);
       }
     });
+
+    return () => {
+      Object.values(sectionRefs.current).forEach(ref => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
+  /* Lightbox */
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('lightbox-open');
+    } else {
+      document.body.classList.remove('lightbox-open');
+    }
+  }, [isOpen]);
+  
+  const handleClickImage = (index) => {
+    if (!isOpen) {  // Ensure modal isn't already open before setting state
+      setPhotoIndex(index);
+      setIsOpen(true);
+    }
   };
-}, []);
 
   return (
     <div className="container">
@@ -62,7 +86,7 @@ const PhotoClockDetail = () => {
             </ul>
         </div>
         <div className="content">
-            <img src={imageProject} alt='PhotoClock' className="project-image" />
+            <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-image" onClick={() => handleClickImage(0)} />
             <section id="overview" ref={sectionRefs.current.overview}>
               <div className="overview-container">
                 <div>
@@ -87,7 +111,7 @@ const PhotoClockDetail = () => {
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-                <img src={imageContext} alt='PhotoClock' className="context-image" />
+                <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => handleClickImage(1)} />
                 <h2>1 - Research Context</h2>
                 <div className="research-container">
                   <div>
@@ -130,10 +154,10 @@ const PhotoClockDetail = () => {
                     </ul>
                   </div>
                 </div>
-                <img src={imagePlan} alt='PhotoClock' className="plan-image" />
+                <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => handleClickImage(2)} />
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
-                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" />
+                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => handleClickImage(3)} />
                 <h2>2 - Empathize</h2>
                 <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
                 <p>The results show that: </p>
@@ -142,7 +166,7 @@ const PhotoClockDetail = () => {
                   <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
                 </ul>
                 <div className="miro-container">
-                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" /></div>
+                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => handleClickImage(4)} /></div>
                   <div>
                     <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
                     <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
@@ -165,6 +189,22 @@ const PhotoClockDetail = () => {
                   <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                 </div>
             </section>
+
+            {/* Lightbox modal */}
+            {isOpen && (
+              <Lightbox
+                mainSrc={images[photoIndex]}
+                nextSrc={images[(photoIndex + 1) % images.length]}
+                prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                onCloseRequest={() => setIsOpen(false)}
+                onMovePrevRequest={() =>
+                  setPhotoIndex((photoIndex + images.length - 1) % images.length)
+                }
+                onMoveNextRequest={() =>
+                  setPhotoIndex((photoIndex + 1) % images.length)
+                }
+              />
+            )}
         </div>
       </div>
     </div>
