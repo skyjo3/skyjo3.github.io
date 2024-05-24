@@ -1,15 +1,16 @@
 // PhotoClockDetail.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './PhotoClockDetail.css';
 
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import Lightbox from '../../../components/Lightbox';
 
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
 import imagePlan from './img/plan.png'
 import imageFocusGroup from './img/M123-template_M1.png'
 import imageMiro from './img/M123-template_M2.png'
+
+const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
 
 const PhotoClockDetail = () => {
 
@@ -52,24 +53,16 @@ const PhotoClockDetail = () => {
   }, []);
 
   /* Lightbox */
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
+  const openLightbox = (image) => {
+    setSelectedImage(image);
+    setIsOpen(true);
+  };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('lightbox-open');
-    } else {
-      document.body.classList.remove('lightbox-open');
-    }
-  }, [isOpen]);
-  
-  const handleClickImage = (index) => {
-    if (!isOpen) {  // Ensure modal isn't already open before setting state
-      setPhotoIndex(index);
-      setIsOpen(true);
-    }
+  const closeLightbox = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -86,7 +79,7 @@ const PhotoClockDetail = () => {
             </ul>
         </div>
         <div className="content">
-            <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-image" onClick={() => handleClickImage(0)} />
+            <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-image" onClick={() => openLightbox(imageProject)} />
             <section id="overview" ref={sectionRefs.current.overview}>
               <div className="overview-container">
                 <div>
@@ -111,7 +104,7 @@ const PhotoClockDetail = () => {
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-                <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => handleClickImage(1)} />
+                <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
                 <h2>1 - Research Context</h2>
                 <div className="research-container">
                   <div>
@@ -154,10 +147,10 @@ const PhotoClockDetail = () => {
                     </ul>
                   </div>
                 </div>
-                <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => handleClickImage(2)} />
+                <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
-                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => handleClickImage(3)} />
+                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
                 <h2>2 - Empathize</h2>
                 <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
                 <p>The results show that: </p>
@@ -166,7 +159,7 @@ const PhotoClockDetail = () => {
                   <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
                 </ul>
                 <div className="miro-container">
-                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => handleClickImage(4)} /></div>
+                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
                   <div>
                     <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
                     <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
@@ -191,20 +184,12 @@ const PhotoClockDetail = () => {
             </section>
 
             {/* Lightbox modal */}
-            {isOpen && (
-              <Lightbox
-                mainSrc={images[photoIndex]}
-                nextSrc={images[(photoIndex + 1) % images.length]}
-                prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-                onCloseRequest={() => setIsOpen(false)}
-                onMovePrevRequest={() =>
-                  setPhotoIndex((photoIndex + images.length - 1) % images.length)
-                }
-                onMoveNextRequest={() =>
-                  setPhotoIndex((photoIndex + 1) % images.length)
-                }
-              />
-            )}
+            <Lightbox
+              src={selectedImage}
+              alt="Enlarged View"
+              isOpen={isOpen}
+              onClose={closeLightbox}
+            />
         </div>
       </div>
     </div>
