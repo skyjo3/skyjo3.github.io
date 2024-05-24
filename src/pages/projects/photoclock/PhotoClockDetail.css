@@ -29,7 +29,7 @@
 }
 
 .sidebar ul li a:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.1);
+  background-color: rgba(var(--color-secondary-rgb), 0.1);
 }
 
 .content {
@@ -44,7 +44,7 @@
 
 .active {
   font-weight: bold;
-  background-color: rgba(var(--color-secondary-rgb), 0.1);
+  background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 
 .project-image {
