@@ -29,7 +29,7 @@ const projectsData = [
     description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
     imageUrl: image3,
     linkPath: '/projects/crescendo',
-    tags: ['photos', 'mobile', 'field study', 'all'],
+    tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
   },
   {
     title: 'Womany',

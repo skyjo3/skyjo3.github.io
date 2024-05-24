@@ -1,7 +1,48 @@
 /* PhotoClockDetail.css */
 
 .project-container {
-  max-width: var(--container-width);
+  max-width: var(--container-width); /* Define this variable in your root if not already defined */
   margin-left: auto;
   margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* Enables scrolling within the sidebar */
+  padding: 20px;
+  border-right: 0.5px solid var(--color-gray); /* Assumes you have a color variable named --color-gray */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--color-gray);
+}
+
+.content {
+  margin-left: 250px;
+  padding: 10px 40px;
+  overflow: auto; /* Scrollable content area */
+}
+
+.content section {
+  margin-bottom: 50px;
+}
+
+.content h2 {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
