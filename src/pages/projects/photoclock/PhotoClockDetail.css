@@ -88,7 +88,8 @@
   margin-bottom: 50px;
 }
 
-.focus-group-image {
+.focus-group-image,
+.field-study-image {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -128,4 +129,8 @@
 .content h2 {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
+}
+
+.content h3 {
+  margin-top: 60px;
 }

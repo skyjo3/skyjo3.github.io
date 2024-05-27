@@ -10,6 +10,7 @@ import imageContext from './img/context.jpg'
 import imagePlan from './img/plan.png'
 import imageFocusGroup from './img/M123-template_M1.png'
 import imageMiro from './img/M123-template_M2.png'
+import imageFieldStudy from './img/M123-template_M3.png'
 
 import imageDesign1 from './img/Fig2.png'
 import imageDesign2 from './img/Fig3a.png'
@@ -82,18 +83,23 @@ const PhotoClockDetail = () => {
   const designRef = useRef(null);
 
   useEffect(() => {
-    // Create script element
-    const script = document.createElement('script');
-    script.src = "https://static.elfsight.com/platform/platform.js";
-    script.async = true;
-    script.defer = true;
+    // Create and append the first script
+    const script1 = document.createElement('script');
+    script1.src = "https://static.elfsight.com/platform/platform.js";
+    script1.async = true;
+    script1.defer = true;
+    document.body.appendChild(script1);
 
-    // Append script to the body or specific component
-    document.body.appendChild(script);
+    // Create and append the second script
+    const script2 = document.createElement('script');
+    script2.src = 'https://cdn.commoninja.com/sdk/latest/commonninja.js';
+    script2.async = true;
+    script2.defer = true;
+    document.body.appendChild(script2);
 
     return () => {
-      // Cleanup the script when the component unmounts
-      document.body.removeChild(script);
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
     };
   }, []);
 
@@ -205,16 +211,22 @@ const PhotoClockDetail = () => {
                 <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
             <section id="test" ref={sectionRefs.current.test}>
-                <h2>4 - Test</h2>
-                <p>There are plenty of great data mocking libraries available for almost every language and platform. But not everyone is a programmer or has time to learn a new framework. Mockaroo allows you to quickly and easily to download large amounts of randomly generated test data based on your own specs which you can then load directly into your test environment using SQL or CSV formats. No programming is required.</p>
+                <h2>4 - Online Field Study</h2>
+                <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
+                <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
+                <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
+                <p>Hear the AI-distorted voices from our field study's participants:</p>
+                <div class="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy></div>
             </section>
             <section id="takeaways" ref={sectionRefs.current.takeaways}>
-                <h2>5 - Takeaways</h2>
-                <p>Concluding remarks and outcomes of the PhotoClock project...</p>
+                <h2>5 - Takeaways – Less, again, is more.</h2>
+                <p>Findings show that PhotoClock engaged people in exploring their photo memories with <b>a natural, dynamic 'flow'</b>. This kind of flow-based interaction design strengthened people's connection with their precious past. Our findings also reveal that providing <b>minimal controls</b> in digital photo viewing system can better support people to recall memories and reflect on life history <b>more consciously and naturally</b>.</p>
                 <div>
-                  <h3>How Research Changed the Design Direction</h3>
+                  <h3>REFLECTION: How Research Changed the Design Direction</h3>
                   <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                 </div>
+                <p>Learn more participants' stories and experiences here:</p>
+                <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
             </section>
 
             {/* Lightbox modal */}
