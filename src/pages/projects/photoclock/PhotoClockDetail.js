@@ -11,14 +11,18 @@ import imagePlan from './img/plan.png'
 import imageFocusGroup from './img/M123-template_M1.png'
 import imageMiro from './img/M123-template_M2.png'
 
+import imageDesign1 from './img/Fig2.png'
+import imageDesign2 from './img/Fig3a.png'
+import imageDesign3 from './img/Fig3b.png'
+import imageDesign4 from './img/Fig1b.jpg'
+
 const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
 
-const images2 = [
-  { src: imageProject, alt: 'Image 1 Description' },
-  { src: imageContext, alt: 'Image 2 Description' },
-  { src: imagePlan, alt: 'Image 2 Description' },
-  { src: imageFocusGroup, alt: 'Image 2 Description' },
-  { src: imageMiro, alt: 'Image 2 Description' },
+const imagesProposedDesign = [
+  { src: imageDesign1, alt: 'PhotoClock Design' },
+  { src: imageDesign2, alt: 'PhotoClock Design' },
+  { src: imageDesign3, alt: 'PhotoClock Design' },
+  { src: imageDesign4, alt: 'PhotoClock Use Scenario' },
 ];
 
 const PhotoClockDetail = () => {
@@ -197,8 +201,7 @@ const PhotoClockDetail = () => {
             <section id="design" ref={sectionRefs.current.design}>
                 <h2>3 - Proposed Design</h2>
                 <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
-                <CustomSwiper images={images2} />
-                <div className="elfsight-app-6e69fc6f-a605-454b-880e-4efc23182ca9"></div>
+                <CustomSwiper images={imagesProposedDesign} />
             </section>
             <section id="test" ref={sectionRefs.current.test}>
                 <h2>4 - Test</h2>
