@@ -202,6 +202,7 @@ const PhotoClockDetail = () => {
                 <h2>3 - Proposed Design</h2>
                 <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
                 <CustomSwiper images={imagesProposedDesign} />
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
             <section id="test" ref={sectionRefs.current.test}>
                 <h2>4 - Test</h2>
