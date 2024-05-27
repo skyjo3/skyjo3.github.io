@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './CustomSwiper.css';
+import Lightbox from './Lightbox';
 
 const CustomSwiper = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const nextSlide = () => {
     if (!transitioning) {
@@ -35,9 +37,17 @@ const CustomSwiper = ({ images }) => {
     }
   };
 
+  const openLightbox = () => {
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
   return (
     <div className="custom-swiper">
-      <div className="slider">
+      <div className="slider" onClick={openLightbox}>
         {images.map((image, index) => (
           <div
             key={index}
@@ -67,6 +77,12 @@ const CustomSwiper = ({ images }) => {
       <button className="next" onClick={nextSlide} disabled={transitioning}>
         &#10095;
       </button>
+      <Lightbox
+        src={images[currentSlide].src}
+        alt={`Slide ${currentSlide + 1}`}
+        isOpen={lightboxOpen}
+        onClose={closeLightbox}
+      />
     </div>
   );
 };

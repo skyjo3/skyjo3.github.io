@@ -10,7 +10,7 @@
 /* Slider styles */
 .slider {
   display: flex;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   height: 100%;
 }
 
@@ -19,8 +19,8 @@
   height: 640px;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  opacity: 1.0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
   border-radius: 10px; /* Rounded corners for slides */
 }
 
@@ -45,7 +45,7 @@
 .thumbnail {
   cursor: pointer;
   margin: 0 5px; /* Adjust spacing between thumbnails */
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   width: 100px; /* Set fixed width for thumbnails */
   height: 60px; /* Set fixed height for thumbnails */
   border-radius: 5px; /* Rounded corners for thumbnails */
@@ -71,7 +71,7 @@
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 30px);
   transform: translateY(-50%);
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -80,7 +80,7 @@
   border: none;
   cursor: pointer;
   z-index: 1;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.1s ease;
 }
 
 .prev:hover,
