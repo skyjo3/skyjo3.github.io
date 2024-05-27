@@ -1,6 +1,6 @@
 // PhotoClockDetail.js
 import React, { useState, useEffect, useRef } from 'react';
-import './PhotoClockDetail.css';
+import styles from './PhotoClockDetail.css';
 
 import Lightbox from '../../../components/Lightbox';
 import CustomSwiper from '../../../components/CustomSwiper';
@@ -117,125 +117,127 @@ const PhotoClockDetail = () => {
             </ul>
         </div>
         <div className="content">
-            <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-image" onClick={() => openLightbox(imageProject)} />
-            <section id="overview" ref={sectionRefs.current.overview}>
-              <div className="overview-container">
-                <div>
-                  <h2>Overview</h2>
-                  <p>PhotoClock is an iOS mobile app that enables people to revisit their photos previously taken at the same ‘clock time’ of the present moment. Following the ongoing flow of time, users perceive different memories in a dynamic manner. This project specifically provoke a question of when people would like their memories to re-emerge and how memories could be interconnected to enrich personal reflection.</p>
-                </div>
-                <div>
-                  <h2>Team</h2>
-                  <h6>Project Lead & Design Researcher</h6>Amy Yo Sue Chen
-                  <h6>Design & Writing Supervisor</h6>William Odom
-                  <h6>Writing Supervisor</h6>Carman Neustaedter
-                  <h6>Data Analysis Assistant</h6>Sol Kang
-                </div>
-              </div>
-              <div>
-                <h2>Contribution / Impact</h2>
-                <ul>
-                  <li>This project discovered a strategy to use 'clock time' as a design material to reorganize photos.</li>
-                  <li>We created an innovative way to view photos and to trigger people's memories more naturally.</li>
-                  <li>3 research publications in top-tier HCI conferences (ACM CHI + DIS)</li>
-                </ul>
-              </div>
-            </section>
-            <section id="research" ref={sectionRefs.current.research}>
-                <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
-                <h2>1 - Research Context</h2>
-                <div className="research-container">
+          <div className="photoclock-container">
+              <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-content-image" onClick={() => openLightbox(imageProject)} />
+              <section id="overview" ref={sectionRefs.current.overview}>
+                <div className="overview-container">
                   <div>
-                    <h3>Problem Statement</h3>
-                    <p>The adoption of smartphones and low-cost cloud storage over the past decade has catalyzed a hyper-accelerated growth of personal photo archives. <b>As digital photos grow</b>, it becomes more <b>difficult for people to notice and engage</b> with their archive as an everyday resource.</p>
+                    <h2>Overview</h2>
+                    <p>PhotoClock is an iOS mobile app that enables people to revisit their photos previously taken at the same ‘clock time’ of the present moment. Following the ongoing flow of time, users perceive different memories in a dynamic manner. This project specifically provoke a question of when people would like their memories to re-emerge and how memories could be interconnected to enrich personal reflection.</p>
                   </div>
                   <div>
-                    <h3>Research Goal</h3>
-                    <p>We aim to explore the <b>factors and methods</b> that <b>evoke feelings of nostalgia, fulfillment, and significance</b> in individuals when they engage with photos. By gaining insights into the user needs, our objective is to introduce <b>innovative photo viewing approaches</b>.</p>
+                    <h2>Team</h2>
+                    <h6>Project Lead & Design Researcher</h6>Amy Yo Sue Chen
+                    <h6>Design & Writing Supervisor</h6>William Odom
+                    <h6>Writing Supervisor</h6>Carman Neustaedter
+                    <h6>Data Analysis Assistant</h6>Sol Kang
                   </div>
                 </div>
                 <div>
-                  <h3>Question + Plan</h3>
-                  <p><i>How to make digital photo more present, dynamic, and interactive to support more situated and reflective photo viewing experiences?</i></p>
-                  <p>To answer this question, we built a qualitative research plan to understand user needs and explore potential design materials. Based on the research results, we kick started the PhotoClock design process.</p>
+                  <h2>Contribution / Impact</h2>
+                  <ul>
+                    <li>This project discovered a strategy to use 'clock time' as a design material to reorganize photos.</li>
+                    <li>We created an innovative way to view photos and to trigger people's memories more naturally.</li>
+                    <li>3 research publications in top-tier HCI conferences (ACM CHI + DIS)</li>
+                  </ul>
                 </div>
-                <div className="skills-container">
-                  <div>
-                    <h4>research methods</h4>
-                    <ul>
-                      <li>Focus group</li>
-                      <li>Field study</li>
-                      <li>Interview</li>
-                    </ul>
+              </section>
+              <section id="research" ref={sectionRefs.current.research}>
+                  <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
+                  <h2>1 - Research Context</h2>
+                  <div className="research-container">
+                    <div>
+                      <h3>Problem Statement</h3>
+                      <p>The adoption of smartphones and low-cost cloud storage over the past decade has catalyzed a hyper-accelerated growth of personal photo archives. <b>As digital photos grow</b>, it becomes more <b>difficult for people to notice and engage</b> with their archive as an everyday resource.</p>
+                    </div>
+                    <div>
+                      <h3>Research Goal</h3>
+                      <p>We aim to explore the <b>factors and methods</b> that <b>evoke feelings of nostalgia, fulfillment, and significance</b> in individuals when they engage with photos. By gaining insights into the user needs, our objective is to introduce <b>innovative photo viewing approaches</b>.</p>
+                    </div>
                   </div>
                   <div>
-                    <h4>design tools</h4>
-                    <ul>
-                      <li>Miro brainstorming</li>
-                      <li>Figma prototyping</li>
-                      <li>Adobe Suite</li>
-                    </ul>
+                    <h3>Question + Plan</h3>
+                    <p><i>How to make digital photo more present, dynamic, and interactive to support more situated and reflective photo viewing experiences?</i></p>
+                    <p>To answer this question, we built a qualitative research plan to understand user needs and explore potential design materials. Based on the research results, we kick started the PhotoClock design process.</p>
                   </div>
+                  <div className="skills-container">
+                    <div>
+                      <h4>research methods</h4>
+                      <ul>
+                        <li>Focus group</li>
+                        <li>Field study</li>
+                        <li>Interview</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4>design tools</h4>
+                      <ul>
+                        <li>Miro brainstorming</li>
+                        <li>Figma prototyping</li>
+                        <li>Adobe Suite</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4>documentation</h4>
+                      <ul>
+                        <li>Google Suite</li>
+                        <li>Otter.ai</li>
+                        <li>Microsoft Word / LaTeX</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
+              </section>
+              <section id="empathize" ref={sectionRefs.current.empathize}>
+                  <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
+                  <h2>2 - Empathize</h2>
+                  <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
+                  <p>The results show that: </p>
+                  <ul>
+                    <li>The conventional chronological photo viewing with <b>gallery view</b> does not present <b>memories associated with the present self</b>, so this form of viewing does not trigger memories deeply.</li>
+                    <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
+                  </ul>
+                  <div className="miro-container">
+                    <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
+                    <div>
+                      <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
+                      <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
+                    </div>
+                  </div>
+              </section>
+              <section id="design" ref={sectionRefs.current.design}>
+                  <h2>3 - Proposed Design</h2>
+                  <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
+                  <CustomSwiper images={imagesProposedDesign} />
+                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </section>
+              <section id="test" ref={sectionRefs.current.test}>
+                  <h2>4 - Online Field Study</h2>
+                  <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
+                  <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
+                  <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
+                  <p>Hear the AI-distorted voices from our field study's participants:</p>
+                  <div class="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy></div>
+              </section>
+              <section id="takeaways" ref={sectionRefs.current.takeaways}>
+                  <h2>5 - Takeaways – Less, again, is more.</h2>
+                  <p>Findings show that PhotoClock engaged people in exploring their photo memories with <b>a natural, dynamic 'flow'</b>. This kind of flow-based interaction design strengthened people's connection with their precious past. Our findings also reveal that providing <b>minimal controls</b> in digital photo viewing system can better support people to recall memories and reflect on life history <b>more consciously and naturally</b>.</p>
                   <div>
-                    <h4>documentation</h4>
-                    <ul>
-                      <li>Google Suite</li>
-                      <li>Otter.ai</li>
-                      <li>Microsoft Word / LaTeX</li>
-                    </ul>
+                    <h3>REFLECTION: How Research Changed the Design Direction</h3>
+                    <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                   </div>
-                </div>
-                <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
-            </section>
-            <section id="empathize" ref={sectionRefs.current.empathize}>
-                <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
-                <h2>2 - Empathize</h2>
-                <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
-                <p>The results show that: </p>
-                <ul>
-                  <li>The conventional chronological photo viewing with <b>gallery view</b> does not present <b>memories associated with the present self</b>, so this form of viewing does not trigger memories deeply.</li>
-                  <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
-                </ul>
-                <div className="miro-container">
-                  <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
-                  <div>
-                    <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
-                    <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
-                  </div>
-                </div>
-            </section>
-            <section id="design" ref={sectionRefs.current.design}>
-                <h2>3 - Proposed Design</h2>
-                <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
-                <CustomSwiper images={imagesProposedDesign} />
-                <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
-            <section id="test" ref={sectionRefs.current.test}>
-                <h2>4 - Online Field Study</h2>
-                <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
-                <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
-                <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
-                <p>Hear the AI-distorted voices from our field study's participants:</p>
-                <div class="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy></div>
-            </section>
-            <section id="takeaways" ref={sectionRefs.current.takeaways}>
-                <h2>5 - Takeaways – Less, again, is more.</h2>
-                <p>Findings show that PhotoClock engaged people in exploring their photo memories with <b>a natural, dynamic 'flow'</b>. This kind of flow-based interaction design strengthened people's connection with their precious past. Our findings also reveal that providing <b>minimal controls</b> in digital photo viewing system can better support people to recall memories and reflect on life history <b>more consciously and naturally</b>.</p>
-                <div>
-                  <h3>REFLECTION: How Research Changed the Design Direction</h3>
-                  <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
-                </div>
-                <p>Learn more participants' stories and experiences here:</p>
-                <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
-            </section>
+                  <p>Learn more participants' stories and experiences here:</p>
+                  <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
+              </section>
 
-            {/* Lightbox modal */}
-            <Lightbox
-              src={selectedImage}
-              alt="Enlarged View"
-              isOpen={isOpen}
-              onClose={closeLightbox}
-            />
+              {/* Lightbox modal */}
+              <Lightbox
+                src={selectedImage}
+                alt="Enlarged View"
+                isOpen={isOpen}
+                onClose={closeLightbox}
+              />
+          </div>
         </div>
       </div>
     </div>

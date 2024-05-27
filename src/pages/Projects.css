@@ -4,6 +4,7 @@
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 200px;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -11,7 +12,7 @@
   gap: 50px;
 }
 
-h5 {
+.projects-container h5 {
   width: 70%;
   padding-left: 6px;
   padding-bottom: 20px;
