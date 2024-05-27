@@ -109,6 +109,18 @@
   margin-top: 20px;
 }
 
+.zoom-div {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 200px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomed {
+  transform: scale(1.5);
+}
+
 .content h6 {
   margin-bottom: 6px;
 }

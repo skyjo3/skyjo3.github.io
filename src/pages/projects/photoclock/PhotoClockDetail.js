@@ -1,8 +1,9 @@
 // PhotoClockDetail.js
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './PhotoClockDetail.css';
 
 import Lightbox from '../../../components/Lightbox';
+import CustomSwiper from '../../../components/CustomSwiper';
 
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
@@ -11,6 +12,14 @@ import imageFocusGroup from './img/M123-template_M1.png'
 import imageMiro from './img/M123-template_M2.png'
 
 const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
+
+const images2 = [
+  { src: imageProject, alt: 'Image 1 Description' },
+  { src: imageContext, alt: 'Image 2 Description' },
+  { src: imagePlan, alt: 'Image 2 Description' },
+  { src: imageFocusGroup, alt: 'Image 2 Description' },
+  { src: imageMiro, alt: 'Image 2 Description' },
+];
 
 const PhotoClockDetail = () => {
 
@@ -64,6 +73,25 @@ const PhotoClockDetail = () => {
   const closeLightbox = () => {
     setIsOpen(false);
   };
+
+  /* plugin */
+  const designRef = useRef(null);
+
+  useEffect(() => {
+    // Create script element
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    script.defer = true;
+
+    // Append script to the body or specific component
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup the script when the component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="container">
@@ -167,8 +195,10 @@ const PhotoClockDetail = () => {
                 </div>
             </section>
             <section id="design" ref={sectionRefs.current.design}>
-                <h2>3 - Design</h2>
-                <p>When your test database is filled with realistic looking data, you'll be more engaged as a tester. When you demonstrate new features to others, they'll understand them faster. Real data is varied and will contain characters that may not play nice with your code, such as apostrophes, or unicode characters from other languages. Testing with realistic data will make your app more robust because you'll catch errors that are likely to occur in production before release day.</p>
+                <h2>3 - Proposed Design</h2>
+                <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
+                <CustomSwiper images={images2} />
+                <div className="elfsight-app-6e69fc6f-a605-454b-880e-4efc23182ca9"></div>
             </section>
             <section id="test" ref={sectionRefs.current.test}>
                 <h2>4 - Test</h2>
