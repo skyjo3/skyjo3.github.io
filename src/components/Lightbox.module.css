@@ -41,7 +41,8 @@
 
 .prev:hover,
 .next:hover {
-  color: #ccc;
+  color: black;
+  transform: translateY(-50%);
 }
 
 .prev {
