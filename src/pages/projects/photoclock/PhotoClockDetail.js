@@ -78,8 +78,8 @@ const PhotoClockDetail = () => {
 
   return (
     <div className="container">
-    {/* CTA at page end */}
-    <FullScreenCTA />
+      {/* CTA fade in at page end */}
+      <FullScreenCTA />
       <div className="project-container">
         <div className="sidebar">
             <ul>
