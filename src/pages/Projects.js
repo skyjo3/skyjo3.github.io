@@ -8,7 +8,7 @@ import ScrollIndicator from '../components/ScrollIndicator';
 import backgroundImage from '../assets/img/project_background.png';
 
 import { Link } from 'react-router-dom';
-import projectsData from './projectData';
+import data from './projectListData';
 import { debounce } from '../utils/debounce';
 
 const Projects = () => {
@@ -17,7 +17,7 @@ const Projects = () => {
   const isProjectsPage = location.pathname === '/projects'; 
 
   // Project data and tag filtering
-  const [projects, setProjects] = useState(projectsData); 
+  const [projects, setProjects] = useState(data); 
   const [selectedTags, setSelectedTags] = useState(() => {
     // Initialize selected tags from localStorage if available, otherwise default to ['all']
     const storedTags = localStorage.getItem('selectedTags');
@@ -31,8 +31,8 @@ const Projects = () => {
     localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
 
     const filteredProjects = selectedTags.includes('all') || selectedTags.length === 0
-      ? projectsData
-      : projectsData.filter(project =>
+      ? data
+      : data.filter(project =>
           selectedTags.some(tag => project.tags.includes(tag))
         );
     setProjects(filteredProjects);
