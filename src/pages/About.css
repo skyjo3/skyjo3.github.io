@@ -14,7 +14,7 @@
 .about-content {
   flex: 1; /* Takes up equal space as the image column */
   min-width: 300px; /* Ensures a minimum width */
-  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .about-image {

@@ -7,6 +7,9 @@ import image from '../assets/img/about.jpg';
 const About = () => (
   <div className="container">
     <div className="about-container">
+      <div className="about-image">
+        <img src={image} alt="Amy Yo Sue Chen" />
+      </div>
       <div className="about-content">
         <h6>HELLO !</h6>
         <h1>My name is Amy.</h1>
@@ -17,9 +20,6 @@ const About = () => (
           I commit to a <b>research philosophy</b> that advocates creating technologies for <b>deep, holistic reflection</b> rather than just for function and efficiency.
         </p>
         <Link to="/projects" className="custom-button">View My Projects</Link>
-      </div>
-      <div className="about-image">
-        <img src={image} alt="Amy Yo Sue Chen" />
       </div>
     </div>
   </div>
