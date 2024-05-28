@@ -4,6 +4,7 @@ import styles from './PhotoClockDetail.css';
 
 import Lightbox from '../../../components/Lightbox';
 import CustomSwiper from '../../../components/CustomSwiper';
+import Gallery from '../../../components/Gallery';
 
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
@@ -17,6 +18,17 @@ import imageDesign2 from './img/Fig3a.png'
 import imageDesign3 from './img/Fig3b.png'
 import imageDesign4 from './img/Fig1b.jpg'
 
+import imageMore1 from './img/more/Fig1a.jpg'
+import imageMore2 from './img/more/Fig1c.jpg'
+import imageMore3 from './img/more/Fig1d.jpg'
+import imageMore4 from './img/more/Fig7b.jpg'
+import imageMore5 from './img/more/Fig7a.png'
+import imageMore6 from './img/more/1.png'
+import imageMore7 from './img/more/2.png'
+import imageMore8 from './img/more/3.png'
+import imageMore9 from './img/more/4.png'
+import imageMore10 from './img/more/5.png'
+
 const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
 
 const imagesProposedDesign = [
@@ -24,6 +36,19 @@ const imagesProposedDesign = [
   { src: imageDesign2, alt: 'PhotoClock Design' },
   { src: imageDesign3, alt: 'PhotoClock Design' },
   { src: imageDesign4, alt: 'PhotoClock Use Scenario' },
+];
+
+const imagesMore = [
+  { src: imageMore1, alt: 'PhotoClock Design' },
+  { src: imageMore2, alt: 'PhotoClock Design' },
+  { src: imageMore3, alt: 'PhotoClock Design' },
+  { src: imageMore4, alt: 'PhotoClock Use Scenario' },
+  { src: imageMore5, alt: 'PhotoClock Design' },
+  { src: imageMore6, alt: 'PhotoClock Design' },
+  { src: imageMore7, alt: 'PhotoClock Design' },
+  { src: imageMore8, alt: 'PhotoClock Use Scenario' },
+  { src: imageMore9, alt: 'PhotoClock Design' },
+  { src: imageMore10, alt: 'PhotoClock Use Scenario' },
 ];
 
 const PhotoClockDetail = () => {
@@ -225,9 +250,11 @@ const PhotoClockDetail = () => {
                   <div>
                     <h3>REFLECTION: How Research Changed the Design Direction</h3>
                     <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
+                    <p>Learn more participants' stories and experiences here:</p>
+                    <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
+                    <h3>More Images</h3>
+                    <Gallery images={imagesMore} rows={2} columns={5} />
                   </div>
-                  <p>Learn more participants' stories and experiences here:</p>
-                  <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
               </section>
 
               {/* Lightbox modal */}
