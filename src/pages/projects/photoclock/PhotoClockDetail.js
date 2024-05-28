@@ -12,50 +12,7 @@ import { CommonNinjaWidget } from 'commonninja-react';
 
 import FullScreenCTA from '../../../components/FullScreenCTA'
 
-import imageProject from './img/project.jpg'
-import imageContext from './img/context.jpg'
-import imagePlan from './img/plan.png'
-import imageFocusGroup from './img/M123-template_M1.png'
-import imageMiro from './img/M123-template_M2.png'
-import imageFieldStudy from './img/M123-template_M3.png'
-
-import imageDesign1 from './img/Fig2.png'
-import imageDesign2 from './img/Fig3a.png'
-import imageDesign3 from './img/Fig3b.png'
-import imageDesign4 from './img/Fig1b.jpg'
-
-import imageMore1 from './img/more/Fig1a.jpg'
-import imageMore2 from './img/more/Fig1c.jpg'
-import imageMore3 from './img/more/Fig1d.jpg'
-import imageMore4 from './img/more/Fig7b.jpg'
-import imageMore5 from './img/more/Fig7a.png'
-import imageMore6 from './img/more/1.png'
-import imageMore7 from './img/more/2.png'
-import imageMore8 from './img/more/3.png'
-import imageMore9 from './img/more/4.png'
-import imageMore10 from './img/more/5.png'
-
-const images = [imageProject, imageContext, imagePlan, imageFocusGroup, imageMiro];
-
-const imagesProposedDesign = [
-  { src: imageDesign1, alt: 'PhotoClock Design' },
-  { src: imageDesign2, alt: 'PhotoClock Design' },
-  { src: imageDesign3, alt: 'PhotoClock Design' },
-  { src: imageDesign4, alt: 'PhotoClock Use Scenario' },
-];
-
-const imagesMore = [
-  { src: imageMore1, alt: 'PhotoClock Design' },
-  { src: imageMore2, alt: 'PhotoClock Design' },
-  { src: imageMore3, alt: 'PhotoClock Design' },
-  { src: imageMore4, alt: 'PhotoClock Use Scenario' },
-  { src: imageMore5, alt: 'PhotoClock Design' },
-  { src: imageMore6, alt: 'PhotoClock Design' },
-  { src: imageMore7, alt: 'PhotoClock Design' },
-  { src: imageMore8, alt: 'PhotoClock Use Scenario' },
-  { src: imageMore9, alt: 'PhotoClock Design' },
-  { src: imageMore10, alt: 'PhotoClock Use Scenario' },
-];
+import images from './PhotoClockImages'
 
 const PhotoClockDetail = () => {
 
@@ -136,7 +93,7 @@ const PhotoClockDetail = () => {
         </div>
         <div className="content">
           <div className="photoclock-container">
-              <LazyLoadImage src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-content-image" onClick={() => openLightbox(imageProject)} />
+              <LazyLoadImage src={images.singles.imageProject.src} alt={images.singles.imageProject.alt} className="project-content-image" onClick={() => openLightbox(images.singles.imageProject.src)} />
               <section id="overview" ref={sectionRefs.current.overview}>
                 <div className="overview-container">
                   <div>
@@ -161,7 +118,7 @@ const PhotoClockDetail = () => {
                 </div>
               </section>
               <section id="research" ref={sectionRefs.current.research}>
-                  <LazyLoadImage src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
+                  <LazyLoadImage src={images.singles.imageContext.src} alt={images.singles.imageContext.alt} className="context-image" onClick={() => openLightbox(images.singles.imageContext.src)} />
                   <h2>1 - Research Context</h2>
                   <div className="research-container">
                     <div>
@@ -204,10 +161,10 @@ const PhotoClockDetail = () => {
                       </ul>
                     </div>
                   </div>
-                  <LazyLoadImage src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
+                  <LazyLoadImage src={images.singles.imagePlan.src} alt={images.singles.imagePlan.alt} className="plan-image" onClick={() => openLightbox(images.singles.imagePlan.src)} />
               </section>
               <section id="empathize" ref={sectionRefs.current.empathize}>
-                  <LazyLoadImage src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
+                  <LazyLoadImage src={images.singles.imageFocusGroup.src} alt={images.singles.imageFocusGroup.alt} className="focus-group-image" onClick={() => openLightbox(images.singles.imageFocusGroup.src)} />
                   <h2>2 - Empathize</h2>
                   <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
                   <p>The results show that: </p>
@@ -216,7 +173,7 @@ const PhotoClockDetail = () => {
                     <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
                   </ul>
                   <div className="miro-container">
-                    <div><LazyLoadImage src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
+                    <LazyLoadImage src={images.singles.imageMiro.src} alt={images.singles.imageMiro.alt} className="miro-image" onClick={() => openLightbox(images.singles.imageMiro.src)} />
                     <div>
                       <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
                       <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
@@ -226,14 +183,14 @@ const PhotoClockDetail = () => {
               <section id="design" ref={sectionRefs.current.design}>
                   <h2>3 - Proposed Design</h2>
                   <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
-                  <CustomSwiper images={imagesProposedDesign} />
+                  <CustomSwiper images={images.design} />
                   <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </section>
               <section id="test" ref={sectionRefs.current.test}>
                   <h2>4 - Online Field Study</h2>
                   <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
                   <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
-                  <LazyLoadImage src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
+                  <LazyLoadImage src={images.singles.imageFieldStudy.src} alt={images.singles.imageFieldStudy.alt} className="field-study-image" onClick={() => openLightbox(images.singles.imageFieldStudy.src)} />
                   <p>Hear the AI-distorted voices from our field study's participants:</p>
                   {/* Conditionally load ElfsightWidget */}
                   {loadElfsightWidget && (
@@ -252,7 +209,7 @@ const PhotoClockDetail = () => {
                       <CommonNinjaWidget widgetId="4059adb6-9433-48d1-a294-3bc3de43b15f" />
                     )}
                     <h3>More Images</h3>
-                    <Gallery images={imagesMore} rows={2} columns={5} />
+                    <Gallery images={images.more} rows={2} columns={5} />
                   </div>
               </section>
 
