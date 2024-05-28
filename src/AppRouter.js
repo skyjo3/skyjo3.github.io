@@ -1,6 +1,7 @@
 // src/AppRouter.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 import Header from './Header';
 import About from './pages/About';
@@ -20,6 +21,7 @@ import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
 
 const AppRouter = () => (
   <Router basename="/website-new">
+    <ScrollToTop />
     <Header />
     <Routes>
       <Route path="/" element={<About />} />

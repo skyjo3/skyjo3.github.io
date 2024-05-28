@@ -10,6 +10,8 @@ import LazyLoadImage from '../../../components/LazyLoadImage';
 import { ElfsightWidget } from 'react-elfsight-widget';
 import { CommonNinjaWidget } from 'commonninja-react';
 
+import FullScreenCTA from '../../../components/FullScreenCTA'
+
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
 import imagePlan from './img/plan.png'
@@ -119,6 +121,8 @@ const PhotoClockDetail = () => {
 
   return (
     <div className="container">
+    {/* CTA at page end */}
+    <FullScreenCTA />
       <div className="project-container">
         <div className="sidebar">
             <ul>

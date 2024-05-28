@@ -4,6 +4,7 @@
   max-width: var(--container-width); /* Define this variable in your root if not already defined */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 200px;
 }
 
 .sidebar {
