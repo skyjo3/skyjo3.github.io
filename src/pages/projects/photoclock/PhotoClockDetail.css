@@ -1,7 +1,7 @@
 /* PhotoClockDetail.css */
 
 .project-container {
-  max-width: var(--container-width); /* Define this variable in your root if not already defined */
+  max-width: var(--container-width); 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 200px;
@@ -10,10 +10,10 @@
 .sidebar {
   position: fixed;
   width: 200px;
-  height: 100vh; /* Full viewport height */
-  overflow: auto; /* Enables scrolling within the sidebar */
+  height: 100vh; 
+  overflow: auto; 
   padding: 20px;
-  border-right: 0.5px solid var(--color-gray); /* Assumes you have a color variable named --color-gray */
+  border-right: 0.5px solid var(--color-gray); 
 }
 
 .sidebar ul {

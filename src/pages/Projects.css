@@ -3,6 +3,8 @@
 .projects-background-container {
   background-image: url('../assets/img/project_background.png');
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .projects-container {
