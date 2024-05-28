@@ -3367,6 +3367,11 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==
 
+commonninja-react@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/commonninja-react/-/commonninja-react-1.1.0.tgz#597e0e34b74b061b6d0cf7e32a3f925ab2f0e32d"
+  integrity sha512-KTluv7MFxH4YSERnoawctdrexmmgBFhxT8zvMQ2YM/GcXa72kx8bIbusCd5oHNnk/HWsqvkvGSXcTWnqGxd+FA==
+
 compressible@~2.0.16:
   version "2.0.18"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.18.tgz#af53cca6b070d4c3c0750fbd77286a6d7cc46fba"
@@ -7995,6 +8000,11 @@ react-dom@^18.3.1:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-elfsight-widget@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-elfsight-widget/-/react-elfsight-widget-1.1.1.tgz#9bc98f12d316e23aa88b4784c339850aa0b1e50f"
+  integrity sha512-f6r0gC9266yRcNZak8sKev/UwkAP5RYpcEt5X5eeYqHo8agXCQzdYwA0+8HDz5pSPHb0/C54o6oWv+Ukf2GO9w==
 
 react-error-overlay@^6.0.11:
   version "6.0.11"

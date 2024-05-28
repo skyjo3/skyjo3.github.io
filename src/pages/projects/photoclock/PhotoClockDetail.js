@@ -6,6 +6,9 @@ import LightboxSingle from '../../../components/LightboxSingle';
 import CustomSwiper from '../../../components/CustomSwiper';
 import Gallery from '../../../components/Gallery';
 
+import { ElfsightWidget } from 'react-elfsight-widget';
+import { CommonNinjaWidget } from 'commonninja-react';
+
 import imageProject from './img/project.jpg'
 import imageContext from './img/context.jpg'
 import imagePlan from './img/plan.png'
@@ -88,6 +91,7 @@ const PhotoClockDetail = () => {
           observer.unobserve(ref.current);
         }
       });
+      observer.disconnect(); // Cleanup the observer
     };
   }, []);
 
@@ -98,36 +102,11 @@ const PhotoClockDetail = () => {
   const openLightbox = (image) => {
     setSelectedImage(image);
     setIsOpen(true);
-    console.log('Opening lightbox with image:', image); 
   };
 
   const closeLightbox = () => {
     setIsOpen(false);
   };
-
-  /* plugin */
-  const designRef = useRef(null);
-
-  useEffect(() => {
-    // Create and append the first script
-    const script1 = document.createElement('script');
-    script1.src = "https://static.elfsight.com/platform/platform.js";
-    script1.async = true;
-    script1.defer = true;
-    document.body.appendChild(script1);
-
-    // Create and append the second script
-    const script2 = document.createElement('script');
-    script2.src = 'https://cdn.commoninja.com/sdk/latest/commonninja.js';
-    script2.async = true;
-    script2.defer = true;
-    document.body.appendChild(script2);
-
-    return () => {
-      document.body.removeChild(script1);
-      document.body.removeChild(script2);
-    };
-  }, []);
 
   return (
     <div className="container">
@@ -243,7 +222,7 @@ const PhotoClockDetail = () => {
                   <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
                   <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
                   <p>Hear the AI-distorted voices from our field study's participants:</p>
-                  <div className="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy={true}></div>
+                  <ElfsightWidget widgetID="127867e4-882f-4838-98c1-a8a562a84e29" />
               </section>
               <section id="takeaways" ref={sectionRefs.current.takeaways}>
                   <h2>5 - Takeaways – Less, again, is more.</h2>
@@ -252,7 +231,7 @@ const PhotoClockDetail = () => {
                     <h3>REFLECTION: How Research Changed the Design Direction</h3>
                     <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                     <p>Learn more participants' stories and experiences here:</p>
-                    <div className="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
+                    <CommonNinjaWidget widgetId="4059adb6-9433-48d1-a294-3bc3de43b15f" />
                     <h3>More Images</h3>
                     <Gallery images={imagesMore} rows={2} columns={5} />
                   </div>

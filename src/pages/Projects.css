@@ -1,5 +1,10 @@
 /* Projects.css */
 
+.projects-background-container {
+  background-image: url('../assets/img/project_background.png');
+  background-attachment: fixed;
+}
+
 .projects-container {
   max-width: var(--container-width);
   margin-left: auto;
@@ -49,7 +54,7 @@
 }
 
 .tag:hover {
-  transform: translateY(-2px);
+/*  transform: translateY(-2px);*/
   border: 1px solid var(--color-secondary);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
