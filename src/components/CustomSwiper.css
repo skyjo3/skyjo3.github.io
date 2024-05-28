@@ -16,6 +16,7 @@
 }
 
 .slide {
+  cursor: pointer;
   flex: 0 0 100%;
   height: 480px;
   background-size: cover;
@@ -39,7 +40,7 @@
 .thumbnails {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Adjust spacing between slider and thumbnails */
+  margin: 20px 0px; /* Adjust spacing between slider and thumbnails */
 }
 
 /* Individual thumbnail styles */
@@ -53,6 +54,11 @@
   border: 2px solid transparent; /* Add border on hover */
 }
 
+.thumbnail.active {
+  transform: scale(1.1); /* Increase scale on active thumbnail */
+  border: 2px solid var(--color-primary); 
+}
+
 .thumbnail:hover {
   border: 2px solid var(--color-secondary); /* Add border on hover */
 }
@@ -64,15 +70,11 @@
   border-radius: 5px; /* Rounded corners for thumbnails */
 }
 
-.thumbnail.active {
-  transform: scale(1.1); /* Increase scale on active thumbnail */
-}
-
 /* Navigation button styles */
 .prev,
 .next {
   position: absolute;
-  top: calc(50% - 30px);
+  top: calc(50% - 50px);
   transform: translateY(-50%);
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -86,6 +88,7 @@
 
 .prev:hover,
 .next:hover {
+  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.8);
 }
 
