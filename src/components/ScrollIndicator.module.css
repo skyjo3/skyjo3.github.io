@@ -1,6 +1,6 @@
 /* ScrollIndicator.css */
 
-.scroll-indicator {
+.scrollIndicator {
   position: fixed;
   top: 0;
   left: 50%;
@@ -10,7 +10,7 @@
   z-index: 9999;
 }
 
-.scroll-indicator-line {
+.scrollIndicatorLine {
   height: 100%;
   width: 0.75px;
   background-color: black; /* Adjust the color of the scroll indicator line */

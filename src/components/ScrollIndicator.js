@@ -1,7 +1,7 @@
 // ScrollIndicator.js
 
 import React, { useEffect, useState } from 'react';
-import './ScrollIndicator.css';
+import styles from './ScrollIndicator.module.css';
 
 const ScrollIndicator = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -22,8 +22,8 @@ const ScrollIndicator = () => {
   }, []);
 
   return (
-    <div className="scroll-indicator" style={{ height: `${scrollProgress}%` }}>
-      <div className="scroll-indicator-line"></div>
+    <div className={styles.scrollIndicator} style={{ height: `${scrollProgress}%` }}>
+      <div className={styles.scrollIndicatorLine}></div>
     </div>
   );
 };
