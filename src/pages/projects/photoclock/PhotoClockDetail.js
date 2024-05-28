@@ -235,7 +235,7 @@ const PhotoClockDetail = () => {
                   <h2>3 - Proposed Design</h2>
                   <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
                   <CustomSwiper images={imagesProposedDesign} />
-                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </section>
               <section id="test" ref={sectionRefs.current.test}>
                   <h2>4 - Online Field Study</h2>
@@ -243,7 +243,7 @@ const PhotoClockDetail = () => {
                   <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
                   <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
                   <p>Hear the AI-distorted voices from our field study's participants:</p>
-                  <div class="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy></div>
+                  <div className="elfsight-app-127867e4-882f-4838-98c1-a8a562a84e29" data-elfsight-app-lazy={true}></div>
               </section>
               <section id="takeaways" ref={sectionRefs.current.takeaways}>
                   <h2>5 - Takeaways – Less, again, is more.</h2>
@@ -252,7 +252,7 @@ const PhotoClockDetail = () => {
                     <h3>REFLECTION: How Research Changed the Design Direction</h3>
                     <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                     <p>Learn more participants' stories and experiences here:</p>
-                    <div class="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
+                    <div className="commonninja_component pid-4059adb6-9433-48d1-a294-3bc3de43b15f"></div>
                     <h3>More Images</h3>
                     <Gallery images={imagesMore} rows={2} columns={5} />
                   </div>

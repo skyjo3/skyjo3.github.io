@@ -17,10 +17,17 @@ const Projects = () => {
 
   // Project data and tag filtering
   const [projects, setProjects] = useState(projectsData); 
-  const [selectedTags, setSelectedTags] = useState(['all']);
+  const [selectedTags, setSelectedTags] = useState(() => {
+    // Initialize selected tags from localStorage if available, otherwise default to ['all']
+    const storedTags = localStorage.getItem('selectedTags');
+    return storedTags ? JSON.parse(storedTags) : ['all'];
+  });
 
   // This effect runs when selectedTags changes
   useEffect(() => {
+    // Update localStorage when selectedTags change
+    localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
+    
     const filteredProjects = selectedTags.includes('all') || selectedTags.length === 0
       ? projectsData
       : projectsData.filter(project =>
