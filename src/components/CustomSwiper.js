@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CustomSwiper.css';
+import styles from './CustomSwiper.module.css';
 import Lightbox from './Lightbox';
 
 const CustomSwiper = ({ images }) => {
@@ -13,7 +13,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
       setTimeout(() => {
         setTransitioning(false);
-      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
+      }, 300);
     }
   };
 
@@ -23,7 +23,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
       setTimeout(() => {
         setTransitioning(false);
-      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
+      }, 300);
     }
   };
 
@@ -33,7 +33,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide(index);
       setTimeout(() => {
         setTransitioning(false);
-      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
+      }, 300);
     }
   };
 
@@ -54,12 +54,12 @@ const CustomSwiper = ({ images }) => {
   };
 
   return (
-    <div className="custom-swiper">
-      <div className="slider" onClick={openLightbox}>
+    <div className={styles.customSwiper}>
+      <div className={styles.slider} onClick={openLightbox}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
             style={{
               backgroundImage: `url(${image.src})`,
               transition: transitioning ? 'transform 0.3s ease-in-out' : '',
@@ -68,21 +68,21 @@ const CustomSwiper = ({ images }) => {
           ></div>
         ))}
       </div>
-      <div className="thumbnails">
+      <div className={styles.thumbnails}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`thumbnail ${index === currentSlide ? 'active' : ''}`}
+            className={`${styles.thumbnail} ${index === currentSlide ? styles.active : ''}`}
             onClick={() => handleThumbnailClick(index)}
           >
             <img src={image.src} alt={`Thumbnail ${index + 1}`} />
           </div>
         ))}
       </div>
-      <button className="prev" onClick={prevSlide} disabled={transitioning}>
+      <button className={styles.prev} onClick={prevSlide} disabled={transitioning}>
         &#10094;
       </button>
-      <button className="next" onClick={nextSlide} disabled={transitioning}>
+      <button className={styles.next} onClick={nextSlide} disabled={transitioning}>
         &#10095;
       </button>
       <Lightbox

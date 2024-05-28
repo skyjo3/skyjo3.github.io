@@ -1,7 +1,7 @@
 /* CustomSwiper.css */
 
 /* Main container styles */
-.custom-swiper {
+.customSwiper {
   position: relative;
   max-width: 100%;
   overflow: hidden;
@@ -44,14 +44,17 @@
 }
 
 /* Individual thumbnail styles */
+
 .thumbnail {
   cursor: pointer;
-  margin: 0 5px; /* Adjust spacing between thumbnails */
+  margin: 0 5px; /* Ensure no overlap with adjacent elements */
   transition: transform 0.2s ease-in-out;
-  width: 100px; /* Set fixed width for thumbnails */
-  height: 60px; /* Set fixed height for thumbnails */
-  border-radius: 5px; /* Rounded corners for thumbnails */
-  border: 2px solid transparent; /* Add border on hover */
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  z-index: 10; /* Higher than surrounding elements */
+  position: relative; /* Ensure z-index is respected */
 }
 
 .thumbnail.active {
@@ -60,7 +63,7 @@
 }
 
 .thumbnail:hover {
-  border: 2px solid var(--color-secondary); /* Add border on hover */
+  border: 2px solid var(--color-secondary);
 }
 
 .thumbnail img {
