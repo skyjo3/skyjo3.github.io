@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './PhotoClockDetail.css';
 
-import Lightbox from '../../../components/Lightbox';
+import LightboxSingle from '../../../components/LightboxSingle';
 import CustomSwiper from '../../../components/CustomSwiper';
 import Gallery from '../../../components/Gallery';
 
@@ -91,13 +91,14 @@ const PhotoClockDetail = () => {
     };
   }, []);
 
-  /* Lightbox */
+  /* LightboxSingle */
   const [selectedImage, setSelectedImage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   const openLightbox = (image) => {
     setSelectedImage(image);
     setIsOpen(true);
+    console.log('Opening lightbox with image:', image); 
   };
 
   const closeLightbox = () => {
@@ -258,7 +259,7 @@ const PhotoClockDetail = () => {
               </section>
 
               {/* Lightbox modal */}
-              <Lightbox
+              <LightboxSingle
                 src={selectedImage}
                 alt="Enlarged View"
                 isOpen={isOpen}

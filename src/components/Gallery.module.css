@@ -6,6 +6,7 @@
 .imageContainer {
   overflow: hidden;
   cursor: pointer;
+  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -19,5 +20,5 @@
   object-fit: cover;
   border-radius: 10px; 
   border: 1px solid #ccc;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }

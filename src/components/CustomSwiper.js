@@ -13,7 +13,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
       setTimeout(() => {
         setTransitioning(false);
-      }, 1000); // Adjust the duration as needed (e.g., 1000ms for 1 second)
+      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
     }
   };
 
@@ -23,7 +23,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
       setTimeout(() => {
         setTransitioning(false);
-      }, 1000); // Adjust the duration as needed (e.g., 1000ms for 1 second)
+      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
     }
   };
 
@@ -33,7 +33,7 @@ const CustomSwiper = ({ images }) => {
       setCurrentSlide(index);
       setTimeout(() => {
         setTransitioning(false);
-      }, 1000); // Adjust the duration as needed (e.g., 1000ms for 1 second)
+      }, 300); // Adjust the duration as needed (e.g., 300ms for quicker transition)
     }
   };
 
@@ -45,6 +45,14 @@ const CustomSwiper = ({ images }) => {
     setLightboxOpen(false);
   };
 
+  const showPrevImage = () => {
+    setCurrentSlide((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
+  const showNextImage = () => {
+    setCurrentSlide((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
     <div className="custom-swiper">
       <div className="slider" onClick={openLightbox}>
@@ -54,7 +62,7 @@ const CustomSwiper = ({ images }) => {
             className={`slide ${index === currentSlide ? 'active' : ''}`}
             style={{
               backgroundImage: `url(${image.src})`,
-              transition: transitioning ? 'transform 1s ease-in-out' : '',
+              transition: transitioning ? 'transform 0.3s ease-in-out' : '',
               transform: `translateX(-${currentSlide * 100}%)`,
             }}
           ></div>
@@ -78,10 +86,12 @@ const CustomSwiper = ({ images }) => {
         &#10095;
       </button>
       <Lightbox
-        src={images[currentSlide].src}
-        alt={`Slide ${currentSlide + 1}`}
+        images={images}
+        currentIndex={currentSlide}
         isOpen={lightboxOpen}
         onClose={closeLightbox}
+        onPrev={showPrevImage}
+        onNext={showNextImage}
       />
     </div>
   );

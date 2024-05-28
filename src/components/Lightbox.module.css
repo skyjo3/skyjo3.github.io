@@ -11,16 +11,43 @@
   z-index: 1000; /* Ensure it is above all other content */
 }
 
-.fullscreen-image {
+.fullscreenImage {
   max-width: 90%;
   max-height: 90%;
 }
 
-.close-btn {
+.closeBtn {
   position: absolute;
   top: 20px;
   right: 40px;
   font-size: 30px;
   color: white;
   cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.prev:hover,
+.next:hover {
+  color: #ccc;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
 }
