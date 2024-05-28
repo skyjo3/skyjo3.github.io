@@ -5,6 +5,7 @@ import styles from './PhotoClockDetail.css';
 import LightboxSingle from '../../../components/LightboxSingle';
 import CustomSwiper from '../../../components/CustomSwiper';
 import Gallery from '../../../components/Gallery';
+import LazyLoadImage from '../../../components/LazyLoadImage';
 
 import { ElfsightWidget } from 'react-elfsight-widget';
 import { CommonNinjaWidget } from 'commonninja-react';
@@ -58,6 +59,9 @@ const PhotoClockDetail = () => {
 
   /* Sidebar Navigation */
   const [activeSection, setActiveSection] = useState('');
+  const [loadElfsightWidget, setLoadElfsightWidget] = useState(false);
+  const [loadCommonNinjaWidget, setLoadCommonNinjaWidget] = useState(false);
+
   const sectionRefs = useRef({
     overview: useRef(null),
     research: useRef(null),
@@ -73,6 +77,11 @@ const PhotoClockDetail = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
+            if (entry.target.id === 'test') {
+              setLoadElfsightWidget(true);
+            } else if (entry.target.id === 'takeaways') {
+              setLoadCommonNinjaWidget(true);
+            }
           }
         });
       },
@@ -123,7 +132,7 @@ const PhotoClockDetail = () => {
         </div>
         <div className="content">
           <div className="photoclock-container">
-              <img src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-content-image" onClick={() => openLightbox(imageProject)} />
+              <LazyLoadImage src={imageProject} alt='Open Lightbox view for PhotoClock project' className="project-content-image" onClick={() => openLightbox(imageProject)} />
               <section id="overview" ref={sectionRefs.current.overview}>
                 <div className="overview-container">
                   <div>
@@ -148,7 +157,7 @@ const PhotoClockDetail = () => {
                 </div>
               </section>
               <section id="research" ref={sectionRefs.current.research}>
-                  <img src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
+                  <LazyLoadImage src={imageContext} alt='PhotoClock' className="context-image" onClick={() => openLightbox(imageContext)} />
                   <h2>1 - Research Context</h2>
                   <div className="research-container">
                     <div>
@@ -191,10 +200,10 @@ const PhotoClockDetail = () => {
                       </ul>
                     </div>
                   </div>
-                  <img src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
+                  <LazyLoadImage src={imagePlan} alt='PhotoClock' className="plan-image" onClick={() => openLightbox(imagePlan)} />
               </section>
               <section id="empathize" ref={sectionRefs.current.empathize}>
-                  <img src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
+                  <LazyLoadImage src={imageFocusGroup} alt='PhotoClock' className="focus-group-image" onClick={() => openLightbox(imageFocusGroup)} />
                   <h2>2 - Empathize</h2>
                   <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
                   <p>The results show that: </p>
@@ -203,7 +212,7 @@ const PhotoClockDetail = () => {
                     <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
                   </ul>
                   <div className="miro-container">
-                    <div><img src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
+                    <div><LazyLoadImage src={imageMiro} alt='PhotoClock' className="miro-image" onClick={() => openLightbox(imageMiro)} /></div>
                     <div>
                       <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
                       <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
@@ -220,9 +229,12 @@ const PhotoClockDetail = () => {
                   <h2>4 - Online Field Study</h2>
                   <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
                   <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
-                  <img src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
+                  <LazyLoadImage src={imageFieldStudy} alt='PhotoClock' className="field-study-image" onClick={() => openLightbox(imageFieldStudy)} />
                   <p>Hear the AI-distorted voices from our field study's participants:</p>
-                  <ElfsightWidget widgetID="127867e4-882f-4838-98c1-a8a562a84e29" />
+                  {/* Conditionally load ElfsightWidget */}
+                  {loadElfsightWidget && (
+                    <ElfsightWidget widgetID="127867e4-882f-4838-98c1-a8a562a84e29" />
+                  )}
               </section>
               <section id="takeaways" ref={sectionRefs.current.takeaways}>
                   <h2>5 - Takeaways – Less, again, is more.</h2>
@@ -231,7 +243,10 @@ const PhotoClockDetail = () => {
                     <h3>REFLECTION: How Research Changed the Design Direction</h3>
                     <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
                     <p>Learn more participants' stories and experiences here:</p>
-                    <CommonNinjaWidget widgetId="4059adb6-9433-48d1-a294-3bc3de43b15f" />
+                    {/* Conditionally load CommonNinjaWidget */}
+                    {loadCommonNinjaWidget && (
+                      <CommonNinjaWidget widgetId="4059adb6-9433-48d1-a294-3bc3de43b15f" />
+                    )}
                     <h3>More Images</h3>
                     <Gallery images={imagesMore} rows={2} columns={5} />
                   </div>

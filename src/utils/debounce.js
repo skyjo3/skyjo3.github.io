@@ -1,10 +1,14 @@
-// utils/debounce.js
+// src/utils/debounce.js
 export const debounce = (func, wait) => {
   let timeout;
-  return (...args) => {
+  const debouncedFunc = (...args) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func.apply(this, args);
-    }, wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
+
+  debouncedFunc.cancel = () => {
+    clearTimeout(timeout);
+  };
+
+  return debouncedFunc;
 };

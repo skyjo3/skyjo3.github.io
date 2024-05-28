@@ -57,6 +57,7 @@ const Projects = () => {
     });
   };
 
+  // debounce & cleanup
   const handleMouseEnter = useCallback(debounce((tag) => {
     // Perform actions on mouse enter, if necessary
     console.log(`Mouse entered tag: ${tag}`);
@@ -66,6 +67,14 @@ const Projects = () => {
     // Perform actions on mouse leave, if necessary
     console.log(`Mouse left tag: ${tag}`);
   }, 300), []);
+
+  useEffect(() => {
+    // Cleanup function to clear the debounced functions
+    return () => {
+      handleMouseEnter.cancel();
+      handleMouseLeave.cancel();
+    };
+  }, [handleMouseEnter, handleMouseLeave]);
 
   return (
     <div className="container">
