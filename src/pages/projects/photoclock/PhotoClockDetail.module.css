@@ -1,6 +1,6 @@
 /* PhotoClockDetail.css */
 
-.project-container {
+.projectContainer {
   max-width: var(--container-width); 
   margin-left: auto;
   margin-right: auto;
@@ -48,75 +48,70 @@
   background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 
-.photoclock-container {
-  width: 100%;
-  height: 100%;
-}
-
-.photoclock-container .project-content-image {
+.projectContentImage {
   width: 100%;
   height: 300px;
   object-fit: cover;
   margin-top: 20px;
 }
 
-.photoclock-container .overview-container {
+.overviewContainer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
 }
 
-.photoclock-container .context-image {
+.contextImage {
   width: 100%;
   height: auto;
   object-fit: cover;
   margin-top: 20px;
 }
 
-.photoclock-container .research-container {
+.researchContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   margin-bottom: 50px;
 }
 
-.photoclock-container .plan-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin-top: 20px;
-}
-
-.photoclock-container .skills-container {
+.skillsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin-bottom: 50px;
 }
 
-.photoclock-container .focus-group-image,
-.photoclock-container .field-study-image {
+.planImage {
   width: 100%;
   height: auto;
   object-fit: cover;
   margin-top: 20px;
 }
 
-.photoclock-container .miro-container {
+.focusGroupImage,
+.fieldStudyImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.miroContainer {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 20px;
   margin-top: 50px;
 }
 
-.photoclock-container .miro-image {
+.miroImage {
   width: 100%;
   height: auto;
   object-fit: cover;
   margin-top: 20px;
 }
-
-.photoclock-container .zoom-div {
+/*
+.zoomDiv {
   width: 200px;
   height: 200px;
   background-color: #ccc;
@@ -124,19 +119,19 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.photoclock-container .zoomed {
+.zoomed {
   transform: scale(1.5);
-}
+}*/
 
-.photoclock-container h6 {
+h6 {
   margin-bottom: 6px;
 }
 
-.photoclock-container h2 {
+h2 {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
 }
 
-.photoclock-container h3 {
+h3 {
   margin-top: 60px;
 }

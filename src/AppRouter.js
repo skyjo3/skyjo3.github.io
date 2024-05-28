@@ -10,7 +10,7 @@ import More from './pages/More';
 
 import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
 
-// <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
+{/*<Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />*/}
       // <Route path="/projects/crescendo" element={<CrescendoDetail />} />
       // <Route path="/projects/womany" element={<WomanyDetail />} />
       // <Route path="/projects/quologue" element={<QuologueDetail />} />
