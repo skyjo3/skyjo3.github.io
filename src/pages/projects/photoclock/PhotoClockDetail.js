@@ -153,8 +153,8 @@ const PhotoClockDetail = () => {
                   </div>
                   <div>
                     <h2>Team</h2>
-                    <h6>Project Lead & Design Researcher</h6>Amy Yo Sue Chen
-                    <h6>Design & Writing Supervisor</h6>William Odom
+                    <h6>Project Lead, Design Researcher, Engineer</h6>Amy Yo Sue Chen
+                    <h6>Writing & Design Supervisor</h6>William Odom
                     <h6>Writing Supervisor</h6>Carman Neustaedter
                     <h6>Data Analysis Assistant</h6>Sol Kang
                   </div>
