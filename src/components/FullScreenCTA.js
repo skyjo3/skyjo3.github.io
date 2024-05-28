@@ -29,8 +29,8 @@ const FullScreenCTA = () => {
 
   return (
     <div className={styles.fullScreenCTA} style={{ opacity: opacity }}>
-      <button onClick={() => navigate('/projects')}>not yet amy — let me view more projects first 🤔</button>
       <button onClick={() => navigate('/more')}>contact me for collaboration 😃</button>
+      <button onClick={() => navigate('/projects')}>not yet amy — let me view more projects first 🤔</button>
     </div>
   );
 };
