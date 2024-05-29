@@ -1,5 +1,6 @@
 // PhotoClockDetail.js
 import React, { useState, useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import styles from './PhotoClockDetail.module.css';
 
 import LightboxSingle from '../../../components/LightboxSingle';
@@ -92,6 +93,7 @@ const PhotoClockDetail = () => {
             </ul>
         </div>
         <div className={styles.content}>
+          <div className={styles.photoclock}>
             <LazyLoadImage src={images.singles.imageProject.src} alt={images.singles.imageProject.alt} className={styles.projectContentImage} onClick={() => openLightbox(images.singles.imageProject.src)} />
             <section id="overview" ref={sectionRefs.current.overview}>
               <div className={styles.overviewContainer}>
@@ -221,6 +223,7 @@ const PhotoClockDetail = () => {
               isOpen={isOpen}
               onClose={closeLightbox}
             />
+          </div>
         </div>
       </div>
     </div>
