@@ -99,22 +99,24 @@ const ChronoscopeDetail = () => {
               <div className={styles.overviewContainer}>
                 <div>
                   <h2>Overview</h2>
-                  <p>PhotoClock is an iOS mobile app that enables people to revisit their photos previously taken at the same ‘clock time’ of the present moment. Following the ongoing flow of time, users perceive different memories in a dynamic manner. This project specifically provoke a question of when people would like their memories to re-emerge and how memories could be interconnected to enrich personal reflection.</p>
+                  <p>With the massive proliferation of digital photos, new approaches are needed to enable people to engage with their vast photo archives over time and into the future. ChronoScope is a domestic technology that leverages temporal metadata embedded in digital photos as a resource to reorganize photos and present life patterns more clearly to encourage rich reflection on one's photo history.</p>
                 </div>
                 <div>
                   <h2>Team</h2>
-                  <h6>Project Lead, Design Researcher, Engineer</h6>Amy Yo Sue Chen
+                  <h6>Project Lead & Graphics, Software, Electronics</h6>Amy Yo Sue Chen
                   <h6>Writing & Design Supervisor</h6>William Odom
                   <h6>Writing Supervisor</h6>Carman Neustaedter
-                  <h6>Data Analysis Assistant</h6>Sol Kang
+                  <h6>3D Design & Data Analysis Assistant</h6>Ce Zhong
+                  <h6>Digital Fabrication & Electronics Assistant</h6>Henry Lin
+                  <h6>Electronics Assistant</h6>Tal Amram
                 </div>
               </div>
               <div>
                 <h2>Contribution / Impact</h2>
                 <ul>
-                  <li>This project discovered a strategy to use 'clock time' as a design material to reorganize photos.</li>
-                  <li>We created an innovative way to view photos and to trigger people's memories more naturally.</li>
-                  <li>3 research publications in top-tier HCI conferences (ACM CHI + DIS)</li>
+                  <li>Creating innovative photo viewing experience to improve user engagement</li>
+                  <li>Using temporal metadata as design materials to trigger curious exploration of one’s life history</li>
+                  <li>5 research publications, including a journal article, a book chapter, and 3 papers on ACM CHI/DIS</li>
                 </ul>
               </div>
             </section>
@@ -140,13 +142,13 @@ const ChronoscopeDetail = () => {
                   <div>
                     <h4>research methods</h4>
                     <ul>
-                      <li>Focus group</li>
-                      <li>Field study</li>
-                      <li>Interview</li>
+                      <li>Contextual inquiry</li>
+                      <li>Field study / interview</li>
+                      <li>Affinity mapping</li>
                     </ul>
                   </div>
                   <div>
-                    <h4>design tools</h4>
+                    <h4>graphic design tools</h4>
                     <ul>
                       <li>Miro brainstorming</li>
                       <li>Figma prototyping</li>
@@ -154,11 +156,36 @@ const ChronoscopeDetail = () => {
                     </ul>
                   </div>
                   <div>
+                    <h4>3D design tools</h4>
+                    <ul>
+                      <li>modeling with Rhino</li>
+                      <li>rendering with Keyshot</li>
+                      <li>printing with Ultimaker Cura</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.skillsContainer}>
+                  <div>
                     <h4>documentation</h4>
                     <ul>
                       <li>Google Suite</li>
                       <li>Otter.ai</li>
                       <li>Microsoft Word / LaTeX</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>electronics design</h4>
+                    <ul>
+                      <li>Arduino prototyping</li>
+                      <li>Raspberry Pi production</li>
+                      <li>PCB design (Frizting)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>software engineering</h4>
+                    <ul>
+                      <li>Python development and production</li>
+                      <li>(PIL/Pillow, PyQt5, NumPy)</li>
                     </ul>
                   </div>
                 </div>
@@ -182,6 +209,7 @@ const ChronoscopeDetail = () => {
                 </div>
             </section>
             <section id="design" ref={sectionRefs.current.design}>
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/oG2IDyQWvLU?si=v3NXWSFP9eSACLQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <h2>3 - Proposed Design</h2>
                 <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
                 <CustomSwiper images={images.design} />
