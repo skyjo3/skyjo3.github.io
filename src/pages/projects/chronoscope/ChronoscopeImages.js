@@ -1,6 +1,6 @@
 import imageProject from './img/Fig1.png'
-import imagePlan from './img/Fig1a.jpg'
-import imageFocusGroup from './img/Fig1a.jpg'
+import imagePlan from './img/plan.png'
+import imageInquiry from './img/inquiry.png'
 import imageMiro from './img/Fig1a.jpg'
 import imageFieldStudy from './img/Fig1a.jpg'
 
@@ -37,9 +37,8 @@ const images = {
 
   singles: {
     imageProject:    { src: imageProject, alt: 'PhotoClock Design' },
-    imageContext:    { src: context1, alt: 'PhotoClock Design' },
     imagePlan:       { src: imagePlan, alt: 'PhotoClock Design' },
-    imageFocusGroup: { src: imageFocusGroup, alt: 'PhotoClock Use Scenario' },
+    imageInquiry:    { src: imageInquiry, alt: 'PhotoClock Use Scenario' },
     imageMiro:       { src: imageMiro, alt: 'PhotoClock Use Scenario' },
     imageFieldStudy: { src: imageFieldStudy, alt: 'PhotoClock Use Scenario' },
   },

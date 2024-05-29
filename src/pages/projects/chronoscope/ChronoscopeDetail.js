@@ -85,11 +85,11 @@ const ChronoscopeDetail = () => {
         <div className={styles.sidebar}>
             <ul>
                 <li><a href="#overview" className={activeSection === 'overview' ? styles.active : ''}>0 - overview</a></li>
-                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - research</a></li>
-                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - empathize</a></li>
+                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - context</a></li>
+                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - understand</a></li>
                 <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - design</a></li>
-                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - test</a></li>
-                <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - takeaways</a></li>
+                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - study</a></li>
+                <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - reflection</a></li>
             </ul>
         </div>
         <div className={styles.content}>
@@ -99,7 +99,7 @@ const ChronoscopeDetail = () => {
               <div className={styles.overviewContainer}>
                 <div>
                   <h2>Overview</h2>
-                  <p>With the massive proliferation of digital photos, new approaches are needed to enable people to engage with their vast photo archives over time and into the future. ChronoScope is a domestic technology that leverages temporal metadata embedded in digital photos as a resource to reorganize photos and present life patterns more clearly to encourage rich reflection on one's photo history.</p>
+                  <p>With the massive proliferation of digital photos, new approaches are needed to enable people to engage with their vast photo archives over time and into the future. Chronoscope is a domestic technology that leverages temporal metadata embedded in digital photos as a resource to reorganize photos and present life patterns more clearly to encourage rich reflection on one's photo history.</p>
                 </div>
                 <div>
                   <h2>Team</h2>
@@ -121,7 +121,7 @@ const ChronoscopeDetail = () => {
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-                <LazyLoadImage src={images.singles.imageContext.src} alt={images.singles.imageContext.alt} className={styles.contextImage} onClick={() => openLightbox(images.singles.imageContext.src)} />
+                <CustomSwiper images={images.context} />
                 <h2>1 - Research Context</h2>
                 <div className={styles.researchContainer}>
                   <div>
@@ -130,13 +130,14 @@ const ChronoscopeDetail = () => {
                   </div>
                   <div>
                     <h3>Research Goal</h3>
-                    <p>We aim to explore the <b>factors and methods</b> that <b>evoke feelings of nostalgia, fulfillment, and significance</b> in individuals when they engage with photos. By gaining insights into the user needs, our objective is to introduce <b>innovative photo viewing approaches</b>.</p>
+                    <p>We aim to support <b>open-ended</b> and <b>more diverse ways</b> for people to interact with their vast and still growing digital photo archive. Meanwhile, we aim to utilize <b>timestamps</b> as design materials to create <b>innovative photo viewing approaches</b> that invite <b>curious exploration</b>.</p>
                   </div>
                 </div>
                 <div>
-                  <h3>Question + Plan</h3>
-                  <p><i>How to make digital photo more present, dynamic, and interactive to support more situated and reflective photo viewing experiences?</i></p>
-                  <p>To answer this question, we built a qualitative research plan to understand user needs and explore potential design materials. Based on the research results, we kick started the PhotoClock design process.</p>
+                  <h3>Questions + Plan</h3>
+                  <p><i>Q1: How might meaningful experiences with personal digital photo archives be supported and sustained as they grow, expand, and age over time?</i></p>
+                  <p><i>Q2: What opportunities exist for metadata to be leveraged as a design resource that supports new ways of experiencing the trajectory of digital photos one has accumulated in their life?</i></p>
+                  <p>To answer these questions, we built a qualitative research plan to understand user needs and explore potential design ideas. Based on the research results, we kick started the Chronoscope design process.</p>
                 </div>
                 <div className={styles.skillsContainer}>
                   <div>
@@ -184,17 +185,17 @@ const ChronoscopeDetail = () => {
                   <div>
                     <h4>software engineering</h4>
                     <ul>
-                      <li>Python development and production</li>
-                      <li>(PIL/Pillow, PyQt5, NumPy)</li>
+                      <li>prototyping in Obj-C / Swift</li>
+                      <li>Python production (PIL/Pillow, PyQt5, NumPy)</li>
                     </ul>
                   </div>
                 </div>
                 <LazyLoadImage src={images.singles.imagePlan.src} alt={images.singles.imagePlan.alt} className={styles.planImage} onClick={() => openLightbox(images.singles.imagePlan.src)} />
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
-                <LazyLoadImage src={images.singles.imageFocusGroup.src} alt={images.singles.imageFocusGroup.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageFocusGroup.src)} />
-                <h2>2 - Empathize</h2>
-                <p>To understand the user needs, we conducted an <b>online focus group</b> on Zoom with 5 participants. We invited participants to generate insights through co-creating answers to questions in a <b>Figma</b> board.</p>
+                <LazyLoadImage src={images.singles.imageInquiry.src} alt={images.singles.imageInquiry.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageInquiry.src)} />
+                <h2>2 - Contextual Inquiry</h2>
+                <p>To understand the user needs, I conducted a <b>contextual inquiry</b> at 5 participants' houses to observe and learn their photographic practices. Through word of mouth and online advertisement, we recruited participants who regularly take and view photos, and have at least 1800 photos in their archives.</p>
                 <p>The results show that: </p>
                 <ul>
                   <li>The conventional chronological photo viewing with <b>gallery view</b> does not present <b>memories associated with the present self</b>, so this form of viewing does not trigger memories deeply.</li>
