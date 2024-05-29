@@ -63,14 +63,14 @@
 }
 
 .thumbnail:hover {
-  border: 2px solid var(--color-secondary);
+  border: 3px solid var(--color-secondary);
 }
 
 .thumbnail img {
   width: 100%; /* Ensure image fills the thumbnail container */
   height: 100%; /* Ensure image fills the thumbnail container */
   object-fit: cover; /* Maintain aspect ratio and cover entire container */
-  border-radius: 5px; /* Rounded corners for thumbnails */
+  border-radius: 3px; /* Rounded corners for thumbnails */
 }
 
 /* Navigation button styles */
