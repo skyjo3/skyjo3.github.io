@@ -126,11 +126,11 @@ const ChronoscopeDetail = () => {
                 <div className={styles.researchContainer}>
                   <div>
                     <h3>Problem Statement</h3>
-                    <p>The adoption of smartphones and low-cost cloud storage over the past decade has catalyzed a hyper-accelerated growth of personal photo archives. <b>As digital photos grow</b>, it becomes more <b>difficult for people to notice and engage</b> with their archive as an everyday resource.</p>
+                    <p>The adoption of smartphones over traditional cameras has catalyzed a hyper-accelerated growth of personal photo archives. As digital photos grow, <b>the placeless, spaceless, and formless nature</b> has made them <b>difficult for people to notice and engage</b>.</p>
                   </div>
                   <div>
                     <h3>Research Goal</h3>
-                    <p>We aim to support <b>open-ended</b> and <b>more diverse ways</b> for people to interact with their vast and still growing digital photo archive. Meanwhile, we aim to utilize <b>timestamps</b> as design materials to create <b>innovative photo viewing approaches</b> that invite <b>curious exploration</b>.</p>
+                    <p>To counteract the challenges posed by the vast, often formless nature of digital photo archives, we aim to develop <b>innovative and open-ended interaction methods</b> that engage people to explore their continually expanding collections, fostering <b>a sense of curiosity and discovery</b>.</p>
                   </div>
                 </div>
                 <div>
@@ -152,7 +152,7 @@ const ChronoscopeDetail = () => {
                     <h4>graphic design tools</h4>
                     <ul>
                       <li>Miro brainstorming</li>
-                      <li>Figma prototyping</li>
+                      <li>Paper wireframing</li>
                       <li>Adobe Suite</li>
                     </ul>
                   </div>
@@ -195,51 +195,90 @@ const ChronoscopeDetail = () => {
             <section id="empathize" ref={sectionRefs.current.empathize}>
                 <LazyLoadImage src={images.singles.imageInquiry.src} alt={images.singles.imageInquiry.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageInquiry.src)} />
                 <h2>2 - Contextual Inquiry</h2>
-                <p>To understand the user needs, I conducted a <b>contextual inquiry</b> at 5 participants' houses to observe and learn their photographic practices. Through word of mouth and online advertisement, we recruited participants who regularly take and view photos, and have at least 1800 photos in their archives.</p>
-                <p>The results show that: </p>
-                <ul>
-                  <li>The conventional chronological photo viewing with <b>gallery view</b> does not present <b>memories associated with the present self</b>, so this form of viewing does not trigger memories deeply.</li>
-                  <li>People desire new approaches to revisit their photo memories on <b>mobile phones</b>.</li>
-                </ul>
+                <p>To understand the user needs, I conducted a <b>contextual inquiry</b> at 5 participants' houses to observe and learn their photographic practices. Through word of mouth and online advertisement, I recruited participants who regularly take and view photos, and have at least 1,800 photos in their archives.</p>
+                
                 <div className={styles.miroContainer}>
                   <LazyLoadImage src={images.singles.imageMiro.src} alt={images.singles.imageMiro.alt} className={styles.miroImage} onClick={() => openLightbox(images.singles.imageMiro.src)} />
                   <div>
-                    <p>After analyzing the data on a <b>Miro</b> board, our results show that people care the most about <b>the why and when </b>they are browsing their photos.</p>
-                    <p>Thus, our research team decided to make use of the <b>timestamp of when each photo was taken</b>.</p>
+                    <p>After analyzing the data on a <b>Miro</b> board, we gained the results that: </p>
+                    <ul>
+                      <li>There are a <b>lack of motivation to organize or revisit</b> digital photos due to <b>the sheer size</b> of them, and</li>
+                      <li>a <b>lack of awareness</b> around the precise <b>contents in the deep past</b> of their growing photos.</li>  
+                    </ul>
                   </div>
                 </div>
+                <p>Based on the results, we created our design goals:</p>
+                <ul>
+                  <li>to increase people’s <b>awareness</b> and <b>access</b> of digital photos</li>
+                  <li>to support different ways of <b>sorting</b> and <b>visualizing</b> digital photos</li>
+                </ul>
             </section>
             <section id="design" ref={sectionRefs.current.design}>
-                <iframe width="100%" height="480" src="https://www.youtube.com/embed/oG2IDyQWvLU?si=v3NXWSFP9eSACLQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <h2>3 - Proposed Design</h2>
-                <p>To invite people to sense the passage of time and reflect on their life history, we chose <b>'clock time'</b> as a criterion for photos to regain visibility. We proposed a photo viewing app that only prompts photos taken around the 'current clock time'. The photos transition in a real-time flow.</p>
+                <h2>3 - Design Process</h2>
+                <p>To support people to regain a sense of scale and content of their digital photos, our team kickstarted an iterative design process that includes: ideation, prototyping, and digital fabrication.</p>
+                <h3>Ideation</h3>
+                <h5>(1) a tangible artifact at home</h5>
+                <p>After understanding the existing photo viewing platforms and devices, I initiated several rounds of sketching. At the end, we decided to create <b>a tangible photo viewer</b> that allows people to explore their memories <b>at home</b> for intimacy, access, and ease.</p>
+                <h5>(2) a way to reorganize photos via timestamps</h5>
+                <p>Also, learning the value of <b>using timestamps as design materials</b> from existing HCI design works, we decided to enable our tangible photo viewer to sort photos based on:</p>
+                  <ol>
+                    <li><b>chronological order</b>,</li>
+                    <li><b>dates</b>, regardless of the year they were taken,</li>
+                    <li><b>times of day</b>, regardless of the date or year they were taken.</li>
+                  </ol>
+                <h5>(3) a scope-like form</h5>
+                <LazyLoadImage src={images.singles.form.src} alt={images.singles.form.alt} className={styles.formImage} onClick={() => openLightbox(images.singles.form.src)} />
+                <p>Giving an appropriate physical form to Chronoscope pushed us to critically consider the aesthetics, material presence, and holistic integration of design elements. Our process was highly inspired by <b>scope-like forms</b> which not only suggest <b>rotation-based tangible interaction</b> but also invite users to <b>view and contemplate</b> the viewed phenomena in an intentional, inquisitive way.</p>
+                <h3>Prototyping</h3>
+                <h5>Phase 1 — Sketching</h5>
+                <p>Next, I started by collecting numerous <b>scope-form images on Pinterest</b> and created an <b>inspiration wall</b> in our design studio. More detailed sketching and ideas were produced in this phase as well.</p>
+                <CustomSwiper images={images.ideation} />
+                <h5>Phase 2 — Programming</h5>
+                <p>Later I turned the paper wireframes into live prototypes on an <b>iOS app</b>. I thought about using Figma, but the experience would just be very limited since it would not be using my real digital photos. The <b>Objective-C</b> codes were later translated into <b>Python</b> scripts, executed by a <b>Raspberry Pi</b> board.</p>
+                <p>The Python script that securely requests, downloads, processes, and integrates user’s digital photo archive (either <b>Google Photos or Dropbox</b>). It synchronizes photos over time.</p>
+                <CustomSwiper images={images.prototype} />
+                <h5>Phase 3 — Fabricating</h5>
+                <p>While developing the software, I collaborated with our 3d designer and digital fabrication expert on the actual <b>3D-printed parts</b> and where <b>each embeded electronic component</b> should be tightly stored.</p>
+                <LazyLoadImage src={images.singles.e1.src} alt={images.singles.e1.alt} className={styles.formImage} onClick={() => openLightbox(images.singles.e1.src)} />
+                <LazyLoadImage src={images.singles.e2.src} alt={images.singles.e2.alt} className={styles.formImage} onClick={() => openLightbox(images.singles.e2.src)} />
+                <p>A silicone eyepiece with magnification lens is affixed to the 240x240 color display. Raspberry Pi Zero W is integrated under a rotary switch (for timeframe mode selection) and a potentiometer (for granularity selection); these components lead into a continuous rotary encoder that is integrated into a driveshaft (for photo viewing selection); a cylindical lithium ion battery, Powerboost 1000 charger, and latching pushbutton (for powering on and of) conclude the electronics implementation. The enclosure is fabricated from 3D printed Resin with the viewing direction rotational surface encased in silicone.</p>
+                <LazyLoadImage src={images.singles.e3.src} alt={images.singles.e3.alt} className={styles.formImage} onClick={() => openLightbox(images.singles.e3.src)} />
+                <Gallery images={images.electronics} rows={2} columns={4} />
+                <h3>Final Design</h3>
+                <p>The final Chronoscope design enables users to explore and interact with their photo archive through 3 rotational controls:</p>
+                <ol>
+                  <li><b>Main Wheel:</b> The scope’s main feature is a rotating wheel that controls the viewing direction, navigating either forward or backward in time within the selected timeframe mode (either <b>clockwise</b> to move forward in time, or <b>counterclockwise</b> to move backward).</li>
+                  <li><b>Big Knob:</b> When switching the bigger knob, users toggle between <b>3 different timeframe modes</b> (Linear, Date, Time), each offering a temporal organization of their archive.</li>
+                  <li><b>Small Knob:</b> To ‘speed up’ or ‘slow down’ the amount of photos that are cycled through in one rotation when viewing photos, the user can adjust the smaller knob to <b>‘tune’ the granularity</b>.</li>
+                </ol>
+                <LazyLoadImage src={images.singles.design.src} alt={images.singles.design.alt} className={styles.fieldStudyImage} onClick={() => openLightbox(images.singles.design.src)} />
+                <p>Here are the examples of using Chronoscope. Click on the images to enter full screen.</p>
                 <CustomSwiper images={images.design} />
-                <iframe width="100%" height="480" src="https://www.youtube.com/embed/sNrT14OwCvA?si=ArwsHBIzFc1IFsBJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/oG2IDyQWvLU?si=v3NXWSFP9eSACLQm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </section>
             <section id="test" ref={sectionRefs.current.test}>
-                <h2>4 - Online Field Study</h2>
-                <p>PhotoClock was deployed to <b>12 participants</b>' phones via Apple Testflight in North America for <b>8 weeks</b>. Participants were encouraged to share the screenshots and use scenarios of their PhotoClock app. Post-deployment <b>interviews</b> were conducted one-on-one, lasting for 1 hour on Zoom.</p>
-                <p>Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b>.</p>
-                <LazyLoadImage src={images.singles.imageFieldStudy.src} alt={images.singles.imageFieldStudy.alt} className={styles.fieldStudyImage} onClick={() => openLightbox(images.singles.imageFieldStudy.src)} />
-                <p>Hear the AI-distorted voices from our field study's participants:</p>
-                
-                {/* Conditionally load ElfsightWidget */}
-                {loadElfsightWidget && (
-                  <ElfsightWidget widgetID="127867e4-882f-4838-98c1-a8a562a84e29" />
+                <h2>4 - Field Study</h2>
+                <p>We recruited <b>4 participants</b> for <b>3 months</b> in Vancouver through word of mouth and online advertisements. In the initial interviews, we offered a demo of Chronoscope and provided a pamphlet explaining how it works. After the initial visit, we conducted bi-weekly interviews to check in with participants.</p>
+                <p>The final <b>in-depth interviews</b> lasted for approximately 2 hours. Two researchers attended and took field notes in each interview. Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b> on Miro.</p>
+                <p>.</p>
+                <LazyLoadImage src={images.singles.form.src} alt={images.singles.form.alt} className={styles.fieldStudyImage} onClick={() => openLightbox(images.singles.form.src)} />
+                <h3>Findings</h3>
+                <p>Our findings showed that Chronoscope resurfaced <b>forgotten or unknown life patterns</b>, especially those in <b>less familiar modes</b>, such as Date and Time. Because it is not easy to anticipate what photos would be interconnected in those two modes. People can revisit, associate, and reflect on multiple surprising moments at once in their exploration journey, <b>triggering a provocative way of integrating and interpreting autobiographical memories</b>.</p>
+                <h3>More details can be found below:</h3> 
+                <p>1. Audio-distorted video presentation of this work in CHI2023:</p>                
+                {/* Presentation Slides? */}
+                <iframe width="100%" height="480" src="https://www.youtube.com/embed/KO5jsBgDPtk?si=l5FOcVnGmBHX80zh" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <p>2. Research publications:</p>
+                {/* Conditionally load CommonNinjaWidget */}
+                {loadCommonNinjaWidget && (
+                  <CommonNinjaWidget widgetId="65a1eb65-1593-4968-be59-7e52f7b54060" />
                 )}
             </section>
             <section id="takeaways" ref={sectionRefs.current.takeaways}>
-                <h2>5 - Takeaways – Less, again, is more.</h2>
-                <p>Findings show that PhotoClock engaged people in exploring their photo memories with <b>a natural, dynamic 'flow'</b>. This kind of flow-based interaction design strengthened people's connection with their precious past. Our findings also reveal that providing <b>minimal controls</b> in digital photo viewing system can better support people to recall memories and reflect on life history <b>more consciously and naturally</b>.</p>
+                <h2>5 - Reflection on Challenges and Opportunities</h2>
+                <p>Looking back, the most challenging part at the beginning is to <b>interconnect people's various past photo memories and present them in a meaning form</b>. However, with the support of timestamps, we were able to figure out a way to propose innovative ways of reorganizing photos.</p> 
+                <p>Moreover, the fact that Chronoscope updates photos over time created an ongoing accumulated quality that increases people's <b>sense of ownership</b> and offers <b>agency</b> over their photo archives. It is what prompted prospective refections on the potential longer-term place that Chronoscope could occupy in their own lives and potentially scaling beyond it to future generations.</p>
                 <div>
-                  <h3>REFLECTION: How Research Changed the Design Direction</h3>
-                  <p>This research has significantly influenced the design direction by leveraging insights from participants. It has yielded evidence regarding potential new design elements for systems that facilitate the coexistence of individuals with their ever-expanding digital data and possessions.</p>
-                  <p>Learn more participants' stories and experiences here:</p>
-                  
-                  {/* Conditionally load CommonNinjaWidget */}
-                  {loadCommonNinjaWidget && (
-                    <CommonNinjaWidget widgetId="4059adb6-9433-48d1-a294-3bc3de43b15f" />
-                  )}
                   <h3>More Images</h3>
                   <Gallery images={images.more} rows={2} columns={5} />
                 </div>
