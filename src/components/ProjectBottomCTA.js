@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
-import styles from './FullScreenCTA.module.css';
+import styles from './ProjectBottomCTA.module.css';
 
-const FullScreenCTA = () => {
+const ProjectBottomCTA = () => {
   const [opacity, setOpacity] = useState(0);
   const navigate = useNavigate(); // Hook for navigation
 
@@ -27,12 +27,15 @@ const FullScreenCTA = () => {
     };
   }, []);
 
+  // Calculate z-index based on opacity
+  const zIndex = opacity > 0 ? 1000 : -1;
+
   return (
-    <div className={styles.fullScreenCTA} style={{ opacity: opacity }}>
+    <div className={styles.bottomCTA} style={{ opacity: opacity, zIndex: zIndex }}>
       <button onClick={() => navigate('/more')}>contact me for collaboration 😃</button>
       <button onClick={() => navigate('/projects')}>not yet amy — let me view more projects first 🤔</button>
     </div>
   );
 };
 
-export default FullScreenCTA;
+export default ProjectBottomCTA;

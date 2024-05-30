@@ -11,7 +11,7 @@ import LazyLoadImage from '../../../components/LazyLoadImage';
 import { ElfsightWidget } from 'react-elfsight-widget';
 import { CommonNinjaWidget } from 'commonninja-react';
 
-import FullScreenCTA from '../../../components/FullScreenCTA'
+import ProjectBottomCTA from '../../../components/ProjectBottomCTA'
 
 import images from './ChronoscopeImages'
 
@@ -80,7 +80,7 @@ const ChronoscopeDetail = () => {
   return (
     <div className="container">
       {/* CTA fade in at page end */}
-      <FullScreenCTA />
+      <ProjectBottomCTA />
       <div className={styles.projectContainer}>
         <div className={styles.sidebar}>
             <ul>
