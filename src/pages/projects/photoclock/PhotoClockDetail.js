@@ -1,5 +1,6 @@
 // PhotoClockDetail.js
 import React, { useState, useEffect, useRef } from 'react';
+import { debounce } from '../../../utils/debounce';
 import { useHistory } from 'react-router-dom';
 import styles from './PhotoClockDetail.module.css';
 
@@ -32,21 +33,23 @@ const PhotoClockDetail = () => {
   });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-            if (entry.target.id === 'test') {
-              setLoadElfsightWidget(true);
-            } else if (entry.target.id === 'takeaways') {
-              setLoadCommonNinjaWidget(true);
-            }
+    const debounceObserverCallback = debounce((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+          if (entry.target.id === 'test') {
+            setLoadElfsightWidget(true);
+          } else if (entry.target.id === 'takeaways') {
+            setLoadCommonNinjaWidget(true);
           }
-        });
-      },
-      { rootMargin: '-20% 0px', threshold: 0.1 }  // Trigger when 10% of the element is visible and expand the top margin
-    );
+        }
+      });
+    }, 300); // Debounce delay of 300 milliseconds
+
+    const observer = new IntersectionObserver(debounceObserverCallback, {
+      rootMargin: '-20% 0px',
+      threshold: 0.1
+    });
 
     Object.values(sectionRefs.current).forEach(ref => {
       if (ref.current) {
