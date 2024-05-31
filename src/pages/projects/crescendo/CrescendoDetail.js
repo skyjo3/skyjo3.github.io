@@ -158,7 +158,7 @@ const CrescendoDetail = () => {
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-              <LazyLoadImage src={images.singles.imageInquiry.src} alt={images.singles.imageInquiry.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageInquiry.src)} />
+              <CustomSwiper images={images.context} />
               <h2>1 - Survey for People's Interest in Slow Messaging</h2>
 
             </section>
