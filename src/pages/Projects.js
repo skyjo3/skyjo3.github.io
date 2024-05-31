@@ -47,22 +47,7 @@ const Projects = () => {
   }, [selectedTags]); 
 
   const handleTagClick = (tag) => {
-    setSelectedTags(prev => {
-        // If "all" is clicked, reset to only include "all"
-        if (tag === 'all') {
-            return ['all'];
-        }
-
-        // Remove "all" from selected tags if any other tag is clicked
-        const filteredTags = prev.filter(t => t !== 'all');
-
-        // Toggle the clicked tag
-        if (filteredTags.includes(tag)) {
-            return filteredTags.filter(t => t !== tag);
-        } else {
-            return [...filteredTags, tag];
-        }
-    });
+    setSelectedTags([tag]);
   };
 
   // debounce & cleanup
@@ -98,7 +83,7 @@ const Projects = () => {
               {tags.map(tag => (
                 <div
                   key={tag}
-                  className={`${styles.tag} ${selectedTags.includes(tag) ? styles.selected : ''}`}
+                  className={[styles.tag, selectedTags.includes(tag) && styles.selected].filter(Boolean).join(' ')}
                   onClick={() => handleTagClick(tag)}
                   onMouseEnter={() => handleMouseEnter(tag)}
                   onMouseLeave={() => handleMouseLeave(tag)}
