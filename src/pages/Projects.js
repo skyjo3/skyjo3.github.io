@@ -16,12 +16,20 @@ const Projects = () => {
   const location = useLocation();
   const isProjectsPage = location.pathname === '/projects'; 
 
+  // get unique tags
+  const getUniqueTags = (projects) => {
+    const allTags = projects.reduce((acc, project) => [...acc, ...project.tags], []);
+    const uniqueTags = new Set(allTags);
+    uniqueTags.delete('all');
+    return [...uniqueTags];
+  };
+
   // Project data and tag filtering
   const [projects, setProjects] = useState(data); 
+  const [tags, setTags] = useState(['all', ...getUniqueTags(data)]);
   const [selectedTags, setSelectedTags] = useState(() => {
     // Initialize selected tags from localStorage if available, otherwise default to ['all']
     const storedTags = localStorage.getItem('selectedTags');
-    console.log('stored tages: '+storedTags);
     return storedTags ? JSON.parse(storedTags) : ['all'];
   });
 
@@ -87,7 +95,7 @@ const Projects = () => {
             <p>Recently, I have started to incorporate <b>generative AI</b> to foster more <b>enriched and meaningful interactions</b> with personal data.</p>
             {/* Tags section */}
             <div className={styles["tags-container"]}>
-              {['all', 'mobile', 'tangible', 'website', 'photos', 'audio', 'reading'].map(tag => (
+              {tags.map(tag => (
                 <div
                   key={tag}
                   className={`${styles.tag} ${selectedTags.includes(tag) ? styles.selected : ''}`}
