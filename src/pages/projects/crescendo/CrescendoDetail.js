@@ -81,10 +81,10 @@ const CrescendoDetail = () => {
         <div className={styles.sidebar}>
             <ul>
                 <li><a href="#overview" className={activeSection === 'overview' ? styles.active : ''}>0 - overview</a></li>
-                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - context</a></li>
-                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - understand</a></li>
-                <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - design</a></li>
-                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - study</a></li>
+                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - survey</a></li>
+                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - design</a></li>
+                <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - user study #1</a></li>
+                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - user study #2</a></li>
                 <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - reflection</a></li>
             </ul>
         </div>
@@ -95,98 +95,72 @@ const CrescendoDetail = () => {
               <div className={styles.overviewContainer}>
                 <div>
                   <h2>Overview</h2>
-                  <p>With the massive proliferation of digital photos, new approaches are needed to enable people to engage with their vast photo archives over time and into the future. Chronoscope is a domestic technology that leverages temporal metadata embedded in digital photos as a resource to reorganize photos and present life patterns more clearly to encourage rich reflection on one's photo history.</p>
+                  <p>Messaging in human communication is not only a carrier of the sender’s intention but also interplay between anticipations on both sides if we see it as an experience-centered design issue. In contrast to using instant messages, we proposed a slow messaging app that progressively reveal messages over a period of time and observe people's reaction to it.</p>
                 </div>
                 <div>
                   <h2>Team</h2>
-                  <h6>Project Lead & Graphics, Software, Electronics</h6>Amy Yo Sue Chen
-                  <h6>Writing & Design Supervisor</h6>William Odom
-                  <h6>Writing Supervisor</h6>Carman Neustaedter
-                  <h6>3D Design & Data Analysis Assistant</h6>Ce Zhong
-                  <h6>Digital Fabrication & Electronics Assistant</h6>Henry Lin
-                  <h6>Electronics Assistant</h6>Tal Amram
+                  <h6>Project Lead & Research, Design, Software</h6>Amy Yo Sue Chen
+                  <h6>Writing & Design Supervisor</h6>Rung-Huei Liang
+                  <h6>Writing & Research Lead</h6>Joe Wen-Chieh Tsai
+                  <h6>Data Analysis Assistant</h6>Sheng-Yang Hsu
                 </div>
               </div>
               <div>
                 <h2>Contribution / Impact</h2>
                 <ul>
-                  <li>Creating innovative photo viewing experience to improve user engagement</li>
-                  <li>Using temporal metadata as design materials to trigger curious exploration of one’s life history</li>
-                  <li>5 research publications, including a journal article, a book chapter, and 3 papers on ACM CHI/DIS</li>
+                  <li>This research found a best level of progression that invites anticipation and curiosity.</li>
+                  <li>This messaging way offered a way to increase the quality of intimate communication.</li>
+                  <li>This work produced 2 research publications, including one with a <b>best paper award</b>.</li>
                 </ul>
+              </div>
+              <LazyLoadImage src={images.singles.messaging.src} alt={images.singles.messaging.alt} className={styles.contextImage} onClick={() => openLightbox(images.singles.messaging.src)} />
+              <h2>Research Context</h2>
+              <div className={styles.researchContainer}>
+                <div>
+                  <h3>Problem Statement</h3>
+                  <p>The fast and concise communication enabled by <b>instant messaging</b> has compelled individuals to convey their feelings and thoughts <b>promptly and respond 'in time'</b>, particularly for those communicating across long distances with timezone differences.</p>
+                </div>
+                <div>
+                  <h3>Research Goal</h3>
+                  <p>We aim to develop <b>new approaches to experiencing messaging systems</b> that enhance and support people's deep and intimate communication with each other.</p>
+                </div>
+              </div>
+              <div>
+                <h3>Qualitative Research Plan</h3>
+                <p>To achieve the research goal, we built a qualitative research plan to understand user needs, explore potential design ideas, and evaluate our new messaging design.</p>
+                <p>The whole plan can be broken down into 5 parts:</p>
+                <LazyLoadImage src={images.singles.imagePlan.src} alt={images.singles.imagePlan.alt} className={styles.planImage} onClick={() => openLightbox(images.singles.imagePlan.src)} />
+              </div>
+              <div className={styles.skillsContainer}>
+                <div>
+                  <h4>research methods</h4>
+                  <ul>
+                    <li>Survey / interview</li>
+                    <li>User testing / log analysis</li>
+                    <li>Inferential statistics / t-test</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>design tools</h4>
+                  <ul>
+                    <li>Sketch prototyping</li>
+                    <li>Zeplin</li>
+                    <li>Adobe Suite</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>software engineering</h4>
+                  <ul>
+                    <li>iOS dev (Obj-C/Swift)</li>
+                    <li>Automation Scripts in Adobe Suite</li>
+                  </ul>
+                </div>
               </div>
             </section>
             <section id="research" ref={sectionRefs.current.research}>
-                <CustomSwiper images={images.context} />
-                <h2>1 - Research Context</h2>
-                <div className={styles.researchContainer}>
-                  <div>
-                    <h3>Problem Statement</h3>
-                    <p>The adoption of smartphones over traditional cameras has catalyzed a hyper-accelerated growth of personal photo archives. As digital photos grow, <b>the placeless, spaceless, and formless nature</b> has made them <b>difficult for people to notice and engage</b>.</p>
-                  </div>
-                  <div>
-                    <h3>Research Goal</h3>
-                    <p>To counteract the challenges posed by the vast, often formless nature of digital photo archives, we aim to develop <b>innovative and open-ended interaction methods</b> that engage people to explore their continually expanding collections, fostering <b>a sense of curiosity and discovery</b>.</p>
-                  </div>
-                </div>
-                <div>
-                  <h3>Questions + Plan</h3>
-                  <p><i>Q1: How might meaningful experiences with personal digital photo archives be supported and sustained as they grow, expand, and age over time?</i></p>
-                  <p><i>Q2: What opportunities exist for metadata to be leveraged as a design resource that supports new ways of experiencing the trajectory of digital photos one has accumulated in their life?</i></p>
-                  <p>To answer these questions, we built a qualitative research plan to understand user needs and explore potential design ideas. Based on the research results, we kick started the Chronoscope design process.</p>
-                </div>
-                <div className={styles.skillsContainer}>
-                  <div>
-                    <h4>research methods</h4>
-                    <ul>
-                      <li>Contextual inquiry</li>
-                      <li>Field study / interview</li>
-                      <li>Affinity mapping</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>graphic design tools</h4>
-                    <ul>
-                      <li>Miro brainstorming</li>
-                      <li>Paper wireframing</li>
-                      <li>Adobe Suite</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>3D design tools</h4>
-                    <ul>
-                      <li>modeling with Rhino</li>
-                      <li>rendering with Keyshot</li>
-                      <li>printing with Ultimaker Cura</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={styles.skillsContainer}>
-                  <div>
-                    <h4>documentation</h4>
-                    <ul>
-                      <li>Google Suite</li>
-                      <li>Otter.ai</li>
-                      <li>Microsoft Word / LaTeX</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>electronics design</h4>
-                    <ul>
-                      <li>Arduino prototyping</li>
-                      <li>Raspberry Pi production</li>
-                      <li>PCB design (Frizting)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>software engineering</h4>
-                    <ul>
-                      <li>prototyping in Obj-C / Swift</li>
-                      <li>Python production (PIL/Pillow, PyQt5, NumPy)</li>
-                    </ul>
-                  </div>
-                </div>
-                <LazyLoadImage src={images.singles.imagePlan.src} alt={images.singles.imagePlan.alt} className={styles.planImage} onClick={() => openLightbox(images.singles.imagePlan.src)} />
+              <LazyLoadImage src={images.singles.imageInquiry.src} alt={images.singles.imageInquiry.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageInquiry.src)} />
+              <h2>1 - Survey for People's Interest in Slow Messaging</h2>
+
             </section>
             <section id="empathize" ref={sectionRefs.current.empathize}>
                 <LazyLoadImage src={images.singles.imageInquiry.src} alt={images.singles.imageInquiry.alt} className={styles.focusGroupImage} onClick={() => openLightbox(images.singles.imageInquiry.src)} />

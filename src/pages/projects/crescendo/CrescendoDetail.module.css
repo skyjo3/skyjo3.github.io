@@ -65,9 +65,9 @@
 
 .crescendo .contextImage {
   width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 200px;
 }
 
 .crescendo .researchContainer {
@@ -88,6 +88,7 @@
   height: auto;
   object-fit: cover;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .crescendo .focusGroupImage,

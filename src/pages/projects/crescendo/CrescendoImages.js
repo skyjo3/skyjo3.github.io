@@ -1,12 +1,13 @@
-import imageProject from './img/Fig1.png'
+import imageProject from './img/1.jpg'
+import imageMessaging from './img/messaging.jpg'
 import imagePlan from './img/plan.png'
 import imageInquiry from './img/inquiry.png'
 import imageMiro from './img/Fig1a.jpg'
 import imageForm from './img/form.png'
 
-import context1 from './img/context1.jpg'
+import context1 from './img/crystalized.gif'
 import context2 from './img/context2.jpg'
-import context3 from './img/context3.gif'
+import context3 from './img/context1.jpg'
 
 import ideation0 from './img/home.png'
 import ideation1 from './img/pinterest.png'
@@ -51,6 +52,7 @@ const images = {
 
   singles: {
     imageProject:    { src: imageProject, alt: 'PhotoClock Design' },
+    messaging:       { src: imageMessaging, alt: 'instant messaging'},
     imagePlan:       { src: imagePlan, alt: 'PhotoClock Design' },
     imageInquiry:    { src: imageInquiry, alt: 'PhotoClock Use Scenario' },
     imageMiro:       { src: imageMiro, alt: 'PhotoClock Use Scenario' },

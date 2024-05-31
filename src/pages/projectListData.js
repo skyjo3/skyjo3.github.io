@@ -24,13 +24,13 @@ const projectsData = [
     linkPath: '/projects/chronoscope',
     tags: ['photos', 'tangible', 'field study', 'all'],
   },
-  {
-    title: 'CrescendoMessage',
-    description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
-    imageUrl: image3,
-    linkPath: '/projects/crescendo',
-    tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
-  },
+  // {
+  //   title: 'CrescendoMessage',
+  //   description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
+  //   imageUrl: image3,
+  //   linkPath: '/projects/crescendo',
+  //   tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
+  // },
   {
     title: 'Womany',
     description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
@@ -66,13 +66,13 @@ const projectsData = [
     linkPath: '/projects/olly',
     tags: ['audio', 'tangible', 'field study', 'all'],
   },
-  {
-    title: 'Slow Game',
-    description: 'Conceptualizing time alternatively by playing the Snake game one step every 18 hours.',
-    imageUrl: image9,
-    linkPath: '/projects/slow-game',
-    tags: ['temporality', 'tangible', 'research through design', 'all'],
-  }
+  // {
+  //   title: 'Slow Game',
+  //   description: 'Conceptualizing time alternatively by playing the Snake game one step every 18 hours.',
+  //   imageUrl: image9,
+  //   linkPath: '/projects/slow-game',
+  //   tags: ['temporality', 'tangible', 'research through design', 'all'],
+  // }
 ];
 
 export default projectsData;

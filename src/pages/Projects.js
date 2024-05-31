@@ -82,7 +82,7 @@ const Projects = () => {
         <ScrollIndicator />
         <div className={styles["projects-container"]}>
           <div className={`${styles.project} ${styles.intro}`}>
-            <h5>↳  9 FEATURED PROJECTS</h5>
+            <h5>↳  {data.length} FEATURED PROJECTS</h5>
             <p>My works surrounds <b>human-photo interaction</b>, <b>UX design</b>, and <b>domestic artifacts</b>.</p>
             <p>Recently, I have started to incorporate <b>generative AI</b> to foster more <b>enriched and meaningful interactions</b> with personal data.</p>
             {/* Tags section */}
