@@ -22,7 +22,7 @@ import WomanyDetail from './pages/projects/womany/WomanyDetail'
       // <Route path="/projects/olly" element={<OllyDetail />} />      
 
 const AppRouter = () => (
-  <Router basename="/website-new">
+  <Router basename="/">
     <ScrollToTop />
     <Header />
     <Routes>
