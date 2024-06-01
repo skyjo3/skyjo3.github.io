@@ -1,6 +1,8 @@
 // src/AppRouter.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { pageview } from './utils/gtag';
+
 import ScrollToTop from './components/ScrollToTop';
 
 import Header from './Header';
@@ -21,10 +23,21 @@ import WomanyDetail from './pages/projects/womany/WomanyDetail'
       // <Route path="/projects/olo" element={<OloDetail />} />
       // <Route path="/projects/olly" element={<OllyDetail />} />      
 
+const TrackPageViews = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    pageview(location.pathname + location.search);
+  }, [location]);
+
+  return null;
+};
+
 const AppRouter = () => (
   <Router basename="/">
     <ScrollToTop />
     <Header />
+    <TrackPageViews />
     <Routes>
       <Route path="/" element={<About />} />
       <Route exact path="/projects" element={<Projects />} />
