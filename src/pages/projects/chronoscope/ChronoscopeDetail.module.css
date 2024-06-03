@@ -22,14 +22,14 @@
   margin: 0;
 }
 
-.sidebar ul li a {
+.sidebar ul li {
   display: block;
   padding: 10px;
   color: #333;
   text-decoration: none;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li:hover {
   background-color: rgba(var(--color-secondary-rgb), 0.1);
 }
 

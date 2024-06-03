@@ -1,6 +1,6 @@
 // ChronoscopeDetail.js
 import React, { useState, useEffect, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './ChronoscopeDetail.module.css';
 
 import LightboxSingle from '../../../components/LightboxSingle';
@@ -17,6 +17,8 @@ import images from './ChronoscopeImages'
 const ChronoscopeDetail = () => {
 
   /* Sidebar Navigation */
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
   const [loadCommonNinjaWidget, setLoadCommonNinjaWidget] = useState(false);
 
@@ -28,6 +30,13 @@ const ChronoscopeDetail = () => {
     test: useRef(null),
     takeaways: useRef(null),
   });
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash && sectionRefs.current[hash] && sectionRefs.current[hash].current) {
+      sectionRefs.current[hash].current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,6 +69,10 @@ const ChronoscopeDetail = () => {
     };
   }, []);
 
+  const handleNavClick = (section) => {
+    navigate("#" + section);
+  };
+
   /* LightboxSingle */
   const [selectedImage, setSelectedImage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -79,14 +92,14 @@ const ChronoscopeDetail = () => {
       <ProjectBottomCTA />
       <div className={styles.projectContainer}>
         <div className={styles.sidebar}>
-            <ul>
-                <li><a href="#overview" className={activeSection === 'overview' ? styles.active : ''}>0 - overview</a></li>
-                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - context</a></li>
-                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - understand</a></li>
-                <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - design</a></li>
-                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - study</a></li>
-                <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - reflection</a></li>
-            </ul>
+          <ul>
+              <li onClick={() => handleNavClick('overview')} className={activeSection === 'overview' ? styles.active : ''}>0 - overview</li>
+              <li onClick={() => handleNavClick('research')} className={activeSection === 'research' ? styles.active : ''}>1 - context</li>
+              <li onClick={() => handleNavClick('empathize')} className={activeSection === 'empathize' ? styles.active : ''}>2 - understand</li>
+              <li onClick={() => handleNavClick('design')} className={activeSection === 'design' ? styles.active : ''}>3 - design</li>
+              <li onClick={() => handleNavClick('test')} className={activeSection === 'test' ? styles.active : ''}>4 - study</li>
+              <li onClick={() => handleNavClick('takeaways')} className={activeSection === 'takeaways' ? styles.active : ''}>5 - reflection</li>
+          </ul>
         </div>
         <div className={styles.content}>
           <div className={styles.chronoscope}>

@@ -1,6 +1,7 @@
 // src/AppRouter.js
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { pageview } from './utils/gtag';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -12,7 +13,6 @@ import More from './pages/More';
 
 import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
 import ChronoscopeDetail from './pages/projects/chronoscope/ChronoscopeDetail'
-// import CrescendoDetail from './pages/projects/crescendo/CrescendoDetail'
 import WomanyDetail from './pages/projects/womany/WomanyDetail'
 
       // <Route path="/projects/crescendo" element={<CrescendoDetail />} />
@@ -34,17 +34,17 @@ const TrackPageViews = () => {
 };
 
 const AppRouter = () => (
-  <Router basename="/">
+  <Router>
     <ScrollToTop />
     <Header />
     <TrackPageViews />
     <Routes>
       <Route path="/" element={<About />} />
-      <Route exact path="/projects" element={<Projects />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="/projects/photoclock" element={<PhotoClockDetail />} />
       <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
       <Route path="/projects/womany" element={<WomanyDetail />} />
-      <Route exact path="/more" element={<More />} />
+      <Route path="/more" element={<More />} />
       <Route path="*" element={<Navigate to="/" />} /> {/* Catch-all route */}
     </Routes>
   </Router>

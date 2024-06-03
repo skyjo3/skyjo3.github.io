@@ -1,7 +1,7 @@
 // WomanyDetail.js
 import React, { useState, useEffect, useRef } from 'react';
 import { debounce } from '../../../utils/debounce';
-import { useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './WomanyDetail.module.css';
 
 import LightboxSingle from '../../../components/LightboxSingle';
@@ -16,6 +16,8 @@ import images from './WomanyImages'
 const WomanyDetail = () => {
 
   /* Sidebar Navigation */
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
 
   const sectionRefs = useRef({
@@ -26,6 +28,13 @@ const WomanyDetail = () => {
     test: useRef(null),
     takeaways: useRef(null),
   });
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash && sectionRefs.current[hash] && sectionRefs.current[hash].current) {
+      sectionRefs.current[hash].current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
 
   useEffect(() => {
     const debounceObserverCallback = debounce((entries) => {
@@ -57,6 +66,10 @@ const WomanyDetail = () => {
     };
   }, []);
 
+  const handleNavClick = (section) => {
+    navigate("#" + section);
+  };
+
   /* LightboxSingle */
   const [selectedImage, setSelectedImage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -76,14 +89,14 @@ const WomanyDetail = () => {
       <ProjectBottomCTA />
       <div className={styles.projectContainer}>
         <div className={styles.sidebar}>
-            <ul>
-                <li><a href="#overview" className={activeSection === 'overview' ? styles.active : ''}>0 - overview</a></li>
-                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - background</a></li>
-                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - learn + focus</a></li>
-                <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - design</a></li>
-                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - analytics</a></li>
-                <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - review</a></li>
-            </ul>
+          <ul>
+              <li onClick={() => handleNavClick('overview')} className={activeSection === 'overview' ? styles.active : ''}>0 - overview</li>
+              <li onClick={() => handleNavClick('research')} className={activeSection === 'research' ? styles.active : ''}>1 - background</li>
+              <li onClick={() => handleNavClick('empathize')} className={activeSection === 'empathize' ? styles.active : ''}>2 - learn + focus</li>
+              <li onClick={() => handleNavClick('design')} className={activeSection === 'design' ? styles.active : ''}>3 - design</li>
+              <li onClick={() => handleNavClick('test')} className={activeSection === 'test' ? styles.active : ''}>4 - analytics</li>
+              <li onClick={() => handleNavClick('takeaways')} className={activeSection === 'takeaways' ? styles.active : ''}>5 - review</li>
+          </ul>
         </div>
         <div className={styles.content}>
           <div className={styles.womany}>

@@ -1,7 +1,7 @@
 // PhotoClockDetail.js
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { debounce } from '../../../utils/debounce';
-import { useHistory } from 'react-router-dom';
 import styles from './PhotoClockDetail.module.css';
 
 import LightboxSingle from '../../../components/LightboxSingle';
@@ -19,6 +19,8 @@ import images from './PhotoClockImages'
 const PhotoClockDetail = () => {
 
   /* Sidebar Navigation */
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
   const [loadElfsightWidget, setLoadElfsightWidget] = useState(false);
   const [loadCommonNinjaWidget, setLoadCommonNinjaWidget] = useState(false);
@@ -31,6 +33,15 @@ const PhotoClockDetail = () => {
     test: useRef(null),
     takeaways: useRef(null),
   });
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    console.log("Current hash:", hash);
+    if (hash && sectionRefs.current[hash] && sectionRefs.current[hash].current) {
+      console.log("Scrolling to:", hash);
+      sectionRefs.current[hash].current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
 
   useEffect(() => {
     const debounceObserverCallback = debounce((entries) => {
@@ -67,6 +78,10 @@ const PhotoClockDetail = () => {
     };
   }, []);
 
+  const handleNavClick = (section) => {
+    navigate("#" + section);
+  };
+
   /* LightboxSingle */
   const [selectedImage, setSelectedImage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -86,14 +101,14 @@ const PhotoClockDetail = () => {
       <ProjectBottomCTA />
       <div className={styles.projectContainer}>
         <div className={styles.sidebar}>
-            <ul>
-                <li><a href="#overview" className={activeSection === 'overview' ? styles.active : ''}>0 - overview</a></li>
-                <li><a href="#research" className={activeSection === 'research' ? styles.active : ''}>1 - research</a></li>
-                <li><a href="#empathize" className={activeSection === 'empathize' ? styles.active : ''}>2 - empathize</a></li>
-                <li><a href="#design" className={activeSection === 'design' ? styles.active : ''}>3 - design</a></li>
-                <li><a href="#test" className={activeSection === 'test' ? styles.active : ''}>4 - test</a></li>
-                <li><a href="#takeaways" className={activeSection === 'takeaways' ? styles.active : ''}>5 - takeaways</a></li>
-            </ul>
+          <ul>
+            <li onClick={() => handleNavClick('overview')} className={activeSection === 'overview' ? styles.active : ''}>0 - overview</li>
+            <li onClick={() => handleNavClick('research')} className={activeSection === 'research' ? styles.active : ''}>1 - research</li>
+            <li onClick={() => handleNavClick('empathize')} className={activeSection === 'empathize' ? styles.active : ''}>2 - empathize</li>
+            <li onClick={() => handleNavClick('design')} className={activeSection === 'design' ? styles.active : ''}>3 - design</li>
+            <li onClick={() => handleNavClick('test')} className={activeSection === 'test' ? styles.active : ''}>4 - test</li>
+            <li onClick={() => handleNavClick('takeaways')} className={activeSection === 'takeaways' ? styles.active : ''}>5 - takeaways</li>
+          </ul>
         </div>
         <div className={styles.content}>
           <div className={styles.photoclock}>
