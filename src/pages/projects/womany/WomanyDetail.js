@@ -67,6 +67,7 @@ const WomanyDetail = () => {
   }, []);
 
   const handleNavClick = (section) => {
+    setActiveSection(section);
     navigate("#" + section);
   };
 
@@ -100,8 +101,8 @@ const WomanyDetail = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.womany}>
-            <LazyLoadImage src={images.singles.imageProject.src} alt={images.singles.imageProject.alt} className={styles.projectContentImage} onClick={() => openLightbox(images.singles.imageProject.src)} />
             <section id="overview" ref={sectionRefs.current.overview}>
+              <LazyLoadImage src={images.singles.imageProject.src} alt={images.singles.imageProject.alt} className={styles.projectContentImage} onClick={() => openLightbox(images.singles.imageProject.src)} />
               <div className={styles.overviewContainer}>
                 <div>
                   <h2>Overview</h2>
