@@ -135,7 +135,7 @@ const QuologueDetail = () => {
                   </div>
                   <div>
                     <h3>Research Goal</h3>
-                    <p>The project seeks to foster an <b>open dialogue</b>, encouraging users to <b>revisit and challenge</b> their own perspectives. Through seamlessly integrating AI in the background, Quologue aims to facilitate a sophisticated conversation between individuals and their insights, pushing the boundaries of how artificial intelligence can elegantly support and enhance these meaningful interactions.</p>
+                    <p>The project seeks to foster an <b>open dialogue</b>, encouraging users to <b>revisit and challenge</b> their own perspectives. Through seamlessly integrating AI in the background, we aim to facilitate a sophisticated conversation between individuals and their insights, pushing the boundaries of <b>how AI can elegantly support and enhance these meaningful interactions</b>.</p>
                   </div>
                 </div>
                 <div className={styles.skillsContainer}>
@@ -172,36 +172,71 @@ const QuologueDetail = () => {
             <section id="empathize" ref={sectionRefs.current.empathize}>
                 <LazyLoadImage src={images.singles.interview.src} alt={images.singles.interview.alt} className={styles.interviewImage} onClick={() => openLightbox(images.singles.interview.src)} />
                 <h2>2 - Semi-Structured Interview</h2>
-                <p>To begin with, we conducted a semi-structured interview with 3 participants to understand their eBook reading practices and desire.</p>
-                <div>
-                  <h3>How Research Changed the Design Direction</h3>
-                  <p>This research has significantly influenced our design direction, informed by insights shared by participants. It has uncovered evidence that supports design guidelines aimed at addressing broader user needs and enhancing the reading experience by making it continuous, generative, inviting, and conducive to advancing knowledge acquisition to the next level.</p>
+                <p>To begin with, we conducted a semi-structured interview with <b>5 participants who are avid ebook readers</b>. We aim to understand their ebook reading practices, user experiences, and ideas on how ebook reading experiences could be enhanced.</p>
+                <p>Click the image below to see the interview protocol and question list in full screen:</p>
+                <LazyLoadImage src={images.singles.protocol.src} alt={images.singles.protocol.alt} className={styles.interviewImage} onClick={() => openLightbox(images.singles.protocol.src)} />
+                <h3>Findings + Corresponding Design Goals</h3>
+                <table border="1">
+                  <tr>
+                      <td><u>1. Annotations for Enriching Reading Experiences</u>:
+                      Participants' annotation habits primarily facilitate <b>fact-checking, memory aid, and emotional grounding</b>. Annotations serve as a versatile tool, enriching reading experiences and providing <b>personalized insights</b>.</td>
+                      <td><u>2. Reasons for Re-reading</u>:
+                      Participants re-read books for varied motivations, such as <b>emotional solace, professional clarity,</b> and preparation for discussions or movie adaptations. They <b>discover new details</b> and experience <b>evolving perceptions</b> over time.</td>
+                  </tr>
+                  <tr>
+                      <td><u>3. Sharing is Intimate</u>:
+                      While <b>sharing highlights</b> in a book club setting is beneficial for fostering <b>deeper connections and discussions</b>, some participants refrain from sharing intimate highlights as they are sometimes <b>very personal</b>.</td>
+                      <td><u>4. Stronger Attachment to Physical Books</u>:
+                      Participants expressed a <b>stronger personal attachment to physical books over ebooks</b>, citing the tactile and sensory experiences they provide.</td>
+                  </tr>
+                  <tr>
+                      <td colspan="2"><u>5. Potential Design Features</u>:
+                      One participant suggested <b>incorporating GPT-generated keywords</b> to highlight themes and character experiences, which could enhance discussions in book clubs and make social sharing more engaging.</td>
+                  </tr>
+                </table>
+                <p>After digesting these findings and prioritizing their importance, we have made 2 key decisions. First, in alignment with our research goals and respecting Finding #3's insight into the intimate nature of sharing, we have decided <i>not to pursue the social sharing feature</i>. Second, although Finding #4 presents an intriguing opportunity to recreate tangible and sensory interactions with digital highlights, we have deemed <i>other findings to be more feasible and significant for further development</i>.</p>
+                <p>Therefore, we have set our <b>design goals</b> to:</p>
+                <ul>
+                    <li>Utilize annotations as design resources to offer <b>variations of content</b> that users have already marked as important. This aims to entice curiosity and mimic evolving perceptions.</li>
+                    <li>Incorporate <b>GPT-generated keywords</b> to highlight themes and character experiences.</li>
+                    <li>Create in-depth <b>dialogical interactions</b> between the user and generative AI.</li>
+                </ul>
+                <div className={styles.funfactContainer}>
+                  <div></div>
+                  <div>
+                    <h5>Fun Fact</h5>
+                    <p>From this stage, we have also renamed our project to 'Quologue' to better emphasize the integration of 'quotes' and 'dialogue'.</p>
+                  </div>
                 </div>
-                
             </section>
             <section id="design" ref={sectionRefs.current.design}>
-                <h2>3 - Proposed Design</h2>
-                <p>After the brainstorming session, there are 5 things to highlight in the redesigned Womany app:</p>
-                <ol>
-                  <li>a warm voice in a <b>dialogical login</b> window,</li>
-                  <li>an <b>free-form landing page</b> that allows its user to explore by swiping to four directions,</li>
-                  <li>a customized article feed that caters to its user's interests,</li>
-                  <li>Lottie-powered <b>animation cards</b> that provide insightful quotes, and</li>
-                  <li>a data visualization page of user's reading patterns.</li>
-                </ol>
-                <CustomSwiper images={images.design} />
-                <LazyLoadImage src={images.singles.imageMiro.src} alt={images.singles.imageMiro.alt} className={styles.miroImage} onClick={() => openLightbox(images.singles.imageMiro.src)} />
-                <LazyLoadImage src={images.singles.sitemap.src} alt={images.singles.sitemap.alt} className={styles.sitemapImage} onClick={() => openLightbox(images.singles.sitemap.src)} />
-                <LazyLoadImage src={images.singles.userFlow.src} alt={images.singles.userFlow.alt} className={styles.userFlowImage} onClick={() => openLightbox(images.singles.userFlow.src)} />
+              <CustomSwiper images={images.design} />
+              <h2>3 - Proposed Design</h2>
+              <p>After the brainstorming session, we decided to have <b>5 key features</b> of Quologue:</p>
+              <ol>
+                <li>a <b>website-based</b> platform that could take customized .csv files or Amazon Kindle's .txt files as input,</li>
+                <li>a responsive website that could make use of <b>ChatGPT's official APIs</b>,</li>
+                <li>a <b>conversation</b> that invites user to guess what quotes they have highlighed in the past,</li>
+                <li>a <b>reflective history page</b> that triggers user to extend their thinking about AI's remix, and </li>
+                <li>a <b>keyword setting</b> feature that enables user to prime the next interaction.</li>
+              </ol>
+              <p>To achieve these features, we diagrammed the Sitemap and User Flow. Click to see the details:</p>
+              <LazyLoadImage src={images.singles.sitemap.src} alt={images.singles.sitemap.alt} className={styles.sitemapImage} onClick={() => openLightbox(images.singles.sitemap.src)} />
+              <LazyLoadImage src={images.singles.userFlow.src} alt={images.singles.userFlow.alt} className={styles.userFlowImage} onClick={() => openLightbox(images.singles.userFlow.src)} />
+              <p>As the screenshot below shows, later we prototyped and designed our Quologue website on Figma, and developed the website by React.js. We use Amazon AWS S3 to store the user data securely and host the website on Vercel.</p>
+              <LazyLoadImage src={images.singles.imageMiro.src} alt={images.singles.imageMiro.alt} className={styles.miroImage} onClick={() => openLightbox(images.singles.imageMiro.src)} />
+                
             </section>
             <section id="test" ref={sectionRefs.current.test}>
                 <h2>4 - Field Study</h2>
-                <p>Findings show that the redesigned Womany App engaged people in reading their customized articles.</p>
-                <p>One month after launch, the redesigned app achieved a <b>user growth index (UGI) of 59.02%</b>, increased the <b>user engagement duration by 25.84%</b>, and boosted the <b>page view rate by 94.17%</b>.</p>
+                <p>Next, we decided to recruit <b>10 participants</b> in North America to join our <b>8-week</b> field deployment study. To ensure the robustness of Quologue, our team members have used our own Kindle data to interact with the system before deployment.</p>
+                <p>The field study is currently running. It will end in mid June 2024, and we aim to have an one-hour long closing interview with them to learn their experience of using Quologue. More details will be shared once we publish our results in a formal research paper.</p>
             </section>
             <section id="takeaways" ref={sectionRefs.current.takeaways}>
                 <h2>5 - Overall Reflection</h2>
-                <p></p>
+                <h3>How Research Changed the Design Direction</h3>
+                <p>This research has significantly influenced our design direction, informed by insights shared by participants. It has uncovered evidence supporting design guidelines aimed at addressing specific user needs and enhancing the reading experience by making it continuous, generative, inviting, and conducive to advancing knowledge acquisition to the next level.</p>
+                <p>To-Be Continued :)</p>
                 <div>
                   {/*<h3>More Images</h3>*/}
                   {/*<Gallery images={images.more} rows={2} columns={5} />*/}

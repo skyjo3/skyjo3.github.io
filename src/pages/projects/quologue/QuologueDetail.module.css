@@ -100,6 +100,20 @@
   margin-top: 20px;
 }
 
+.quologue table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 20px 0 50px 0;
+}
+
+.quologue td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+  background-color: #fff;
+}
+
 .quologue .interviewImage,
 .quologue .userFlowImage,
 .quologue .sitemapImage {
@@ -107,6 +121,13 @@
   height: auto;
   object-fit: cover;
   margin-top: 20px;
+}
+
+.quologue .funfactContainer {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 20px;
+  margin-top: 0px;
 }
 
 .quologue .miroContainer {
@@ -134,4 +155,9 @@
 
 .quologue h3 {
   margin-top: 60px;
+}
+
+.quologue h5 {
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
