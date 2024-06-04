@@ -15,7 +15,7 @@ const projectsData = [
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
     linkPath: '/projects/photoclock',
-    tags: ['photos', 'mobile', 'field study', 'all'],
+    tags: ['photos', 'mobile', 'field study', 'AI', 'all'],
   },
   {
     title: 'Chronoscope',
@@ -38,13 +38,13 @@ const projectsData = [
     linkPath: '/projects/womany',
     tags: ['reading', 'mobile', 'analytics', 'all'],
   },
-  // {
-  //   title: 'Quologue',
-  //   description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
-  //   imageUrl: image5,
-  //   linkPath: '/projects/quologue',
-  //   tags: ['reading', 'website', 'field study', 'all'],
-  // },
+  {
+    title: 'Quologue',
+    description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
+    imageUrl: image5,
+    linkPath: '/projects/quologue',
+    tags: ['AI', 'reading', 'website', 'field study', 'all'],
+  },
   // {
   //   title: 'Mental Map',
   //   description: 'Supporting visually impaired people to build mental map of a new environment via mobile interaction.',

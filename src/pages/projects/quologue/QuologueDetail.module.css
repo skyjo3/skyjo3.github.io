@@ -1,0 +1,137 @@
+/* QuologueDetail.css */
+
+.projectContainer {
+  max-width: var(--container-width); 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100vh; 
+  overflow: auto; 
+  padding: 20px;
+  border-right: 0.5px solid var(--color-gray); 
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.content {
+  margin-left: 250px;
+  padding: 10px 40px;
+  overflow: auto; /* Scrollable content area */
+}
+
+.content section {
+  margin-bottom: 200px;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+}
+
+.projectContentImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+
+
+/* project specific */
+
+.quologue .overviewContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.quologue .teamContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.quologue .contextImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.quologue .researchContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.quologue .skillsContainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.quologue .planImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.quologue .interviewImage,
+.quologue .userFlowImage,
+.quologue .sitemapImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.quologue .miroContainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.quologue .miroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.quologue h6 {
+  margin-bottom: 6px;
+}
+
+.quologue h2 {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.quologue h3 {
+  margin-top: 60px;
+}
