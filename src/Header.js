@@ -8,7 +8,7 @@ function Header() {
       <div className="header-container">
         <div className="logo-container">
           <img src={`${process.env.PUBLIC_URL}/website-icon.png`} alt="Logo" className="logo-image" />
-          <div className="logo-text">Amy Yo Sue Chen</div>
+          <div className="logo-text">Amy Y. Chen</div>
         </div>
 
         <nav>
