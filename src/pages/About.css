@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-lg);
-  margin-top: 60px;
+  margin-top: 20vh;
 }
 
 .about-content {
