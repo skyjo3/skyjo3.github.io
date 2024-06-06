@@ -40,3 +40,16 @@
 .more-container a:hover {
   text-decoration: underline;  /* Restores underline on hover for better user interaction */
 }
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .more-container h1 {
+    font-size: var(--font-size-xl);
+    margin-top: 30px;
+  }
+
+  .more-container h2 {
+    font-size: var(--font-size-lg);
+    margin-top: 10px;
+  }
+}
