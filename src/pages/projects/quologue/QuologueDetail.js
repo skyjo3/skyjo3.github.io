@@ -119,9 +119,8 @@ const QuologueDetail = () => {
               <div>
                 <h2>Contribution / Impact</h2>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>This project leverages AI to elevate digital reading, transforming passive consumption into a dynamic, conversational experience that enhances understanding and expands perspectives.</li>
+                  {/*<li></li>*/}
                 </ul>
               </div>
             </section>
