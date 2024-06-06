@@ -8,7 +8,7 @@ import './styles.css';
 import './variables.css';
 
 function App() {
-
+  // display custom cursor if it's on desktop
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
 
   useEffect(() => {

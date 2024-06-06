@@ -12,6 +12,19 @@ import data from './projectListData';
 import { debounce } from '../utils/debounce';
 
 const Projects = () => {
+
+  // display custom scroller if it's on desktop
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Get the current location using react-router-dom's useLocation hook
   const location = useLocation();
   const isProjectsPage = location.pathname === '/projects'; 
@@ -72,7 +85,7 @@ const Projects = () => {
   return (
     <div className={styles["container"]}>
       <div className={styles["projects-background-container"]}>
-        <ScrollIndicator />
+        {isDesktop && <ScrollIndicator />}
         <div className={styles["projects-container"]}>
           <div className={`${styles.project} ${styles.intro}`}>
             <h5>↳  {data.length} FEATURED PROJECTS</h5>

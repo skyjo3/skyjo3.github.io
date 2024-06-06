@@ -185,3 +185,40 @@
     margin-right: 5px; /* Space between tags */
     margin-bottom: 5px; /* Space between lines of tags if they wrap */
 }
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .projects-container {
+    width: 100%;
+    margin-bottom: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr auto auto auto auto; /* Adjusted row heights */
+    gap: 10px;
+  }
+
+  .project-card {
+    width: auto;
+    height: auto;
+    min-width: 300px;
+    margin: 20px 20px;
+    padding-bottom: 20px;
+  }
+
+  .projectL { /* left column */
+    margin-bottom: 0px;
+  }
+
+  .projectR { /* right column */
+    margin-top: 0px;
+  }
+
+  .projects-container h5 {
+    width: auto;
+  }
+
+  .projects-container p {
+    width: auto;
+  }
+}
