@@ -78,4 +78,7 @@ p {
   .about-content {
     padding: 0 30px;
   }
+  .custom-button {
+    margin-bottom: 60px;
+  }
 }
