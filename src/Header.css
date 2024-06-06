@@ -52,3 +52,48 @@
 .nav-links a:hover {
   background-color: #eeeeee;
 }
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-image {
+  height: 25px;
+  vertical-align: middle;
+}
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      right: 0;
+    }
+  }
+
+  .header-container {
+    height: 50px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .nav-open .nav-links {
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
