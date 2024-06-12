@@ -134,3 +134,33 @@
 .womany h3 {
   margin-top: 60px;
 }
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin-left: 0px;
+    padding: 10px 40px;
+    overflow: auto;
+
+    .womany {
+      .overviewContainer {
+        display: inline;
+      }
+      .teamContainer {
+        display: inline;
+      }
+      .researchContainer {
+        display: inline;
+      }
+      .skillsContainer {
+        display: inline;
+      }
+      .miroContainer {
+        display: inline;
+      }
+    }
+  }
+}
