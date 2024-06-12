@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8340c719.css",
+    "main.css": "/static/css/main.0606b6a9.css",
     "main.js": "/static/js/main.d702a97b.js",
     "static/media/media3.png": "/static/media/media3.015d7a6b7278ca87bf2b.png",
     "static/media/context3.gif": "/static/media/context3.1f7bc2192087efd164d3.gif",
@@ -104,11 +104,11 @@
     "static/media/9-slow-game.jpg": "/static/media/9-slow-game.384ff8432c2a190561a9.jpg",
     "static/media/plan.png": "/static/media/plan.af06aadd2fdc9f32197d.png",
     "index.html": "/index.html",
-    "main.8340c719.css.map": "/static/css/main.8340c719.css.map",
+    "main.0606b6a9.css.map": "/static/css/main.0606b6a9.css.map",
     "main.d702a97b.js.map": "/static/js/main.d702a97b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8340c719.css",
+    "static/css/main.0606b6a9.css",
     "static/js/main.d702a97b.js"
   ]
 }
