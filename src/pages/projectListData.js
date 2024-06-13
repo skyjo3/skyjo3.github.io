@@ -1,9 +1,9 @@
 // projectData.js
 import image1 from '../assets/img/project-list/1-photoclock.png';
-import image2 from '../assets/img/project-list/2-chronoscope.png';
+import image2 from '../assets/img/project-list/2-chronoscope.jpg';
 import image3 from '../assets/img/project-list/3-crescendo.jpg';
 import image4 from '../assets/img/project-list/4-womany.png';
-import image5 from '../assets/img/project-list/5-quologue.png';
+import image5 from '../assets/img/project-list/5-quologue.jpg';
 import image6 from '../assets/img/project-list/6-mental-map.png';
 import image7 from '../assets/img/project-list/7-olo.jpg';
 import image8 from '../assets/img/project-list/8_olly.jpeg';
