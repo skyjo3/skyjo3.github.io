@@ -61,7 +61,7 @@ const projectsData = [
   // },
   {
     title: 'Olly',
-    description: 'Embodying one\'s music listening history data to invite memories in different life stages.',
+    description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
     imageUrl: image8,
     linkPath: '/projects/olly',
     tags: ['music', 'tangible', 'field study', 'all'],
