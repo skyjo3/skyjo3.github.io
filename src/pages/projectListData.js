@@ -24,13 +24,6 @@ const projectsData = [
     linkPath: '/projects/chronoscope',
     tags: ['photos', 'tangible', 'field study', 'all'],
   },
-  // {
-  //   title: 'CrescendoMessage',
-  //   description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
-  //   imageUrl: image3,
-  //   linkPath: '/projects/crescendo',
-  //   tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
-  // },
   {
     title: 'Womany',
     description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
@@ -39,12 +32,27 @@ const projectsData = [
     tags: ['reading', 'mobile', 'analytics', 'all'],
   },
   {
+    title: 'Olly',
+    description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
+    imageUrl: image8,
+    linkPath: '/projects/olly',
+    tags: ['music', 'tangible', 'field study', 'all'],
+  },
+  {
     title: 'Quologue',
     description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
     imageUrl: image5,
     linkPath: '/projects/quologue',
     tags: ['AI', 'reading', 'website', 'field study', 'all'],
   },
+
+  // {
+  //   title: 'CrescendoMessage',
+  //   description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
+  //   imageUrl: image3,
+  //   linkPath: '/projects/crescendo',
+  //   tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
+  // },
   // {
   //   title: 'Mental Map',
   //   description: 'Supporting visually impaired people to build mental map of a new environment via mobile interaction.',
@@ -59,13 +67,6 @@ const projectsData = [
   //   linkPath: '/projects/olo',
   //   tags: ['audio', 'tangible', 'field study', 'all'],
   // },
-  {
-    title: 'Olly',
-    description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
-    imageUrl: image8,
-    linkPath: '/projects/olly',
-    tags: ['music', 'tangible', 'field study', 'all'],
-  },
   // {
   //   title: 'Slow Game',
   //   description: 'Conceptualizing time alternatively by playing the Snake game one step every 18 hours.',
