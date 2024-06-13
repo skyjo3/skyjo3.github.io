@@ -5,9 +5,9 @@ import imageFocusGroup from './img/M123-template_M1.png'
 import imageMiro from './img/M123-template_M2.png'
 import imageFieldStudy from './img/M123-template_M3.png'
 
-import imageDesign1 from './img/Fig2.png'
-import imageDesign2 from './img/Fig3a.png'
-import imageDesign3 from './img/Fig3b.png'
+import imageDesign1 from './img/Fig2.jpg'
+import imageDesign2 from './img/Fig3a.jpg'
+import imageDesign3 from './img/Fig3b.jpg'
 import imageDesign4 from './img/Fig1b.jpg'
 
 import imageMore1 from './img/more/Fig1a.jpg'
