@@ -176,22 +176,24 @@ const QuologueDetail = () => {
                 <LazyLoadImage src={images.singles.protocol.src} alt={images.singles.protocol.alt} className={styles.interviewImage} onClick={() => openLightbox(images.singles.protocol.src)} />
                 <h3>Findings + Corresponding Design Goals</h3>
                 <table border="1">
-                  <tr>
-                      <td><u>1. Annotations for Enriching Reading Experiences</u>:
-                      Participants' annotation habits primarily facilitate <b>fact-checking, memory aid, and emotional grounding</b>. Annotations serve as a versatile tool, enriching reading experiences and providing <b>personalized insights</b>.</td>
-                      <td><u>2. Reasons for Re-reading</u>:
-                      Participants re-read books for varied motivations, such as <b>emotional solace, professional clarity,</b> and preparation for discussions or movie adaptations. They <b>discover new details</b> and experience <b>evolving perceptions</b> over time.</td>
-                  </tr>
-                  <tr>
-                      <td><u>3. Sharing is Intimate</u>:
-                      While <b>sharing highlights</b> in a book club setting is beneficial for fostering <b>deeper connections and discussions</b>, some participants refrain from sharing intimate highlights as they are sometimes <b>very personal</b>.</td>
-                      <td><u>4. Stronger Attachment to Physical Books</u>:
-                      Participants expressed a <b>stronger personal attachment to physical books over ebooks</b>, citing the tactile and sensory experiences they provide.</td>
-                  </tr>
-                  <tr>
-                      <td colspan="2"><u>5. Potential Design Features</u>:
-                      One participant suggested <b>incorporating GPT-generated keywords</b> to highlight themes and character experiences, which could enhance discussions in book clubs and make social sharing more engaging.</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                        <td><u>1. Annotations for Enriching Reading Experiences</u>:
+                        Participants' annotation habits primarily facilitate <b>fact-checking, memory aid, and emotional grounding</b>. Annotations serve as a versatile tool, enriching reading experiences and providing <b>personalized insights</b>.</td>
+                        <td><u>2. Reasons for Re-reading</u>:
+                        Participants re-read books for varied motivations, such as <b>emotional solace, professional clarity,</b> and preparation for discussions or movie adaptations. They <b>discover new details</b> and experience <b>evolving perceptions</b> over time.</td>
+                    </tr>
+                    <tr>
+                        <td><u>3. Sharing is Intimate</u>:
+                        While <b>sharing highlights</b> in a book club setting is beneficial for fostering <b>deeper connections and discussions</b>, some participants refrain from sharing intimate highlights as they are sometimes <b>very personal</b>.</td>
+                        <td><u>4. Stronger Attachment to Physical Books</u>:
+                        Participants expressed a <b>stronger personal attachment to physical books over ebooks</b>, citing the tactile and sensory experiences they provide.</td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2"><u>5. Potential Design Features</u>:
+                        One participant suggested <b>incorporating GPT-generated keywords</b> to highlight themes and character experiences, which could enhance discussions in book clubs and make social sharing more engaging.</td>
+                    </tr>
+                  </tbody>
                 </table>
                 <p>After digesting these findings and prioritizing their importance, we have made 2 key decisions. First, in alignment with our research goals and respecting Finding #3's insight into the intimate nature of sharing, we have decided <i>not to pursue the social sharing feature</i>. Second, although Finding #4 presents an intriguing opportunity to recreate tangible and sensory interactions with digital highlights, we have deemed <i>other findings to be more feasible and significant for further development</i>.</p>
                 <p>Therefore, we have set our <b>design goals</b> to:</p>
