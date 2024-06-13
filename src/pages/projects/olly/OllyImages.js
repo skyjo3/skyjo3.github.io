@@ -1,9 +1,9 @@
 import imageProject from './img/3_olly.jpeg'
 
-import imageContext1 from './img/context/context1.png'
+import imageContext1 from './img/context/context1.jpg'
 import imageContext2 from './img/context/context2.jpg'
-import imageContext3 from './img/context/context3.png'
-import imageContext4 from './img/context/context4.png'
+import imageContext3 from './img/context/context3.jpg'
+import imageContext4 from './img/context/context4.jpg'
 
 
 function importAll(r) {

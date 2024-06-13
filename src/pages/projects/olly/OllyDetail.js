@@ -21,7 +21,6 @@ const OllyDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
-  const [loadCommonNinjaWidget, setLoadCommonNinjaWidget] = useState(false);
 
   const sectionRefs = useRef({
     overview: useRef(null),
@@ -44,9 +43,6 @@ const OllyDetail = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
-          if (entry.target.id === 'test') {
-            setLoadCommonNinjaWidget(true);
-          }
         }
       });
     }, 300); // Debounce delay of 300 milliseconds
@@ -191,10 +187,8 @@ const OllyDetail = () => {
                 <p>Next, we deployed Olly in <b>3 homes for 15 months </b> to explore how its slow pace might support experi- ences of reflection and reminiscence.</p>
                 <p>Findings and more details about participants' precious stories can be found in our paper:</p>
                 
-                {/* Conditionally load CommonNinjaWidget */}
-                {loadCommonNinjaWidget && (
-                  <CommonNinjaWidget widgetId="b3c8df6a-1324-45b3-8dda-dc2dd545fd65" />
-                )}
+                {/* Load CommonNinjaWidget */}
+                <CommonNinjaWidget widgetId="b3c8df6a-1324-45b3-8dda-dc2dd545fd65" />
             </section>
 
             {/* Lightbox modal */}
