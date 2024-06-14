@@ -6,7 +6,9 @@ const buildDir = path.join(__dirname, '..', 'build');  // Navigate up one direct
 const indexHtml = fs.readFileSync(path.join(buildDir, 'index.html'), 'utf8');
 const script = `
 <script>
-  if (window.location.pathname !== "/" && window.location.pathname !== "/404.html") {
+  if (window.location.pathname !== "/" && 
+      window.location.pathname !== "/404.html" &&
+      window.location.pathname !== "/photoclock.html") {
     window.location.replace('/#' + window.location.pathname + window.location.search);
   }
 </script>
