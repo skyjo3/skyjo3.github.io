@@ -124,9 +124,10 @@ const ChronoscopeDetail = () => {
               <div>
                 <h2>Contribution / Impact</h2>
                 <ul>
+                  <li>5 research publications, including a journal article, a book chapter, and 3 papers on ACM CHI/DIS</li>
+                  <li>This work has been recognized and cited by <b>Spotify's research team</b> in their paper, <a href="http://doi.org/10.1145/3313831.3376493">"Giving Voice to Silent Data: Designing with Personal Music Listening History"</a> in ACM CHI 2020.</li>
                   <li>Creating innovative photo viewing experience to improve user engagement</li>
                   <li>Using temporal metadata as design materials to trigger curious exploration of one’s life history</li>
-                  <li>5 research publications, including a journal article, a book chapter, and 3 papers on ACM CHI/DIS</li>
                 </ul>
               </div>
             </section>
