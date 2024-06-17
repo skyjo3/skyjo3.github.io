@@ -10,7 +10,7 @@ export const pageView = (url) => {
 };
 
 export const tagSelection = (tag) => {
-  window.gtag('event', 'select_tag', GA_TRACKING_ID, {
+  window.gtag('event', 'select_tag', {
     'event_category': 'Tags',
     'event_label': tag,
     'value': 1
