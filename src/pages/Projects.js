@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Projects.module.css';
 
+import { tagSelection } from '../utils/gtag';
+
 import { useLocation } from 'react-router-dom';
 import ScrollIndicator from '../components/ScrollIndicator';
 
@@ -61,6 +63,7 @@ const Projects = () => {
 
   const handleTagClick = (tag) => {
     setSelectedTags([tag]);
+    tagSelection(tag);
   };
 
   // debounce & cleanup

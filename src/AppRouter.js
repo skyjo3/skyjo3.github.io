@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 // import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { HashRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
-import { pageview } from './utils/gtag';
+import { pageView } from './utils/gtag';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -27,7 +27,7 @@ const TrackPageViews = () => {
   const location = useLocation();
 
   useEffect(() => {
-    pageview(location.pathname + location.search);
+    pageView(location.pathname + location.search);
   }, [location]);
 
   return null;

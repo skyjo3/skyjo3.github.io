@@ -2,8 +2,17 @@
 export const GA_TRACKING_ID = 'G-4MY20W8VK3'; // Replace with your actual GA tracking ID
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url) => {
+
+export const pageView = (url) => {
   window.gtag('config', GA_TRACKING_ID, {
     page_path: url,
+  });
+};
+
+export const tagSelection = (tag) => {
+  window.gtag('event', 'select_tag', GA_TRACKING_ID, {
+    'event_category': 'Tags',
+    'event_label': tag,
+    'value': 1
   });
 };
