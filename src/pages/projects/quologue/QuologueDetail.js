@@ -191,7 +191,7 @@ const QuologueDetail = () => {
                     </tr>
                     <tr>
                         <td colSpan="2"><u>5. Potential Design Features</u>:
-                        One participant suggested <b>incorporating GPT-generated keywords</b> to highlight themes and character experiences, which could enhance discussions in book clubs and make social sharing more engaging.</td>
+                        Participants responded positively to an innovative idea from our project lead, who, after experimenting with their own reading data on an early prototyped system, suggested <b>incorporating GPT-generated keywords</b> to highlight themes and character experiences. This idea was particularly praised for its potential to enrich book club discussions and enhance social sharing.</td>
                     </tr>
                   </tbody>
                 </table>
