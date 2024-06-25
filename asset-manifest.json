@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.afd7981a.css",
-    "main.js": "/static/js/main.1a517afb.js",
+    "main.css": "/static/css/main.5f915387.css",
+    "main.js": "/static/js/main.4e674fab.js",
     "static/media/media3.png": "/static/media/media3.015d7a6b7278ca87bf2b.png",
     "static/media/media2.png": "/static/media/media2.d50eb1b7f5579cb2c8b6.png",
     "static/media/IMG_7103.JPG": "/static/media/IMG_7103.41f460ec96b1ca5d8c54.JPG",
     "static/media/IMG_7121.JPG": "/static/media/IMG_7121.ffe12a6d0baf426c3b73.JPG",
+    "static/media/more-04.png": "/static/media/more-04.98a86ab02e76600c8e15.png",
     "static/media/IMG_7047.JPG": "/static/media/IMG_7047.f74aee2a824ef572c3db.JPG",
     "static/media/IMG_7050.JPG": "/static/media/IMG_7050.1fb8bf776052eb76ea72.JPG",
     "static/media/1-photoclock.png": "/static/media/1-photoclock.44bc484436ab84d9fb1e.png",
@@ -18,6 +19,7 @@
     "static/media/IMG_7092.JPG": "/static/media/IMG_7092.78120b4cb10aade69ad1.JPG",
     "static/media/IMG_7125.JPG": "/static/media/IMG_7125.ed1f9eb992a5611a9773.JPG",
     "static/media/home.png": "/static/media/home.60f3e7d51f5afe2b0542.png",
+    "static/media/more-03.png": "/static/media/more-03.9392a434fce71091a7c0.png",
     "static/media/2.PNG": "/static/media/2.cfdde948fd443cfbcb9d.PNG",
     "static/media/IMG_7057.JPG": "/static/media/IMG_7057.d4ab59685f747482932a.JPG",
     "static/media/IMG_7112.JPG": "/static/media/IMG_7112.eaa2c7023fa41dd8d904.JPG",
@@ -36,7 +38,9 @@
     "static/media/M123-template_M1.png": "/static/media/M123-template_M1.67e70552505ad62fc4e8.png",
     "static/media/context.jpg": "/static/media/context.64cf8c0bc4f55337d551.jpg",
     "static/media/M123-template_M3.png": "/static/media/M123-template_M3.1ad076ccda091613caf6.png",
+    "static/media/more-02.png": "/static/media/more-02.d940683ea84d81229fcb.png",
     "static/media/media1.png": "/static/media/media1.72008583694521c1f099.png",
+    "static/media/more-01.png": "/static/media/more-01.3702f031af462877aa05.png",
     "static/media/M123-Womany_M3.png": "/static/media/M123-Womany_M3.c0ba5676d73dae568c19.png",
     "static/media/2.png": "/static/media/2.bdbd983c7bd5b2657cc1.png",
     "static/media/5.PNG": "/static/media/5.8c012b6c0273ea9dc560.PNG",
@@ -93,6 +97,7 @@
     "static/media/5.jpg": "/static/media/5.e55fc098293a1c8026d9.jpg",
     "static/media/Fig6a.jpg": "/static/media/Fig6a.12ba5c76b8624b0cb928.jpg",
     "static/media/pinterest.jpg": "/static/media/pinterest.2b249e6b2873470cf923.jpg",
+    "static/media/more-00.jpg": "/static/media/more-00.0f9c0a4ed68f311a3ae9.jpg",
     "static/media/e2.jpg": "/static/media/e2.9931c16fa994d42cad2b.jpg",
     "static/media/7-olo.jpg": "/static/media/7-olo.66613774868b51b3f1b9.jpg",
     "static/media/2.jpg": "/static/media/2.bdbb55bc572018c643f4.jpg",
@@ -127,11 +132,11 @@
     "static/media/9-slow-game.jpg": "/static/media/9-slow-game.384ff8432c2a190561a9.jpg",
     "static/media/plan.png": "/static/media/plan.2b1ca603efacdddc7f1d.png",
     "index.html": "/index.html",
-    "main.afd7981a.css.map": "/static/css/main.afd7981a.css.map",
-    "main.1a517afb.js.map": "/static/js/main.1a517afb.js.map"
+    "main.5f915387.css.map": "/static/css/main.5f915387.css.map",
+    "main.4e674fab.js.map": "/static/js/main.4e674fab.js.map"
   },
   "entrypoints": [
-    "static/css/main.afd7981a.css",
-    "static/js/main.1a517afb.js"
+    "static/css/main.5f915387.css",
+    "static/js/main.4e674fab.js"
   ]
 }
