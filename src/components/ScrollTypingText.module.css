@@ -1,0 +1,27 @@
+.scrolltypingtext .container {
+  position: relative;
+  transition: opacity 1s ease-in-out;
+  opacity: 0; /* Start invisible */
+}
+
+.scrolltypingtext .visible {
+  opacity: 1; /* Fade to visible when in viewport */
+}
+
+.scrolltypingtext .image {
+  width: 100%; /* Ensure image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space beneath the image */
+}
+
+.scrolltypingtext {
+  margin-bottom: 60px;
+}
+
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .scrolltypingtext {
+    margin: 0px 10px 20px 10px;
+  }
+}

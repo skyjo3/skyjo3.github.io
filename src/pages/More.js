@@ -5,7 +5,8 @@ import styles from './More.module.css';
 // import Lottie from 'react-lottie';
 // import animationData from '../assets/lottie/Animation - 1717195759498.json';
 
-import LazyLoadImage from '../components/LazyLoadImage';
+import TypeIt from 'typeit-react';
+import ScrollTypingText from '../components/ScrollTypingText';
 import images from './MoreImages'
 
 const More = () => {
@@ -28,18 +29,20 @@ const More = () => {
           </div>*/}
         
           <div className={styles["image-container"]}>
-            {/*<LazyLoadImage src={images.singles.img1.src} alt={images.singles.img1.alt} className={styles.moreImage} />*/}
             <div className={styles["text-overlay"]}>
-              <h1>Let's collaborate on fun projects!</h1>
+              {/*<h1>Let's collaborate on fun projects!</h1>*/}
+              <TypeIt as={"h1"}
+                getBeforeInit={(instance) => {
+                  instance.type('Let\'s collaborate on fun projcets!').pause(750).delete(5).pause(500).type("ects !! ");
+                  return instance;
+                }}
+              />
               <p>Please contact me via this email: <br /><a href="mailto:amy.yosue.chen@gmail.com">amy.yosue.chen@gmail.com</a></p>
             </div>
           </div>
 
-          <LazyLoadImage src={images.singles.img2.src} alt={images.singles.img2.alt} className={styles.moreImage} />
-          
-          <LazyLoadImage src={images.singles.img3.src} alt={images.singles.img3.alt} className={styles.moreImage} />
-          
-          <LazyLoadImage src={images.singles.img4.src} alt={images.singles.img4.alt} className={styles.moreImage} />
+          <ScrollTypingText src={images.singles.img2.src} alt={images.singles.img2.alt} text="Looking forward to your ideas!" />
+          <ScrollTypingText src={images.singles.img3.src} alt={images.singles.img3.alt} text="Contact me to start something amazing." />
           
         </div>
       </div>
