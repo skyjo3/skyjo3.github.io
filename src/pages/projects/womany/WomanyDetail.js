@@ -128,7 +128,7 @@ const WomanyDetail = () => {
               <div>
                 <h2>Contribution / Impact</h2>
                 <ul>
-                  <li>This iOS app received the recognition of Best App of the Day on App Store in 2018.</li>
+                  <li>This iOS app received the recognition of Best App of the Day on App Store in 2018, with more than 96.4k downloads as of 2018.</li>
                   <li>Its Android version was awarded as App with the Best Potential in 2017.</li>
                   <li>One month after launch, 
                     <ul>
