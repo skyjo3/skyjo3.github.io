@@ -41,7 +41,7 @@ const More = () => {
             </div>
           </div>
 
-          <ScrollTypingText src={images.singles.img2.src} alt={images.singles.img2.alt} text="Looking forward to your ideas!" />
+          <ScrollTypingText src={images.singles.img2.src} alt={images.singles.img2.alt} text="Why not pitch your ideas and hit some homeruns?" />
           <ScrollTypingText src={images.singles.img3.src} alt={images.singles.img3.alt} text="Contact me to start something amazing." />
           
         </div>
