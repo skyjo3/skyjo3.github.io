@@ -33,7 +33,7 @@ const More = () => {
               {/*<h1>Let's collaborate on fun projects!</h1>*/}
               <TypeIt as={"h1"}
                 getBeforeInit={(instance) => {
-                  instance.type('Let\'s collaborate on fun projcets!').pause(750).delete(5).pause(500).type("ects !! ");
+                  instance.type('Let\'s do some cool projcets!').pause(750).delete(5).pause(500).type("ects !! ");
                   return instance;
                 }}
               />
@@ -41,8 +41,8 @@ const More = () => {
             </div>
           </div>
 
-          <ScrollTypingText src={images.singles.img2.src} alt={images.singles.img2.alt} text="Why not pitch your ideas and hit some homeruns?" />
-          <ScrollTypingText src={images.singles.img3.src} alt={images.singles.img3.alt} text="Contact me to start something amazing." />
+          {/*<ScrollTypingText src={images.singles.img2.src} alt={images.singles.img2.alt} text="Why not pitch your ideas and hit some homeruns?" />
+          <ScrollTypingText src={images.singles.img3.src} alt={images.singles.img3.alt} text="Contact me to start something amazing." />*/}
           
         </div>
       </div>
