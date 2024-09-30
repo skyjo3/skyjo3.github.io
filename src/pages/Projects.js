@@ -93,7 +93,7 @@ const Projects = () => {
           <div className={`${styles.project} ${styles.intro}`}>
             <h5>↳  {data.length} FEATURED PROJECTS</h5>
             <p>My recent projects and activities involve integrating <b>AI models</b> to foster more <b>enriched interactions with personal data</b>.</p>
-            <p>Wearing multiple hats as needed, I commit to a <b>pioneering philosophy</b> that advocates creating technologies for deep, holistic engagement, moving beyond mere function and efficiency.</p>
+            <p>Wearing multiple hats as needed, I commit to a <b>pioneering philosophy</b> that advocates creating technologies for <b>deep, holistic engagement</b>, moving beyond mere function and efficiency.</p>
             {/* Tags section */}
             <div className={styles["tags-container"]}>
               {tags.map(tag => (
