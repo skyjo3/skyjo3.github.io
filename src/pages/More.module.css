@@ -92,8 +92,9 @@
 
   .more-container p {
     font-size: var(--font-size-lg);
-    margin-top: 10px;
-    text-align: center;
+    margin: 20px;
+    text-align: left;
+    width: 94%;
   }
 
   .moreImage {
