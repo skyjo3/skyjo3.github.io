@@ -32,8 +32,8 @@ const ProjectBottomCTA = () => {
 
   return (
     <div className={styles.bottomCTA} style={{ opacity: opacity, zIndex: zIndex }}>
-      <button onClick={() => navigate('/more')}>contact me for collaboration 😃</button>
-      <button onClick={() => navigate('/projects')}>not yet amy — let me view more projects first 🤔</button>
+      {/*<button onClick={() => navigate('/more')}>contact me for collaboration 😃</button>*/}
+      <button onClick={() => navigate('/projects')}>view more projects 😃</button>
     </div>
   );
 };
