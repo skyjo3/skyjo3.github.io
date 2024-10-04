@@ -15,14 +15,14 @@ const projectsData = [
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
     linkPath: '/projects/photoclock',
-    tags: ['photos', 'mobile', 'AI', 'all'],
+    tags: ['photos', 'video', 'mobile', 'AI', 'all'],
   },
   {
     title: 'Chronoscope',
     description: 'Exploring photos through time, using tangible interaction to support curious discovery and reflection on life history.',
     imageUrl: image2,
     linkPath: '/projects/chronoscope',
-    tags: ['photos', 'tangible', 'all'],
+    tags: ['photos', 'digital fabrication', 'all'],
   },
   {
     title: 'Womany',
@@ -36,7 +36,7 @@ const projectsData = [
     description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
     imageUrl: image8,
     linkPath: '/projects/olly',
-    tags: ['music', 'tangible', 'all'],
+    tags: ['music', 'digital fabrication', 'all'],
   },
   {
     title: 'Quologue',
@@ -45,7 +45,6 @@ const projectsData = [
     linkPath: '/projects/quologue',
     tags: ['AI', 'reading', 'website', 'all'],
   },
-
   // {
   //   title: 'CrescendoMessage',
   //   description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
