@@ -92,8 +92,8 @@ const Projects = () => {
         <div className={styles["projects-container"]}>
           <div className={`${styles.project} ${styles.intro}`}>
             <h5>↳  {data.length} FEATURED PROJECTS</h5>
-            <p>My recent projects and activities involve integrating <b>AI models</b> to foster more <b>enriched interactions with personal data</b>.</p>
-            <p>Wearing multiple hats as needed, I commit to a <b>pioneering philosophy</b> that advocates creating technologies for <b>deep, holistic engagement</b>, moving beyond mere function and efficiency.</p>
+            <p>My work targets at enriching people's interaction with their digital possessions, such as <b>digital photos</b>, <b>video clips</b>, and <b>ebook reading highlights</b>.</p>
+            <p>Wearing multiple hats as needed, I commit to a <i>design philosophy</i> named <b>slow technology</b>, which advocates <u>creating technologies for deep, holistic engagement</u>, moving beyond mere function and efficiency.</p>
             {/* Tags section */}
             <div className={styles["tags-container"]}>
               {tags.map(tag => (

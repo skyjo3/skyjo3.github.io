@@ -12,10 +12,9 @@ const About = () => (
       </div>
       <div className="about-content">
         <h6>HELLO !</h6>
-        <h1>My name is Amy.</h1>
-        <h2>I am a Design Researcher.</h2>
-        <p>I design, develop, and ship products with an aim to engage people with their own <b>vast and still growing personal data</b>, such as digital photos, music listening history, and ebook reading metadata.</p>
-        <p>My work in Human-Computer Interaction (HCI) focuses on <b>interaction design</b>, <b>design prototyping</b>, and <b>data visualization</b>.</p>
+        <h2>My name is Amy. I am a Design Researcher focused on Visual Media.</h2>
+        <p>I design, develop, and ship products with an aim to engage people with their own <b>vast and still growing digital possessions</b>.</p>
+        <p>My work in Human-Computer Interaction (HCI) focuses on <b>interaction design</b>, <b>research product</b>, and <b>data visualization</b>.</p>
         <Link to="/projects" className="custom-button">View My Projects</Link>
       </div>
     </div>
