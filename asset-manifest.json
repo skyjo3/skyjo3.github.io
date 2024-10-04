@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b7e4570d.css",
-    "main.js": "/static/js/main.d16004a1.js",
+    "main.css": "/static/css/main.bace1fea.css",
+    "main.js": "/static/js/main.8dd48700.js",
     "static/media/media3.png": "/static/media/media3.015d7a6b7278ca87bf2b.png",
     "static/media/media2.png": "/static/media/media2.d50eb1b7f5579cb2c8b6.png",
     "static/media/IMG_7103.JPG": "/static/media/IMG_7103.41f460ec96b1ca5d8c54.JPG",
@@ -132,11 +132,11 @@
     "static/media/9-slow-game.jpg": "/static/media/9-slow-game.384ff8432c2a190561a9.jpg",
     "static/media/plan.png": "/static/media/plan.2b1ca603efacdddc7f1d.png",
     "index.html": "/index.html",
-    "main.b7e4570d.css.map": "/static/css/main.b7e4570d.css.map",
-    "main.d16004a1.js.map": "/static/js/main.d16004a1.js.map"
+    "main.bace1fea.css.map": "/static/css/main.bace1fea.css.map",
+    "main.8dd48700.js.map": "/static/js/main.8dd48700.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7e4570d.css",
-    "static/js/main.d16004a1.js"
+    "static/css/main.bace1fea.css",
+    "static/js/main.8dd48700.js"
   ]
 }
