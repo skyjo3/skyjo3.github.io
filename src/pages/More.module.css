@@ -18,7 +18,7 @@
   width: 100%;  /* Takes full width of its parent */
   display: flex;  /* Enables flexbox */
   flex-direction: column;  /* Stacks children vertically */
-  align-items: center;  /* Centers children horizontally */
+  align-items: left;  /* Centers children horizontally */
   justify-content: center;  /* Centers children vertically */
 }
 
@@ -66,6 +66,9 @@
   padding: 10px;
 }
 
+.more-container p {
+  width: 520px;
+}
 
 /* Styles for small screens (e.g., smartphones) */
 @media only screen and (max-width: 600px) {

@@ -15,21 +15,14 @@ const projectsData = [
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
     linkPath: '/projects/photoclock',
-    tags: ['photos', 'video', 'mobile', 'AI', 'all'],
+    tags: ['photos', 'video', 'mobile', 'AI', 'data wayfaring', 'all'],
   },
   {
     title: 'Chronoscope',
     description: 'Exploring photos through time, using tangible interaction to support curious discovery and reflection on life history.',
     imageUrl: image2,
     linkPath: '/projects/chronoscope',
-    tags: ['photos', 'digital fabrication', 'all'],
-  },
-  {
-    title: 'Womany',
-    description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
-    imageUrl: image4,
-    linkPath: '/projects/womany',
-    tags: ['reading', 'mobile', 'all'],
+    tags: ['photos', 'digital fabrication', 'data wayfaring', 'all'],
   },
   {
     title: 'Olly',
@@ -37,6 +30,13 @@ const projectsData = [
     imageUrl: image8,
     linkPath: '/projects/olly',
     tags: ['music', 'digital fabrication', 'all'],
+  },
+  {
+    title: 'Womany',
+    description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
+    imageUrl: image4,
+    linkPath: '/projects/womany',
+    tags: ['reading', 'mobile', 'all'],
   },
   {
     title: 'Quologue',
