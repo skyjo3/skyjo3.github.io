@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Header from './Header';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Publication from './pages/Publication';
 import More from './pages/More';
 
 import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
@@ -41,6 +42,7 @@ const AppRouter = () => (
     <Routes>
       <Route path="/" element={<About />} />
       <Route path="/projects" element={<Projects />} />
+      <Route path="/publication" element={<Publication />} />
       <Route path="/projects/photoclock" element={<PhotoClockDetail />} />
       <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
       <Route path="/projects/womany" element={<WomanyDetail />} />

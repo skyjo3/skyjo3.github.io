@@ -1,0 +1,81 @@
+/* Publication.css */
+
+.publication-container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-top: 3vh;
+}
+
+.publication-content {
+  flex: 1; /* Takes up equal space as the image column */
+  min-width: 300px; /* Ensures a minimum width */
+  padding-left: 40px;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.desktop-image {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.custom-button {
+  display: inline-block;
+  margin-top: 20px;
+  min-width: 200px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Styles for small screens (e.g., smartphones) */
+@media only screen and (max-width: 600px) {
+  .mobile-image {
+    display: block;
+    width: 100%;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .publication-container {
+    margin-top: 20px;
+  }
+  .publication-content {
+    padding: 0 30px;
+  }
+  .custom-button {
+    margin-bottom: 60px;
+  }
+}
