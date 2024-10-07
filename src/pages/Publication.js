@@ -8,14 +8,10 @@ import image2 from '../assets/img/google-scholar-mobile.png';
 const Publication = () => (
   <div className="container">
     <div className="publication-container">
-        {/* Desktop Image */}
-        <a href="https://scholar.google.ca/citations?hl=en&user=7oOu3FgAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer">
+        <a href="https://scholar.google.ca/citations?hl=en&user=7oOu3FgAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer" className="image-container">
           <img src={image1} alt="Google Scholar Profile Image - Desktop" className="desktop-image" />
-        </a>
-
-        {/* Mobile Image */}
-        <a href="https://scholar.google.ca/citations?hl=en&user=7oOu3FgAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer">
           <img src={image2} alt="Google Scholar Profile Image - Mobile" className="mobile-image" />
+          <span className="hover-text">View on Google Scholar</span>
         </a>
         <p></p>
     </div>
