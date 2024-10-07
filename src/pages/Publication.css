@@ -12,36 +12,32 @@
 }
 
 .publication-content {
-  flex: 1; /* Takes up equal space as the image column */
-  min-width: 300px; /* Ensures a minimum width */
+  flex: 1; 
+  min-width: 300px; 
   padding-left: 40px;
 }
 
-/* Container for the image and hover text */
 .image-container {
   position: relative;
   display: inline-block;
 }
 
-/* Hide the mobile image by default */
 .mobile-image {
   display: none;
 }
 
-/* Show the desktop image by default */
 .desktop-image {
   display: block;
   width: 100%;
 }
 
-/* Hover text styles - hidden by default */
 .hover-text {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--color-primary); /* Dark background for better readability */
+  background-color: var(--color-primary); 
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -49,7 +45,6 @@
   z-index: 10;
 }
 
-/* Mask overlay to darken the image */
 .image-container::after {
   content: '';
   position: absolute;
@@ -57,18 +52,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0); /* Initially transparent */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: rgba(255, 255, 255, 0); 
+  transition: background-color 0.3s ease; 
   z-index: 5; /* Ensure it's below the text */
 }
 
-/* Show hover text and darken image when hovering over the container */
 .image-container:hover .hover-text {
   display: block;
 }
 
 .image-container:hover::after {
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent black mask */
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
 h1 {
