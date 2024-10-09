@@ -25,18 +25,18 @@ const projectsData = [
     tags: ['photo', 'digital fabrication', 'data wayfaring', 'all'],
   },
   {
-    title: 'Olly',
-    description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
-    imageUrl: image8,
-    linkPath: '/projects/olly',
-    tags: ['audio', 'digital fabrication', 'all'],
-  },
-  {
     title: 'Womany',
     description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
     imageUrl: image4,
     linkPath: '/projects/womany',
     tags: ['digital reading', 'mobile', 'all'],
+  },
+  {
+    title: 'Olly',
+    description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
+    imageUrl: image8,
+    linkPath: '/projects/olly',
+    tags: ['audio', 'digital fabrication', 'all'],
   },
   {
     title: 'Quologue',
