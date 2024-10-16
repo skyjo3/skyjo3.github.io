@@ -86,7 +86,8 @@ const Projects = () => {
   }, [handleMouseEnter, handleMouseLeave]);
 
   return (
-    <div className={styles["container"]}>
+    // <div className={styles["container"]}>
+    <div className="container">
       <div className={styles["projects-background-container"]}>
         {isDesktop && <ScrollIndicator />}
         <div className={styles["projects-container"]}>

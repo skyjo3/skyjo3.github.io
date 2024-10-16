@@ -21,7 +21,7 @@ const More = () => {
   // };
 
   return (
-    <div className={styles["container"]}>
+    <div className="container">
       <div className={styles["more-background-container"]}>
         <div className={styles["more-container"]}>
           {/*<div className={styles["lottie"]}>
