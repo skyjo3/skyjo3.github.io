@@ -19,9 +19,8 @@ function Header() {
 
           <nav className={isOpen ? "nav-open" : ""}>
             <ul className="nav-links">
-              <li><Link to="/" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
-              <li><Link to="/projects" onClick={() => setIsOpen(false)}>PROJECTS</Link></li>
-              <li><Link to="/publication" onClick={() => setIsOpen(false)}>PUBLICATION</Link></li>
+              <li><Link to="/" onClick={() => setIsOpen(false)}>WORK</Link></li>
+              <li><Link to="/about" onClick={() => setIsOpen(false)}>ABOUT</Link></li>
               <li><Link to="/more" onClick={() => setIsOpen(false)}>MORE</Link></li>
             </ul>
           </nav>

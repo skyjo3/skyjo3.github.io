@@ -40,14 +40,13 @@ const AppRouter = () => (
     <Header />
     <TrackPageViews />
     <Routes>
-      <Route path="/" element={<About />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/publication" element={<Publication />} />
+      <Route path="/" element={<Projects />} />
       <Route path="/projects/photoclock" element={<PhotoClockDetail />} />
       <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
       <Route path="/projects/womany" element={<WomanyDetail />} />
       <Route path="/projects/quologue" element={<QuologueDetail />} />
       <Route path="/projects/olly" element={<OllyDetail />} />
+      <Route path="/about" element={<About />} />
       <Route path="/more" element={<More />} />
       <Route path="*" element={<Navigate to="/" />} /> {/* Catch-all route */}
     </Routes>
