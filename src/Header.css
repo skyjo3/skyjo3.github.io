@@ -2,6 +2,11 @@
   background-color: white;
   color: white;
   padding: 0px 0;
+  position: fixed; /* Keeps the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the header stays above other content */
 }
 
 .header-container {
@@ -11,8 +16,8 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-
   border-bottom: 0.5px solid #eeeeee;
+  height: 60px; /* Adjust as needed */
 }
 
 .logo-container {
@@ -21,8 +26,8 @@
 }
 
 .logo-image {
-  height: 20px; /* Adjust the height as needed */
-  margin-right: 10px; /* Space between the image and the text */
+  height: 20px;
+  margin-right: 10px;
 }
 
 .logo-text {
@@ -63,15 +68,11 @@
   vertical-align: middle;
 }
 
-/* Styles for small screens (e.g., smartphones) */
 @media only screen and (max-width: 600px) {
   .menu-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      right: 0;
-    }
   }
 
   .header-container {
@@ -83,27 +84,22 @@
     flex-direction: column;
     width: 100%;
     position: absolute;
-    
     left: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: none;
-    transition: box-shadow 0.3s ease;
   }
 
   .nav-open .nav-links {
-    width: 100%;
     display: flex;
     padding: 10px;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     li {
       width: 100%;
       margin: 0;
       padding: 0;
-      a {
-        width: 100%;
-        display: block;
-      }
+    }
+    a {
+      width: 100%;
+      display: block;
     }
   }
 }
