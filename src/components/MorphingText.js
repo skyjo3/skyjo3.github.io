@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './MorphingText.css';
 
 const MorphingText = () => {
-  const texts = ['visual media', 'photos & video']; // List of words
+  const texts = ['visual media', 'photo & video']; // List of words
   const [currentText, setCurrentText] = useState(texts[0]); // Set initial text
   const [index, setIndex] = useState(0); // Track current index
 

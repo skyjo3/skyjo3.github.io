@@ -11,6 +11,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 12vh;
+  margin-bottom: 4vh;
 }
 
 .morphing-text {
@@ -23,5 +24,6 @@
   .landing-paragraph {
     padding: 20px;
     width: 100%;
+    margin-bottom: 0vh;
   }
 }
