@@ -15,14 +15,14 @@ const projectsData = [
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
     linkPath: '/projects/photoclock',
-    tags: ['photo', 'video', 'mobile', 'AI', 'data wayfaring', 'all'],
+    tags: ['photo', 'video', 'mobile', 'AI', 'all'],
   },
   {
     title: 'Chronoscope',
     description: 'Exploring photos through time, using tangible interaction to support curious discovery and reflection on life history.',
     imageUrl: image2,
     linkPath: '/projects/chronoscope',
-    tags: ['photo', 'digital fabrication', 'data wayfaring', 'all'],
+    tags: ['photo', 'hardware', 'all'],
   },
   {
     title: 'Womany',
@@ -36,7 +36,7 @@ const projectsData = [
     description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
     imageUrl: image8,
     linkPath: '/projects/olly',
-    tags: ['audio', 'digital fabrication', 'all'],
+    tags: ['audio', 'hardware', 'all'],
   },
   {
     title: 'Quologue',
