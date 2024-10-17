@@ -15,14 +15,14 @@ const projectsData = [
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
     linkPath: '/projects/photoclock',
-    tags: ['photo', 'video', 'mobile', 'AI', 'all'],
+    tags: ['photo', 'video', 'mobile', 'AI', 'journey through time', 'all'],
   },
   {
     title: 'Chronoscope',
     description: 'Exploring photos through time, using tangible interaction to support curious discovery and reflection on life history.',
     imageUrl: image2,
     linkPath: '/projects/chronoscope',
-    tags: ['photo', 'hardware', 'journey through time', 'all'],
+    tags: ['photo', 'hardware', 'mobile', 'journey through time', 'all'],
   },
   {
     title: 'Womany',
@@ -43,7 +43,7 @@ const projectsData = [
     description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
     imageUrl: image5,
     linkPath: '/projects/quologue',
-    tags: ['AI', 'digital reading', 'website', 'all'],
+    tags: ['AI', 'digital reading', 'website', 'mobile', 'all'],
   },
   // {
   //   title: 'CrescendoMessage',

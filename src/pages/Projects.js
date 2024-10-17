@@ -6,6 +6,7 @@ import { tagSelection } from '../utils/gtag';
 
 import { useLocation } from 'react-router-dom';
 import ScrollIndicator from '../components/ScrollIndicator';
+ import MorphingText from '../components/MorphingText';
 
 import backgroundImage from '../assets/img/project_background.png';
 
@@ -90,6 +91,7 @@ const Projects = () => {
     <div className="container">
       <div className={styles["projects-background-container"]}>
         {isDesktop && <ScrollIndicator />}
+        <MorphingText />
         <div className={styles["projects-container"]}>
           <div className={`${styles.project} ${styles.intro}`}>
             <h5>↳  {data.length} FEATURED PROJECTS</h5>
