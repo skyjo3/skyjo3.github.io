@@ -22,7 +22,7 @@ const projectsData = [
     description: 'Exploring photos through time, using tangible interaction to support curious discovery and reflection on life history.',
     imageUrl: image2,
     linkPath: '/projects/chronoscope',
-    tags: ['photo', 'hardware', 'all'],
+    tags: ['photo', 'hardware', 'journey through time', 'all'],
   },
   {
     title: 'Womany',
@@ -36,7 +36,7 @@ const projectsData = [
     description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
     imageUrl: image8,
     linkPath: '/projects/olly',
-    tags: ['audio', 'hardware', 'all'],
+    tags: ['journey through time', 'hardware', 'all'],
   },
   {
     title: 'Quologue',
