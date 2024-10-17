@@ -46,7 +46,7 @@ function Header() {
                   onClick={() => setIsOpen(false)} 
                   className={isActive('/more') ? 'active' : ''}
                 >
-                  MORE
+                  PUBLICATION
                 </Link>
               </li>
             </ul>
