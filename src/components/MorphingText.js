@@ -10,7 +10,7 @@ const MorphingText = () => {
     // Set interval to change the text every 2 seconds (2000ms)
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % texts.length); // Increment index and loop back
-    }, 2000); // Change text every 2 seconds
+    }, 1000); // Change text every 1 seconds
 
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, [texts.length]);
