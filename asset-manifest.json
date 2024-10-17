@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c15cfe3.css",
-    "main.js": "/static/js/main.93f02ab4.js",
+    "main.css": "/static/css/main.89b09745.css",
+    "main.js": "/static/js/main.32996881.js",
     "static/media/media3.png": "/static/media/media3.015d7a6b7278ca87bf2b.png",
     "static/media/media2.png": "/static/media/media2.d50eb1b7f5579cb2c8b6.png",
     "static/media/IMG_7103.JPG": "/static/media/IMG_7103.41f460ec96b1ca5d8c54.JPG",
@@ -98,7 +98,6 @@
     "static/media/5.jpg": "/static/media/5.e55fc098293a1c8026d9.jpg",
     "static/media/Fig6a.jpg": "/static/media/Fig6a.12ba5c76b8624b0cb928.jpg",
     "static/media/pinterest.jpg": "/static/media/pinterest.2b249e6b2873470cf923.jpg",
-    "static/media/more-00.jpg": "/static/media/more-00.0f9c0a4ed68f311a3ae9.jpg",
     "static/media/e2.jpg": "/static/media/e2.9931c16fa994d42cad2b.jpg",
     "static/media/7-olo.jpg": "/static/media/7-olo.66613774868b51b3f1b9.jpg",
     "static/media/2.jpg": "/static/media/2.bdbb55bc572018c643f4.jpg",
@@ -134,11 +133,11 @@
     "static/media/9-slow-game.jpg": "/static/media/9-slow-game.384ff8432c2a190561a9.jpg",
     "static/media/plan.png": "/static/media/plan.2b1ca603efacdddc7f1d.png",
     "index.html": "/index.html",
-    "main.3c15cfe3.css.map": "/static/css/main.3c15cfe3.css.map",
-    "main.93f02ab4.js.map": "/static/js/main.93f02ab4.js.map"
+    "main.89b09745.css.map": "/static/css/main.89b09745.css.map",
+    "main.32996881.js.map": "/static/js/main.32996881.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c15cfe3.css",
-    "static/js/main.93f02ab4.js"
+    "static/css/main.89b09745.css",
+    "static/js/main.32996881.js"
   ]
 }
