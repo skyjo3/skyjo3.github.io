@@ -33,6 +33,28 @@
   border-radius: 10px; /* Optional styling */
 }
 
+.more-background-container {
+  background-image: url('../assets/img/project_background.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.more-container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+  padding-top: 100px;
+
+  text-align: left;
+  width: 100%;  /* Takes full width of its parent */
+  display: flex;  /* Enables flexbox */
+  flex-direction: column;  /* Stacks children vertically */
+  align-items: left;  /* Centers children horizontally */
+  justify-content: center;  /* Centers children vertically */
+}
+
 h1 {
   font-size: var(--font-size-xxl);
 }
@@ -46,6 +68,10 @@ p {
   font-size: var(--font-size-base);
   line-height: 1.6;
   margin-bottom: var(--spacing-md);
+}
+
+.more-container p {
+  width: 520px;
 }
 
 .custom-button {
