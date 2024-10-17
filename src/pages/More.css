@@ -1,4 +1,4 @@
-/* Publication.css */
+/* More.css */
 
 .publication-container {
   max-width: var(--container-width);
@@ -54,7 +54,7 @@
   bottom: 0;
   background-color: rgba(255, 255, 255, 0); 
   transition: background-color 0.3s ease; 
-  z-index: 5; /* Ensure it's below the text */
+  z-index: 5;
 }
 
 .image-container:hover .hover-text {

@@ -7,9 +7,8 @@ import { pageView } from './utils/gtag';
 import ScrollToTop from './components/ScrollToTop';
 
 import Header from './Header';
-import About from './pages/About';
 import Projects from './pages/Projects';
-import Publication from './pages/Publication';
+import About from './pages/About';
 import More from './pages/More';
 
 import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'

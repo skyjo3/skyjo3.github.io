@@ -33,6 +33,25 @@
   border-radius: 10px; /* Optional styling */
 }
 
+.custom-button {
+  display: inline-block;
+  margin-top: 20px;
+  min-width: 200px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: var(--color-secondary);
+}
+
 .more-background-container {
   background-image: url('../assets/img/project_background.png');
   background-attachment: fixed;
@@ -55,42 +74,33 @@
   justify-content: center;  /* Centers children vertically */
 }
 
-h1 {
-  font-size: var(--font-size-xxl);
+.more-container h1 {
+  margin-top: 80px;
+  margin-bottom: 0px;
 }
 
-h2 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-md);
+.more-container a {
+  color: var(--color-primary);  /* Example: a nice shade of blue */
+  text-decoration: none;  /* Optional: removes underline from links */
 }
 
-p {
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
+.more-container a:hover {
+  text-decoration: underline;  /* Restores underline on hover for better user interaction */
+}
+
+.moreImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 200px;
+}
+
+.text-overlay {
+  padding: 10px;
 }
 
 .more-container p {
   width: 520px;
-}
-
-.custom-button {
-  display: inline-block;
-  margin-top: 20px;
-  min-width: 200px;
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-size: var(--font-size-base);
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.custom-button:hover {
-  background-color: var(--color-secondary);
 }
 
 /* Styles for small screens (e.g., smartphones) */
@@ -106,5 +116,23 @@ p {
   }
   .custom-button {
     margin-bottom: 60px;
+  }
+  .text-overlay {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .more-container h1 {
+    font-size: var(--font-size-xl);
+    margin-top: 30px;
+    text-align: center;
+  }
+  .more-container p {
+    font-size: var(--font-size-lg);
+    margin: 20px;
+    text-align: left;
+    width: 94%;
+  }
+  .moreImage {
+    margin-bottom: 80px;
   }
 }
