@@ -54,6 +54,11 @@
   transition: background-color 0.3s;
 }
 
+.nav-links li a.active {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
 .nav-links a:hover {
   background-color: #eeeeee;
 }
