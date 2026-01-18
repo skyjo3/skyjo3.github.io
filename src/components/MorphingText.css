@@ -4,13 +4,19 @@
   vertical-align: middle;
   line-height: 1.2;
   color: #333;
-  margin: 20px;
+  margin: 0;
   padding-left: 40px;
   max-width: var(--container-width);
-  
   margin-left: auto;
   margin-right: auto;
+}
+
+.landing-paragraph:first-child {
   margin-top: 12vh;
+}
+
+.landing-paragraph:last-child {
+  margin-top: 2vh;
   margin-bottom: 4vh;
 }
 
@@ -22,8 +28,18 @@
 
 @media only screen and (max-width: 600px) {
   .landing-paragraph {
-    padding: 20px;
-    width: 100%;
+    font-size: 2rem;
+    padding: 4px 20px;
+    width: 90%;
     margin-bottom: 0vh;
+  }
+  .landing-paragraph:first-child {
+    margin-top: 10vh;
+  }
+
+  .landing-paragraph:last-child {
+    font-size: 1.8rem;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
   }
 }
