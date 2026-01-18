@@ -16,7 +16,7 @@ const About = () => (
       </div>
       <div className="about-content">
         <h6>HELLO !</h6>
-        <h2>My name is Amy. I am a Design Researcher focused on Visual Media.</h2>
+        <h2>My name is Amy. I am a design engineer.</h2>
         <p>I design, develop, and ship products with an aim to engage people with their own <b>vast and still growing digital possessions</b>, such as digital photos and video.</p>
         <p>My work in Human-Computer Interaction (HCI) focuses on <b>interaction design</b>, <b>research product</b>, and <b>data visualization</b>.</p>
         <a href="mailto:amy.yosue.chen@gmail.com" className="custom-button">Contact Me</a>
