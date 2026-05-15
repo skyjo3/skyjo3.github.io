@@ -13,32 +13,30 @@ const getGreeting = () => {
 };
 
 const MorphingText = () => {
-  const texts = ['humans', 'aesthetics']; // List of words
-  const [currentText, setCurrentText] = useState(texts[0]); // Set initial text
-  const [index, setIndex] = useState(0); // Track current index
+  const texts = ['creativity,', 'quality,', 'and care :)'];
+  const [currentText, setCurrentText] = useState(texts[0]);
+  const [index, setIndex] = useState(0);
   const [greeting, setGreeting] = useState(getGreeting());
 
   useEffect(() => {
-    // Set interval to change the text every 2 seconds (2000ms)
     const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % texts.length); // Increment index and loop back
-    }, 1000); // Change text every 1 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
   }, [texts.length]);
 
   useEffect(() => {
-    // Update the current text based on the index
     setCurrentText(texts[index]);
   }, [index, texts]);
 
   return (
     <div>
       <p className="landing-paragraph">
-      {greeting} 
+        {greeting}
       </p>
       <p className="landing-paragraph">
-        I am a <b>design engineer</b> who codes for <span className="morphing-text">{currentText}</span>.
+        I'm a <b>design engineer</b> who lives at the intersection of pixels, code, and agents. I ship products that express <span className="morphing-text">{currentText}</span>
       </p>
     </div>
   );
