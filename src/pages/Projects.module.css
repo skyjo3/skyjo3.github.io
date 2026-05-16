@@ -50,14 +50,17 @@
   display: inline-block;
 }
 
-.tag.selected {
-  background-color: var(--color-primary); /* Example: blue background for selected tags */
-  color: white; /* White text color for better contrast */
+.tag:hover {
+  background-color: var(--color-gray);
 }
 
-.tag:hover {
-/*  transform: translateY(-2px);*/
-  background-color: var(--color-gray);
+.tag.selected {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.tag.selected:hover {
+  background-color: var(--color-primary);
 }
 
 /* project list columns */ 
