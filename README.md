@@ -1,17 +1,22 @@
-# Amy Y. Chen's Portfolio
+# Amy Y. Chen — Portfolio
 
-Personal portfolio website showcasing design engineering work focused on human-data relationships and visual media.
+Personal portfolio website showcasing design engineering work.
 
 **Live site:** [skyjo3.github.io](https://skyjo3.github.io)
 
-## Projects
+## Tech Stack
 
-Design projects exploring photo interactions, temporal experiences, and AI-enhanced reading.
+React 18 · React Router DOM 6 · Create React App · GitHub Pages
 
-## About
+## Getting Started
 
-Background, research interests, and contact information.
+```bash
+npm install
+npm start        # Dev server at localhost:3000
+npm run build    # Production build
+npm run deploy   # Build and deploy to GitHub Pages
+```
 
-## Publication
+## License
 
-Academic publications and research work.
+© Amy Y. Chen. All rights reserved.
