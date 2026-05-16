@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Routes, Navigate, useLocation } from 'reac
 import { pageView } from './utils/gtag';
 
 import ScrollToTop from './components/ScrollToTop';
+import ProjectPage from './components/ProjectPage';
 
 import Header from './Header';
 import Projects from './pages/Projects';
@@ -40,11 +41,11 @@ const AppRouter = () => (
     <TrackPageViews />
     <Routes>
       <Route path="/" element={<Projects />} />
-      <Route path="/projects/photoclock" element={<PhotoClockDetail />} />
-      <Route path="/projects/chronoscope" element={<ChronoscopeDetail />} />
-      <Route path="/projects/womany" element={<WomanyDetail />} />
-      <Route path="/projects/quologue" element={<QuologueDetail />} />
-      <Route path="/projects/olly" element={<OllyDetail />} />
+      <Route path="/projects/photoclock" element={<ProjectPage component={PhotoClockDetail} />} />
+      <Route path="/projects/chronoscope" element={<ProjectPage component={ChronoscopeDetail} />} />
+      <Route path="/projects/womany" element={<ProjectPage component={WomanyDetail} />} />
+      <Route path="/projects/quologue" element={<ProjectPage component={QuologueDetail} />} />
+      <Route path="/projects/olly" element={<ProjectPage component={OllyDetail} />} />
       <Route path="/about" element={<About />} />
       <Route path="/more" element={<More />} />
       <Route path="*" element={<Navigate to="/" />} /> {/* Catch-all route */}
