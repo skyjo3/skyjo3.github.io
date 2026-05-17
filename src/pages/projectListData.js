@@ -11,6 +11,34 @@ import image9 from '../assets/img/project-list/9-slow-game.jpg';
 
 const projectsData = [
   {
+    title: 'Befriending AI in Design: A Roadmap',
+    description: 'Coming soon.',
+    imageUrl: null,
+    linkPath: '/projects/ai-roadmap',
+    tags: ['AI', 'all'],
+  },
+  {
+    title: 'Rebrand x Design Systems',
+    description: 'Coming soon.',
+    imageUrl: null,
+    linkPath: '/projects/design-systems',
+    tags: ['all'],
+  },
+  {
+    title: 'Creativity at Scale, via Figma Plugins',
+    description: 'Coming soon.',
+    imageUrl: null,
+    linkPath: '/projects/figma-plugins',
+    tags: ['all'],
+  },
+  {
+    title: 'Quologue',
+    description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
+    imageUrl: image5,
+    linkPath: '/projects/quologue',
+    tags: ['AI', 'digital reading', 'website', 'mobile', 'all'],
+  },
+  {
     title: 'PhotoClock',
     description: 'Resurfacing photos taken at this time of day in your past to trigger curiosity, anticipation, and intimacy.',
     imageUrl: image1,
@@ -25,13 +53,6 @@ const projectsData = [
     tags: ['photo', 'hardware', 'mobile', 'journey through time', 'all'],
   },
   {
-    title: 'Womany',
-    description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
-    imageUrl: image4,
-    linkPath: '/projects/womany',
-    tags: ['digital reading', 'mobile', 'all'],
-  },
-  {
     title: 'Olly',
     description: 'Embodying one\'s music listening history data to evoke memories of different life stages.',
     imageUrl: image8,
@@ -39,11 +60,11 @@ const projectsData = [
     tags: ['journey through time', 'hardware', 'all'],
   },
   {
-    title: 'Quologue',
-    description: 'Reimagining everyday reading experience: AI-infused insights inspiring the rediscovery of cherished books.',
-    imageUrl: image5,
-    linkPath: '/projects/quologue',
-    tags: ['AI', 'digital reading', 'website', 'mobile', 'all'],
+    title: 'Womany',
+    description: 'Unlocking self-growth and creativity: the news app redesigned for readers interested in gender equality.',
+    imageUrl: image4,
+    linkPath: '/projects/womany',
+    tags: ['digital reading', 'mobile', 'all'],
   },
   // {
   //   title: 'CrescendoMessage',
