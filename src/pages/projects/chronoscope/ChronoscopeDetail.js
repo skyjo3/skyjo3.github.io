@@ -271,8 +271,6 @@ const ChronoscopeDetail = () => {
                 <h2>4 - Field Study</h2>
                 <p>We recruited <b>4 participants</b> for <b>3 months</b> in Vancouver through word of mouth and online advertisements. In the initial interviews, we offered a demo of Chronoscope and provided a pamphlet explaining how it works. After the initial visit, we conducted bi-weekly interviews to check in with participants.</p>
                 <p>The final <b>in-depth interviews</b> lasted for approximately 2 hours. Two researchers attended and took field notes in each interview. Qualitative data were collected and transcribed with the support of Otter.ai. Data analysis was performed using an <b>affinity diagram</b> and <b>thematic analysis</b> on Miro.</p>
-                <p>.</p>
-                <LazyLoadImage src={images.singles.form.src} alt={images.singles.form.alt} className={styles.fieldStudyImage} onClick={() => openLightbox(images.singles.form.src)} />
                 <h3>Findings</h3>
                 <p>Our findings showed that Chronoscope resurfaced <b>forgotten or unknown life patterns</b>, especially those in <b>less familiar modes</b>, such as Date and Time. Because it is not easy to anticipate what photos would be interconnected in those two modes. People can revisit, associate, and reflect on multiple surprising moments at once in their exploration journey, <b>triggering a provocative way of integrating and interpreting autobiographical memories</b>.</p>
                 <h3>More details can be found below:</h3> 

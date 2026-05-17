@@ -118,7 +118,7 @@ const Projects = () => {
             <div key={index} className={styles[`project${index % 2 === 0 ? 'R' : 'L'}`]}>
               <Link to={project.linkPath} className={styles["project-link"]}>
                 <div key={index} className={styles["project-card"]}>
-                  <img src={project.imageUrl} alt={project.title} className={styles["project-image"]} />
+                  {project.imageUrl && <img src={project.imageUrl} alt={project.title} className={styles["project-image"]} />}
                   <div className={styles["project-content"]}>
                     <h2 className={styles["project-title"]}>{project.title}</h2>
                     <div className={styles["project-description"]}>{project.description}</div>

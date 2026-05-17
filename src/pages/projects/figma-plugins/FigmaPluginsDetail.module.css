@@ -1,0 +1,83 @@
+.projectContainer {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  overflow: auto;
+  padding: 20px;
+  border-right: 0.5px solid var(--color-gray);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.content {
+  margin-left: 250px;
+  padding: 10px 40px;
+  overflow: auto;
+}
+
+.content section {
+  margin-bottom: 200px;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+}
+
+.projectContentImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.project .overviewContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.project h2 {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.project h3 {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin-left: 0px;
+    padding: 10px 40px;
+    overflow: auto;
+  }
+  .project .overviewContainer {
+    display: block;
+  }
+}
