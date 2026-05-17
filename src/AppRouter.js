@@ -21,12 +21,6 @@ import ChronoscopeDetail from './pages/projects/chronoscope/ChronoscopeDetail'
 import OllyDetail from './pages/projects/olly/OllyDetail'
 import WomanyDetail from './pages/projects/womany/WomanyDetail'
 
-      // <Route path="/projects/crescendo" element={<CrescendoDetail />} />
-      // <Route path="/projects/slow-game" element={<SlowGameDetail />} />
-
-      // <Route path="/projects/mental-map" element={<MentalMapDetail />} />
-      // <Route path="/projects/olo" element={<OloDetail />} />
-
 const TrackPageViews = () => {
   const location = useLocation();
 

@@ -7,11 +7,6 @@ import image5 from '../assets/img/project-list/5-photoclock.png';
 import image6 from '../assets/img/project-list/6-chronoscope.jpg';
 import image7 from '../assets/img/project-list/7-olly.jpeg';
 import image8 from '../assets/img/project-list/8-womany.png';
-// unused (commented-out projects)
-// import imageCrescendo from '../assets/img/project-list/3-crescendo.jpg';
-// import imageMentalMap from '../assets/img/project-list/6-mental-map.png';
-// import imageOlo from '../assets/img/project-list/7-olo.jpg';
-// import imageSlowGame from '../assets/img/project-list/9-slow-game.jpg';
 
 const projectsData = [
   {
@@ -70,34 +65,6 @@ const projectsData = [
     linkPath: '/projects/womany',
     tags: ['digital reading', 'mobile', 'all'],
   },
-  // {
-  //   title: 'CrescendoMessage',
-  //   description: 'Investigating new forms of photo sharing between loved ones with an aim to enrich intimate communication.',
-  //   imageUrl: imageCrescendo,
-  //   linkPath: '/projects/crescendo',
-  //   tags: ['photos', 'mobile', 'field study', 'messaging', 'all'],
-  // },
-  // {
-  //   title: 'Mental Map',
-  //   description: 'Supporting visually impaired people to build mental map of a new environment via mobile interaction.',
-  //   imageUrl: imageMentalMap,
-  //   linkPath: '/projects/mental-map',
-  //   tags: ['accessibility', 'mobile', 'contextual inquiry', 'all'],
-  // },
-  // {
-  //   title: 'Olo Radio',
-  //   description: 'Reflecting on personal listening history through tangible interaction with a domestic music player.',
-  //   imageUrl: imageOlo,
-  //   linkPath: '/projects/olo',
-  //   tags: ['audio', 'tangible', 'field study', 'all'],
-  // },
-  // {
-  //   title: 'Slow Game',
-  //   description: 'Conceptualizing time alternatively by playing the Snake game one step every 18 hours.',
-  //   imageUrl: imageSlowGame,
-  //   linkPath: '/projects/slow-game',
-  //   tags: ['temporality', 'tangible', 'research through design', 'all'],
-  // }
 ];
 
 export default projectsData;
