@@ -15,6 +15,7 @@ const projectsData = [
     imageUrl: image1,
     linkPath: '/projects/ai-roadmap',
     tags: ['AI', 'design systems', 'startegy', 'all'],
+    passwordProtected: true,
   },
   {
     title: 'Rebrand x Design Systems',
@@ -22,6 +23,7 @@ const projectsData = [
     imageUrl: image2,
     linkPath: '/projects/design-systems',
     tags: ['AI', 'design systems', 'startegy', 'mobile', 'web', 'all'],
+    passwordProtected: true,
   },
   {
     title: 'Creativity at Scale, via Figma Plugins',
@@ -29,6 +31,7 @@ const projectsData = [
     imageUrl: image3,
     linkPath: '/projects/figma-plugins',
     tags: ['AI', 'design systems', 'web', 'all'],
+    passwordProtected: true,
   },
   {
     title: 'Quologue',
