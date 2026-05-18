@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d38f4ad3.css",
-    "main.js": "/static/js/main.f69ffe83.js",
+    "main.js": "/static/js/main.b6da234b.js",
     "static/media/media3.png": "/static/media/media3.015d7a6b7278ca87bf2b.png",
     "static/media/media2.png": "/static/media/media2.d50eb1b7f5579cb2c8b6.png",
     "static/media/IMG_7103.JPG": "/static/media/IMG_7103.41f460ec96b1ca5d8c54.JPG",
@@ -33,6 +33,7 @@
     "static/media/3.PNG": "/static/media/3.c37b64deebc66c26ea07.PNG",
     "static/media/Fig7a.png": "/static/media/Fig7a.1a156cde53aff19d7d3c.png",
     "static/media/M123-Womany_P2.png": "/static/media/M123-Womany_P2.61da11891c76b755015e.png",
+    "static/media/1-ai-roadmap.png": "/static/media/1-ai-roadmap.9a21951abe253520ee9f.png",
     "static/media/0_main.png": "/static/media/0_main.75f9916e7064d11521e8.png",
     "static/media/4.PNG": "/static/media/4.a816bc924906bca48383.PNG",
     "static/media/M123-template_M1.png": "/static/media/M123-template_M1.67e70552505ad62fc4e8.png",
@@ -88,7 +89,6 @@
     "static/media/sketching.jpg": "/static/media/sketching.510f71da3daa61fbe460.jpg",
     "static/media/2-design-systems.jpg": "/static/media/2-design-systems.9a5b970a7edbe6a374f5.jpg",
     "static/media/Fig2.jpg": "/static/media/Fig2.72f6ae4157ecd981505e.jpg",
-    "static/media/1-ai-roadmap.jpg": "/static/media/1-ai-roadmap.48d27cb719fbaaccbb69.jpg",
     "static/media/Fig7b.jpg": "/static/media/Fig7b.1df54474bd85c6de8a35.jpg",
     "static/media/Fig5d.jpg": "/static/media/Fig5d.7beea44957b0f65ac9b4.jpg",
     "static/media/inspiration_wall.jpg": "/static/media/inspiration_wall.fbf1cf678dd9290dd32a.jpg",
@@ -133,10 +133,10 @@
     "static/media/plan.png": "/static/media/plan.2b1ca603efacdddc7f1d.png",
     "index.html": "/index.html",
     "main.d38f4ad3.css.map": "/static/css/main.d38f4ad3.css.map",
-    "main.f69ffe83.js.map": "/static/js/main.f69ffe83.js.map"
+    "main.b6da234b.js.map": "/static/js/main.b6da234b.js.map"
   },
   "entrypoints": [
     "static/css/main.d38f4ad3.css",
-    "static/js/main.f69ffe83.js"
+    "static/js/main.b6da234b.js"
   ]
 }
