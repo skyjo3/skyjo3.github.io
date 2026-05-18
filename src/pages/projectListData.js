@@ -1,5 +1,5 @@
 // projectData.js
-import image1 from '../assets/img/project-list/1-ai-roadmap.jpg';
+import image1 from '../assets/img/project-list/1-ai-roadmap.png';
 import image2 from '../assets/img/project-list/2-design-systems.jpg';
 import image3 from '../assets/img/project-list/3-figma-plugins.jpg';
 import image4 from '../assets/img/project-list/4-quologue.jpg';
@@ -11,7 +11,7 @@ import image8 from '../assets/img/project-list/8-womany.png';
 const projectsData = [
   {
     title: 'Befriending AI in Design: A Roadmap',
-    description: 'Coming soon.',
+    description: 'Creating paths for design teams to adopt AI thoughtfully — from mindset shifts to tool integrations and creative agency.',
     imageUrl: image1,
     linkPath: '/projects/ai-roadmap',
     tags: ['AI', 'design systems', 'startegy', 'all'],
@@ -19,7 +19,7 @@ const projectsData = [
   },
   {
     title: 'Rebrand x Design Systems',
-    description: 'Coming soon.',
+    description: 'Unifying a rebranded visual language into a living design system, testing experiences across products at scale.',
     imageUrl: image2,
     linkPath: '/projects/design-systems',
     tags: ['AI', 'design systems', 'startegy', 'mobile', 'web', 'all'],
@@ -27,7 +27,7 @@ const projectsData = [
   },
   {
     title: 'Creativity at Scale, via Figma Plugins',
-    description: 'Coming soon.',
+    description: 'Building Figma plugins to empower design work, freeing teams to focus on craft and high-impact creative decisions.',
     imageUrl: image3,
     linkPath: '/projects/figma-plugins',
     tags: ['AI', 'design systems', 'web', 'all'],
