@@ -1,5 +1,5 @@
 // projectData.js
-import image1 from '../assets/img/project-list/1-ai-roadmap.jpg';
+import image1 from '../assets/img/project-list/1-ai-roadmap.png';
 import image2 from '../assets/img/project-list/2-design-systems.jpg';
 import image3 from '../assets/img/project-list/3-figma-plugins.jpg';
 import image4 from '../assets/img/project-list/4-quologue.jpg';
