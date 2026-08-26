@@ -12,9 +12,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import More from './pages/More';
 
-import AIRoadmapDetail from './pages/projects/ai-roadmap/AIRoadmapDetail'
-import DesignSystemsDetail from './pages/projects/design-systems/DesignSystemsDetail'
-import FigmaPluginsDetail from './pages/projects/figma-plugins/FigmaPluginsDetail'
+import ProtectedProjectDetail from './components/ProtectedProjectDetail'
 import QuologueDetail from './pages/projects/quologue/QuologueDetail'
 import PhotoClockDetail from './pages/projects/photoclock/PhotoClockDetail'
 import ChronoscopeDetail from './pages/projects/chronoscope/ChronoscopeDetail'
@@ -38,9 +36,9 @@ const AppRouter = () => (
     <TrackPageViews />
     <Routes>
       <Route path="/" element={<Projects />} />
-      <Route path="/projects/ai-roadmap" element={<ProjectPage component={AIRoadmapDetail} />} />
-      <Route path="/projects/design-systems" element={<ProjectPage component={DesignSystemsDetail} />} />
-      <Route path="/projects/figma-plugins" element={<ProjectPage component={FigmaPluginsDetail} />} />
+      <Route path="/projects/ai-roadmap" element={<ProjectPage component={() => <ProtectedProjectDetail slug="ai-roadmap" />} />} />
+      <Route path="/projects/design-systems" element={<ProjectPage component={() => <ProtectedProjectDetail slug="design-systems" />} />} />
+      <Route path="/projects/figma-plugins" element={<ProjectPage component={() => <ProtectedProjectDetail slug="figma-plugins" />} />} />
       <Route path="/projects/quologue" element={<ProjectPage component={QuologueDetail} />} />
       <Route path="/projects/photoclock" element={<ProjectPage component={PhotoClockDetail} />} />
       <Route path="/projects/chronoscope" element={<ProjectPage component={ChronoscopeDetail} />} />

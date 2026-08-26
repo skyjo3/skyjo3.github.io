@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './PasswordPrompt.module.css';
 
-const PasswordPrompt = ({ isOpen, projectTitle, onSubmit, onCancel, error }) => {
+const PasswordPrompt = ({ isOpen, projectTitle, onSubmit, onCancel, error, loading }) => {
   const [value, setValue] = useState('');
   const inputRef = useRef(null);
 
@@ -47,7 +47,7 @@ const PasswordPrompt = ({ isOpen, projectTitle, onSubmit, onCancel, error }) => 
             <button type="button" className={styles.cancelBtn} onClick={onCancel}>
               Cancel
             </button>
-            <button type="submit" className={styles.submitBtn} disabled={!value}>
+            <button type="submit" className={styles.submitBtn} disabled={!value || loading}>
               Enter
             </button>
           </div>
